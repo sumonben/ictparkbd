@@ -1,0 +1,524 @@
+{% extends 'basepage/basepage.html' %}
+               {% include 'components/navbarfront.html'%}           
+               {% block content %} 
+ 
+     
+
+
+
+    <main data-v-6f04a53f="" class="main"><!---->
+        <div data-v-6f04a53f="" class="about">
+            <!----------------Page Banner (header)---------------------------->
+            <div style="margin-top:7%" class="page-banner py-3">
+    <div class="container-wrapper">
+        <span class="shape"></span> <span class="shape2"></span>
+        <span class="shape3"></span>
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h3><div class="mb-0"></div> </h3>
+            </div>
+            <div class="col-lg-6">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-end bg-transparent mb-0">
+                        <li class="breadcrumb-item"><a href="/" class="breadcrumb-item router-link-active">User</a></li>
+                        <li class="breadcrumb-item text-capitalize"><span> add</span>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+$(document).ready(function () {
+    
+        var $page=$(".parent-active").first().text();
+        
+        
+        x=document.getElementsByClassName("mb-0");
+        x[0].innerText=$page;
+        
+        
+        
+    
+});
+
+</script>            <!----------------Page Banner (header)---------------------------->
+
+            <div class="content-body py-4">
+                <div class="container-wrapper">
+                    <div class="row">
+
+
+                        <!----------------leftmenu---------------------------->
+
+                        <div class="col-lg-3">
+
+                            <div class="sidebar-menu vue-affix affix-top" style="">
+                                <div class="sidebar-menu vue-affix affix-top" style="">
+                                    
+                                    <div class="leftside-menu">
+
+               
+           
+            
+            <div style="background-color: #f0f7f7" class="card card-body p-0 rounded-10 shadow-lg">
+                   
+                <div style="text-align: center;" class="card-header bg-transparent">
+                <h4>resource Center</h4>
+               
+                
+                    <div style="position: relative;" class="logo1">
+                            <button style="ov" class="fas fa-camera" data-toggle="modal" data-target="#exampleModal"></button>
+                            <h5 class="my-3">মোঃ ত্বরিকুল ইসলাম</h5>
+                    <p>সহকারী অধ্যাপক(আইসিটি)<br>সরকারি মুজিবুর রহমান মহিলা কলেজ, বগুড়া</p>
+                     
+                    
+                           
+                </div>
+                   
+                
+
+            </div>
+              
+                  
+     
+   
+              
+            
+            <ul id="myDiv1" class="nav flex-column">
+
+                <ul class="nav-item"><a href="https://israbentech.com/resource/books" id="profile" class="nav-link">ICT Books </a>
+                    </ul>
+                <ul class="nav-item"><a href="https://israbentech.com/resource/ppt" id="memberlist" aria-current="page" class="nav-link">Power Point</a></ul>
+                <ul class="nav-item"><a href="https://israbentech.com/resource/pdf" id="editprofile" class="nav-link">PDF Lectures</a>
+                    </ul>
+                    
+                    <ul class="nav-item"><a href="https://israbentech.com/resource/add" id="editprofile" class="nav-link active router-link-active">Add Resource</a>
+                    </ul>
+                        <ul class="nav-item"><a href="https://israbentech.com/resource/others" id="editprofile" class="nav-link">Others</a></ul>
+
+                            </ul>
+    
+                                
+
+
+        
+                </div>
+        </div>
+    
+    
+    <!---->
+
+                                    <!---->
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-lg-9"><!---->
+                            <div data-v-3171110e="" id="example-content">
+
+                             
+
+                         
+                                                                                                                                                                                                <div style="width: 100%;  align-content: center;" class="wrapper1">
+    <div style="width: 80px" class="logo2">
+        <img src="/static/images/ict_logo.jpg" alt="" class="rounded-circle img-fluid" style="width: 150px">&gt;
+    </div>
+   
+
+    <div style="font-size: 30px" class="text-center mt-4 name">
+       Entry carousel
+    </div>
+         
+        <form method="post" action="{% url 'create_carousel' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+        <input type="hidden" name="_token" value="ExYHjG5PlxtLZNOVfAtcXa5IxFjkXTT8sHesx81b">        
+        <div style="float: center;position: relative;" class="form-field d-flex align-items-center">
+            <input style="border: #039BE5" type="text" name="cid" id="cid" placeholder="Set Carousel Title" required="">
+        </div>
+        <div style="float: center;position: relative;" class="form-field d-flex align-items-center">
+            <input style="border: #039BE5" type="text" name="cname" id="cname" placeholder="Carousel Topic " required="">
+        </div>
+        <div style="float: center;position: relative;" class="form-field d-flex align-items-center">
+            
+            <textarea type="text" name="ctext" id="ctext" placeholder=" Short Description...." required=""></textarea>
+        </div>
+        
+        <div style="float: center;position: relative;" class="modal-body">
+            <label for="myfile">Select  Title Image</label>
+            <img id="img" src="/static/images/avater.jpg" alt="avatar" style="width: 150px;">
+              
+               <input class="form-field1 d-flex align-items-center" type="file" name="cimage" id="cimage" placeholder="Input  Title Image" required="">
+        </div>
+        
+      
+          
+       
+
+
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+       
+        <button style="width: 60%; margin-left: 20%" class="btn mt-3">সাবমিট</button>
+        <div style="float: right:" class="text-center fs-6">
+            <a href="https://israbentech.com/edit-user">ফিরে যান</a> or <a href="https://israbentech.com/active-users"> ইউজার সমূহ</a>
+        </div>
+        </form>
+    
+</div>
+                                                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </main>
+
+
+
+               
+            </div>
+        </div>
+         <footer data-v-6f04a53f="">
+                    
+                    <div class="footer-bottom">
+                        <div class="container-wrapper">
+                            <div class="row align-items-center">
+                                <div class="col-lg-3">
+                                    <p>©Copyright 2024</p>
+                                </div>
+                                <div class="col-lg-5 text-center">
+                                    <div class="d-flex align-items-center justify-content-start">
+                                        <p>We Accept</p>
+                                        <ul class="nav">
+                                            <li><img alt="img1" data-src="https://basis.org.bd/public/images/icon/bkash.svg" src="https://basis.org.bd/public/images/icon/mastercard.svg" lazy="loaded"></li>
+                                            <li><img alt="img2" data-src="https://basis.org.bd/public/images/icon/amex.svg" src="https://basis.org.bd/public/images/icon/amex.svg" lazy="loaded"></li>
+                                            <li><img alt="img3" data-src="https://basis.org.bd/public/images/icon/visa.svg" src="https://basis.org.bd/public/images/icon/visa.svg" lazy="loaded"></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <p>
+                                        Contributed by :
+                                        <strong><a href="http://israbentech.com/" target="_blank"><img alt="Tarique Sumon" data-src="/images/sumon.jpg" src="/images/sumon.jpg" lazy="loaded"> Tarique Sumon
+                                            </a></strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!----> <a href="#" class="scroll-top"><i class="fa fa-arrow-up"></i></a>
+                </footer> <!---->
+    </div>
+    <script src="https://basis.org.bd/public/js/frontend_app.js"></script>
+    <div>
+        <div class="toast-container toast-top-right"></div>
+        <div class="toast-container toast-bottom-right"></div>
+        <div class="toast-container toast-bottom-left"></div>
+        <div class="toast-container toast-top-left"></div>
+        <div class="toast-container toast-top-full-width"></div>
+        <div class="toast-container toast-bottom-full-width"></div>
+        <div class="toast-container toast-top-center"></div>
+        <div class="toast-container toast-bottom-center"></div>
+    </div>
+
+    <script>
+        // When the user scrolls down 50px from the top of the document, resize the header's font size
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                document.getElementById("header").className = "header sticky";
+                
+            } else {
+                document.getElementById("header").className = "header";
+            }
+        }
+    </script>
+    <!--  Image source set  -->
+    <script>
+        document.getElementById('image').onchange = function(evt) {
+            var tgt = evt.target || window.event.srcElement,
+                files = tgt.files;
+
+            // FileReader support
+            if (FileReader && files && files.length) {
+                var fr = new FileReader();
+                fr.onload = function() {
+                    document.getElementById('img').src = fr.result;
+                }
+                fr.readAsDataURL(files[0]);
+            }
+
+            // Not supported
+            else {
+                // fallback -- perhaps submit the input to an iframe and temporarily store
+                // them on the server until the user's session ends.
+            }
+        }
+    </script>
+    <!-----Modal set----->
+    <script>
+        $('#exampleModal').on('show', function(e) {
+            var link = e.relatedTarget(),
+                modal = $(this),
+                username = link.data("service_id"),
+                email = link.data("email");
+
+            modal.find("#email").val(email);
+            modal.find("#username").val(username);
+        });
+
+        function myFunction(x) {
+            x.className = "nav-link active router-link-active";
+        }
+
+
+
+
+       
+    <script>
+        $(document).ready(function() {
+            $('#myTable').dataTable({
+
+                dom: '<"float-left"f><"float-right"B><"float-right"l>rt<"row"<"col-sm-4"i><"col-sm-4"p>>',
+                "oLanguage": {
+
+                    "sSearch": "Quick Search:"
+
+                }
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $('#myTable1').dataTable({
+                dom: '<"float-left"f><"float-right"B><"float-right"l>rt<"row"<"col-sm-4"i><"col-sm-4"p>>',
+            });
+
+
+        });
+    </script>
+
+
+    <!--------Main NavBar Change Active----->
+
+    <script type="text/javascript">
+        function myFunctionNavbar(x) {
+            // alert(x);
+            var element = document.getElementById(x);
+            tabcontent = document.getElementsByClassName("nav-link active router-link-active");
+            //tabcontent.className="nav-link";
+            for (var i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].className = "nav-link active router-link-active";
+            }
+            element.className = "nav-link ";
+            /*var menu = document.getElementById("myDIV1");
+
+            var links = menu.getElementsByClassName("nav-link active");
+            for (var i = 0; i < links.length; i++) {
+            links[i].className="nav-link";
+            }*/
+
+            //alert(element.className);
+
+            $('#main-container').load('/navbar-content/' + x);
+        }
+    </script>
+    <!------------------Main Contain change in BCSINfo-------->
+    <script type="text/javascript">
+        function load_main_content1(x) {
+            // alert(x);
+            var element = document.getElementById(x);
+            var home = document.getElementById("home");
+            tabcontent = document.getElementsByClassName("nav-link active");
+            //tabcontent.className="nav-link";
+            for (var i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].className = "nav-link";
+            }
+            element.className = "nav-link active";
+            home.className = "nav-link active router-link-active"
+            alert(x);
+            $('#main_content_div').load('/main-content/' + x);
+        }
+    </script>
+
+
+    <!------Main content change in div----->
+    <script type="text/javascript">
+        function load_main_content(x) {
+            // alert(x);
+            var element = document.getElementById(x);
+            var home = document.getElementById("home");
+            tabcontent = document.getElementsByClassName("nav-link active");
+            //tabcontent.className="nav-link";
+            for (var i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].className = "nav-link";
+            }
+            element.className = "nav-link active";
+            home.className = "nav-link active router-link-active"
+            /*var menu = document.getElementById("myDIV1");
+
+            var links = menu.getElementsByClassName("nav-link active");
+            for (var i = 0; i < links.length; i++) {
+            links[i].className="nav-link";
+            }*/
+
+            //alert(element.className);
+
+            $('#main_content_div').load('/main-content/' + x);
+        }
+    </script>
+
+    <!-----------------Leftmenu Active status--------------->
+    <script>
+        // Add active class to the current button (highlight it)
+        var menu = document.getElementById("myDIV");
+        var btns = menu.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("btn active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+    <!---------Member list search------->
+    <script>
+        function myFunction2() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable2");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+    <!------ Text Area movement-------------->
+    <script>
+        function expandTextarea(id) {
+            document.getElementById(id).addEventListener('keyup', function() {
+                this.style.overflow = 'hidden';
+                this.style.height = 0;
+                this.style.height = this.scrollHeight + 'px';
+            }, false);
+        }
+
+        expandTextarea('newsbody');
+    </script>
+    <!--------Selection with search--------------->
+    <script>
+        /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown1 content */
+        function myFunction() {
+            document.getElementById("mydropdown1").classList.toggle("show");
+        }
+
+        function filterFunction() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById("myInput2");
+            filter = input.value.toUpperCase();
+            div = document.getElementById("mydropdown1");
+            a = div.getElementsByTagName("option");
+            for (i = 0; i < a.length; i++) {
+                txtValue = a[i].textContent || a[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    a[i].style.display = "";
+                } else {
+                    a[i].style.display = "none";
+                }
+            }
+        }
+
+        function myFunctionclick(e) {
+
+            var d = document.getElementById(e);
+            var d1 = document.getElementById('select');
+            document.getElementById("mydropdown1").classList.toggle("show");
+            d1.value = d.id;
+
+
+        }
+    </script>
+
+
+    <!--------Selection with search--------------->
+    <script>
+        /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown1 content */
+        function myFunctionSelect2() {
+
+            document.getElementById("mydropdownSelect2").classList.toggle("show");
+        }
+
+        function filterFunctionSelect2() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById("myInputSelect2");
+            filter = input.value.toUpperCase();
+            div = document.getElementById("mydropdownSelect2");
+            a = div.getElementsByTagName("option");
+            for (i = 0; i < a.length; i++) {
+                txtValue = a[i].textContent || a[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    a[i].style.display = "";
+                } else {
+                    a[i].style.display = "none";
+                }
+            }
+        }
+
+        function myFunctionclickSelect2(e) {
+
+            var d = document.getElementById(e);
+            var d1 = document.getElementById('select2');
+
+            d1.value = d.id;
+            document.getElementById("mydropdownSelect2").classList.toggle("show");
+
+        }
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function() {
+                $(this).toggleClass('open');
+            });
+        });
+
+       
+    </script>
+
+
+
+
+   {% endblock %}

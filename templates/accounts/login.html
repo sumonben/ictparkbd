@@ -1,0 +1,32 @@
+
+{% extends 'basepage/basepage.html' %}
+{% include 'components/navbarfront.html'%}           
+{% block content %} 
+ {% load static %}
+ 
+ <div class="wrapper">
+        <div class="logo1">
+            <img src="/images/ict_logo.jpg" alt="">
+        </div>
+
+                <div class="text-center mt-4 name">
+            বিসিএস(সাধারণ শিক্ষা) আইসিটি লগিন
+        </div>
+                <form class="p-3 mt-3" method="POST">
+                  {% csrf_token %}
+            <input type="hidden" name="_token" value="5LGo3Lk7bRzFZHLF5avbcxcuy0zFl6iL3zq96W40">            <div class="form-field d-flex align-items-center">
+                <span class="far fa-user"></span>
+                <input type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="100" required="" id="id_username" placeholder="ই-মেইল">
+            </div>
+            <div class="form-field d-flex align-items-center">
+                <span class="fas fa-key"></span>
+                <input type="password" name="password" autocomplete="current-password" required id="id_password" placeholder="পাসওয়ার্ড">
+            </div>
+            <button class="btn mt-3">লগ-ইন</button>
+        </form>
+        <div class="text-center fs-6">
+            <a href="https://israbentech.com/forgot-password">Forget password?</a> or <a href="https://israbentech.com/add-data">রেজিস্ট্রেশন</a>
+        </div>
+    </div>
+
+{% endblock %} 

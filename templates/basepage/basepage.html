@@ -1,0 +1,975 @@
+<html lang="" layout="frontend"><head>
+    {% load static %}
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>BCSGEICT</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+     <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://israbentech.com/css/twitterstyle.css">
+     <link rel="shortcut icon" href="/images/ict_logo.jpg">
+     <link href="{% static 'css/frontend_app.css' %}" rel="stylesheet">
+     <link rel="stylesheet" href="https://basis.org.bd/public/css/frontend/card_style.css">
+     <link rel="stylesheet" href="https://basis.org.bd/public/css/frontend/ecommerce/style.css">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+     <link rel="stylesheet" href="{% static 'css/application.css' %}">
+     
+     <!----   Navbar collapse -------------------------------------->
+     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+     <!----   Navbar collapse -------------------------------------->
+   
+   <style>
+         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+         .member-box {}
+   
+         .box {}
+   
+         .box:hover {}
+         .slider{
+             height:500px;
+             width:100%;
+             margin-top:70px;
+             position:relative;
+         }
+           .slider-caption{
+             height:500px;
+         } 
+         
+         .services {
+             position: relative;
+             overflow: hidden;
+             padding: 4rem 0;
+             background: rgba(109, 200, 190, .2);
+             background-attachment: fixed
+         }
+         
+         .btn-apply{
+             margin:20px;
+         }
+   .shape1New,
+   .shape2New{
+     width: 200px;
+     height: 200px;
+     background: #6dc8be;
+     opacity: .6;
+     position: absolute;
+     top: 0;
+     border-radius: 40px;
+     -webkit-transform: rotate(45deg);
+     transform: rotate(45deg)
+   }
+   .shape1New {
+     right: -200px;
+     top: -200px;
+   }
+   .shape2New {
+     top: -200px
+   }
+         
+         @media (max-width:992px){
+            .slider{
+             margin-top:0px;
+         } 
+         .slider .banner-anime-button {
+                 display:none;
+         }
+         }
+         @media (max-width:992px){
+            .slider-caption{
+             height:250px;
+         } 
+         }
+         #rightpan{
+             width: 250px;float:right;position: relative;background-color: transparent;
+         }
+         @media(max-width:768px) {
+            #rightpan{
+             display:none;
+         } 
+         }
+         
+   
+         @keyframes example1 {
+             0% {
+                 right: -23%;
+             }
+   
+             100% {
+                 right: 0%;
+             }
+         }
+        
+         @media (max-width:992px){
+             .card-body.ul{
+             width:300px;
+             position:relative;
+         }
+         }
+         .card-img-top {
+             animation-name: example;
+             animation-duration: 4s;
+             position: relative;
+             width: 150px;
+             height: 150px;
+             border-radius: 50%;
+             border-top-left-radius: 0;
+             border-bottom: 5px solid #6dc8be;
+             -o-object-fit: cover;
+             object-fit: cover;
+             -o-object-position: top;
+             object-position: top
+         }
+   
+         .card-img-top {
+             position: relative;
+             width: 150px;
+             height: 50px;
+             border-radius: 50%;
+             border-top-left-radius: 0;
+             border-bottom: 5px solid #6dc8be;
+             -o-object-fit: cover;
+             object-fit: cover;
+             -o-object-position: top;
+             object-position: top
+         }
+   
+         .dropbtn1 {
+             background-color: #ffffff;
+             border: none;
+             outline: none;
+             background: none;
+             font-size: 1.5rem;
+             color: #000000;
+             padding: 0px 0px 0px 0px;
+             float: right;
+         }
+   
+         .dropbtn1:hover,
+         .dropbtn1:focus {
+             background-color: #ffffff;
+         }
+   
+         #myInput2,
+         #myInputSelect2 {
+             box-sizing: border-box;
+             background-image: url('searchicon.png');
+             background-position: 14px 12px;
+             background-repeat: no-repeat;
+             font-size: 16px;
+             padding: 14px 20px 12px 5px;
+             border: none;
+             border-bottom: 1px solid #ddd;
+         }
+   
+   
+   
+         .card-members {
+             width: 1000%;
+             animation-name: example3;
+             animation-duration: 4s;
+         }
+   
+         @keyframes example3 {
+             0% {
+                 left: -23%;
+             }
+   
+             25% {
+                 left: 2%;
+             }
+         }
+   
+   
+         .leftside-menu {
+             animation-name: example;
+             animation-duration: 1s;
+         }
+   
+         @keyframes example {
+             0% {
+                 left: -23%;
+             }
+   
+             100% {
+                 left: 1%;
+             }
+         }
+   
+         #myInput2,
+         #myInputSelect2:focus {
+             outline: 0px solid #be1010;
+         }
+   
+         .dropdown1 {
+             position: relative;
+             display: inline-block;
+         }
+   
+         .dropdown1-content {
+             display: none;
+             position: absolute;
+             background-color: #f6f6f6;
+             overflow: auto;
+             border: 1px solid #ddd;
+             z-index: 1;
+         }
+   
+         .dropdown1-content option {
+             color: black;
+             padding: 12px 16px;
+             text-decoration: none;
+             display: block;
+         }
+   
+         .dropdown1 a:hover {
+             background-color: #ddd;
+         }
+   
+         .show {
+             display: block;
+         }
+   
+         .close {
+             display: inline-block;
+         }
+     </style>
+     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+        /* Reseting */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #ecf0f3;
+        }
+
+        .wrapper {
+            text-align: center;
+            max-width: 350px;
+            min-height: 500px;
+            margin: 80px auto;
+            padding: 40px 30px 30px 30px;
+            background-color: #ecf0f3;
+            border-radius: 15px;
+            box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+        }
+
+        
+        .logo1 {
+            width: 80px;
+            margin: auto;
+        }
+
+        .logo1 img {
+            width: 100%;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0px 0px 3px #5f5f5f,
+                0px 0px 0px 5px #ecf0f3,
+                8px 8px 15px #a7aaa7,
+                -8px -8px 15px #fff;
+        }
+
+        .wrapper .name {
+            font-family: SolaimanLipi;
+            font-weight: 600;
+            font-size: 1.4rem;
+            letter-spacing: 1.3px;
+            padding-left: 10px;
+            color: #555;
+        }
+
+        .wrapper .form-field input {
+            font-family: SolaimanLipi;
+            width: 100%;
+            display: block;
+            border: none;
+            outline: none;
+            background: none;
+            font-size: 1.2rem;
+            color: #666;
+            padding: 10px 15px 10px 10px;
+            /* border: 1px solid red; */
+        }
+
+        .wrapper .form-field {
+            padding-left: 10px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+        }
+
+        .wrapper .form-field .fas {
+            color: #555;
+        }
+
+        .wrapper .btn {
+            font-family: SolaimanLipi;
+            box-shadow: none;
+            width: 100%;
+            height: 40px;
+            background-color: #03A9F4;
+            color: #fff;
+            border-radius: 25px;
+            box-shadow: 3px 3px 3px #b1b1b1,
+                -3px -3px 3px #fff;
+            letter-spacing: 1.3px;
+        }
+
+        .wrapper .btn:hover {
+            background-color: #039BE5;
+        }
+
+        .wrapper a {
+            text-decoration: none;
+            font-size: 0.8rem;
+            color: #03A9F4;
+        }
+
+        .wrapper a:hover {
+            color: #039BE5;
+        }
+
+        @media(max-width: 380px) {
+            .wrapper {
+                margin: 30px 20px;
+                padding: 40px 15px 15px 15px;
+            }
+        }
+    </style>
+     <!-- Styles -->
+     <style>
+         * {
+             margin: 0;
+             padding: 0;
+             box-sizing: border-box;
+             font-family: SolaimanLipi;
+         }
+   
+         body {
+             background: #f0f6f7;
+         }
+   
+   
+   
+   
+   
+   
+         .wrapper1 {
+             width: 60%;
+             min-height: 500px;
+             font-family: SolaimanLipi;
+             padding: 20px 20px 20px 20px;
+             background-color: #ecf0f3;
+             margin: auto;
+             margin-top: 8%;
+             margin-bottom: 8%;
+             border-radius: 15px;
+             box-shadow: 13px 13px 20px #cbced1, 13px 13px 20px #fff;
+         }
+         @media(max-width:768px) {
+             .wrapper1 {
+             width: 100%;
+             min-height: 500px;
+             margin: auto;
+             margin-top: 20%;
+             margin-bottom: 8%;
+             font-family: SolaimanLipi;
+             background-color: #ecf0f3;
+             border-radius: 15px;
+             box-shadow: 13px 13px 20px #cbced1, 13px 13px 20px #fff;
+         }
+         }
+   
+         .wrapper2 {
+             animation-name: example2;
+             animation-duration: 4s;
+             margin: auto;
+             margin-top: 10px;
+             font-family: SolaimanLipi;
+             padding: 10px 10px 10px 10px;
+             background-color: #ecf0f3;
+             border-radius: 15px;
+             box-shadow: 13px 13px 20px #cbced1, 13px 13px 20px #fff;
+         }
+   
+         @keyframes example 2 {
+             0% {
+                 left: -23%;
+             }
+   
+             25% {
+                 left: 2%;
+             }
+         }
+   
+         .logo1 .fa-camera {
+             position: absolute;
+             bottom: 65%;
+             left: 60%;
+         }
+   
+   
+         .logo1 {
+             
+             margin-top: 5px;
+             
+             width: 150px;
+             height: auto;
+             margin: auto;
+         }
+   
+         .logo1 img {
+            
+             width: 100%;
+             height: 150px;
+             object-fit: cover;
+   
+             border-radius: 50%;
+             box-shadow: 0px 0px 3px #974242,
+                 0px 0px 0px 5px #542805,
+                 8px 8px 15px #a7aaa7,
+                 -8px -8px 15px #420404;
+   
+         }
+   
+   
+         .logo2 .fa-camera {
+             position: absolute;
+             bottom: 55%;
+             left: 60%;
+         }
+   
+   
+         .logo2 {
+             width: 150px;
+             height: auto;
+             margin: auto;
+         }
+   
+         .logo2 img {
+             width: 100%;
+             height: 150px;
+             object-fit: cover;
+   
+             border-radius: 50%;
+             box-shadow: 0px 0px 3px #974242,
+                 0px 0px 0px 5px #542805,
+                 8px 8px 15px #a7aaa7,
+                 -8px -8px 15px #420404;
+   
+         }
+   
+   
+   
+         .wrapper1 .name {
+             font-family: SolaimanLipi;
+             font-weight: 600;
+             text-align: center;
+             font-size: 1.4rem;
+             letter-spacing: 1.3px;
+             padding-left: 10px;
+             color: #555;
+         }
+   
+         .wrapper1 .form-field textarea {
+             font-family: SolaimanLipi;
+             width: 100%;
+             min-height: 80px;
+             display: block;
+             border: none;
+             outline: none;
+             background: none;
+             font-size: 1.2rem;
+             color: #666;
+             padding: 10px 15px 10px 10px;
+             /* border: 1px solid red; */
+         }
+   
+   
+         .wrapper1 .form-field input {
+             font-family: SolaimanLipi;
+             width: 100%;
+             display: block;
+             border: none;
+             outline: none;
+             background: none;
+             font-size: 1.5rem;
+             color: #0b0a0a;
+             padding: 10px 15px 10px 10px;
+             /* border: 1px solid red; */
+         }
+         .wrapper1 .form-field3 input {
+             font-family: SolaimanLipi;
+             width: 100%;
+             display: block;
+             border: none;
+             outline: none;
+             background: none;
+             font-size: 1.5rem;
+             color: #0b0a0a;
+             padding: 10px 15px 10px 10px;
+             /* border: 1px solid red; */
+         }
+         
+         @media{
+             
+         }
+   
+         .wrapper2 .form-field2 {
+             float: left;
+             width: 300px;
+             height: 350px;
+             padding-left: 10px;
+             margin-right: 20px;
+             margin-bottom: 20px;
+             border-radius: 20px;
+             box-shadow: inset -8px -8px 8px #cbced1, inset 8px 8px 8px #fff;
+         }
+   
+         .wrapper1 .form-field1 {
+            width: 35%;
+             padding-left: 10px;
+             margin-bottom: 20px;
+             border-radius: 20px;
+             box-shadow: inset -8px -8px 8px #cbced1, inset 8px 8px 8px #fff;
+         }
+   
+         .wrapper1 .form-field {
+             width: 49%;
+             padding-left: 10px;
+             margin-bottom: 20px;
+             border-radius: 20px;
+             box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+         }
+         .wrapper1 .form-field3 {
+             width: 100%;
+             padding-left: 10px;
+             margin-bottom: 20px;
+             border-radius: 20px;
+             box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+         }
+         .wrapper1 .form-field4 {
+            width: 100%;
+             padding-left: 10px;
+             margin-bottom: 20px;
+             border-radius: 20px;
+             box-shadow: inset -8px -8px 8px #cbced1, inset 8px 8px 8px #fff;
+         }
+         
+   
+         @media(max-width:768px){
+   
+             .wrapper1 .form-field1 {
+                 width: 100%;
+                 display: block;
+             }
+   
+             .wrapper2 .form-field2 {
+                 width: 100%;
+                 display: block;
+             }
+             
+   
+             .wrapper1 .form-field {
+               
+                 width: 100%;
+                 display: block
+             }
+   
+         }
+   
+   
+   
+         /*................................................................Data Table property*/
+         div.dataTables_length select {
+             margin-top: 3%;
+             width: 100px;
+             height: 30px;
+             text-align: center;
+             border-radius: 20px;
+             box-shadow: inset -8px -8px 8px #cbced1, inset 8px 8px 8px #fff;
+   
+         }
+   
+   
+   
+         .dataTables_filter input {
+             background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIiAgIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIgICB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgICB2ZXJzaW9uPSIxLjEiICAgaWQ9InN2ZzQ0ODUiICAgdmlld0JveD0iMCAwIDIxLjk5OTk5OSAyMS45OTk5OTkiICAgaGVpZ2h0PSIyMiIgICB3aWR0aD0iMjIiPiAgPGRlZnMgICAgIGlkPSJkZWZzNDQ4NyIgLz4gIDxtZXRhZGF0YSAgICAgaWQ9Im1ldGFkYXRhNDQ5MCI+ICAgIDxyZGY6UkRGPiAgICAgIDxjYzpXb3JrICAgICAgICAgcmRmOmFib3V0PSIiPiAgICAgICAgPGRjOmZvcm1hdD5pbWFnZS9zdmcreG1sPC9kYzpmb3JtYXQ+ICAgICAgICA8ZGM6dHlwZSAgICAgICAgICAgcmRmOnJlc291cmNlPSJodHRwOi8vcHVybC5vcmcvZGMvZGNtaXR5cGUvU3RpbGxJbWFnZSIgLz4gICAgICAgIDxkYzp0aXRsZT48L2RjOnRpdGxlPiAgICAgIDwvY2M6V29yaz4gICAgPC9yZGY6UkRGPiAgPC9tZXRhZGF0YT4gIDxnICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLC0xMDMwLjM2MjIpIiAgICAgaWQ9ImxheWVyMSI+ICAgIDxnICAgICAgIHN0eWxlPSJvcGFjaXR5OjAuNSIgICAgICAgaWQ9ImcxNyIgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNjAuNCw4NjYuMjQxMzQpIj4gICAgICA8cGF0aCAgICAgICAgIGlkPSJwYXRoMTkiICAgICAgICAgZD0ibSAtNTAuNSwxNzkuMSBjIC0yLjcsMCAtNC45LC0yLjIgLTQuOSwtNC45IDAsLTIuNyAyLjIsLTQuOSA0LjksLTQuOSAyLjcsMCA0LjksMi4yIDQuOSw0LjkgMCwyLjcgLTIuMiw0LjkgLTQuOSw0LjkgeiBtIDAsLTguOCBjIC0yLjIsMCAtMy45LDEuNyAtMy45LDMuOSAwLDIuMiAxLjcsMy45IDMuOSwzLjkgMi4yLDAgMy45LC0xLjcgMy45LC0zLjkgMCwtMi4yIC0xLjcsLTMuOSAtMy45LC0zLjkgeiIgICAgICAgICBjbGFzcz0ic3Q0IiAvPiAgICAgIDxyZWN0ICAgICAgICAgaWQ9InJlY3QyMSIgICAgICAgICBoZWlnaHQ9IjUiICAgICAgICAgd2lkdGg9IjAuODk5OTk5OTgiICAgICAgICAgY2xhc3M9InN0NCIgICAgICAgICB0cmFuc2Zvcm09Im1hdHJpeCgwLjY5NjQsLTAuNzE3NiwwLjcxNzYsMC42OTY0LC0xNDIuMzkzOCwyMS41MDE1KSIgICAgICAgICB5PSIxNzYuNjAwMDEiICAgICAgICAgeD0iLTQ2LjIwMDAwMSIgLz4gICAgPC9nPiAgPC9nPjwvc3ZnPg==);
+             background-repeat: no-repeat;
+             background-color: #fff;
+             background-position: 5px 10px !important;
+             width: 500px;
+             padding: 1rem;
+             padding-left: 10px;
+             margin-bottom: 20px;
+             border-radius: 20px;
+             font-size: 20px;
+             box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+         }
+   
+         .dataTables_filter input:hover {
+             background-image: url();
+             background-repeat: no-repeat;
+             background-color: #fff;
+             background-position: 5px 10px !important;
+             width: 500px;
+             padding: 1rem;
+             padding-left: 10px;
+             margin-bottom: 20px;
+             border-radius: 20px;
+             font-size: 20px;
+             box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+         }
+   
+         /*......................................................................Data Table property*/
+   
+   
+         .wrapper1 .form-field .fas {
+             color: #555;
+         }
+   
+         .wrapper1 .btn {
+             box-shadow: none;
+             max-width: 150px;
+             height: 40px;
+             background-color: #03A9F4;
+             color: #fff;
+             border-radius: 25px;
+             box-shadow: 3px 3px 3px #b1b1b1,
+                 -3px -3px 3px #fff;
+             letter-spacing: 1.3px;
+         }
+   
+         .wrapper1 .btn:hover {
+             background-color: #039BE5;
+         }
+   
+         .wrapper1 a {
+             text-decoration: none;
+             font-size: 0.8rem;
+             color: #03A9F4;
+         }
+   
+         .wrapper1 a:hover {
+             color: #039BE5;
+         }
+   
+   
+         @media(max-width: 380px) {
+             .wrapper1 {
+               
+             }
+         }
+   
+         .circle {
+             height: 50px;
+             width: 50px;
+             background-color: #555;
+             border-radius: 50%;
+             opacity: .05;
+         }
+     </style>
+   </head>
+   
+   <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+     <div id="app">
+         <div id="allpage">
+             <div data-v-6f04a53f="" id="app"><!---->
+                 {% include 'components/navbarfront.html'%}           
+                 {% block content %} {% endblock %}
+   
+   
+                            
+                 
+                                                         
+                </div></div></div>                                                 
+     <script>
+         // When the user scrolls down 50px from the top of the document, resize the header's font size
+         window.onscroll = function() {
+             scrollFunction()
+         };
+   
+         function scrollFunction() {
+             if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                 document.getElementById("header").className = "header sticky";
+                 
+             } else {
+                 document.getElementById("header").className = "header";
+             }
+         }
+     </script>
+     <!--  Image source set  -->
+     <script>
+         document.getElementById('image').onchange = function(evt) {
+             var tgt = evt.target || window.event.srcElement,
+                 files = tgt.files;
+   
+             // FileReader support
+             if (FileReader && files && files.length) {
+                 var fr = new FileReader();
+                 fr.onload = function() {
+                     document.getElementById('img').src = fr.result;
+                 }
+                 fr.readAsDataURL(files[0]);
+             }
+   
+             // Not supported
+             else {
+                 // fallback -- perhaps submit the input to an iframe and temporarily store
+                 // them on the server until the user's session ends.
+             }
+         }
+     </script>
+     <!-----Modal set----->
+     <script>
+         $('#exampleModal').on('show', function(e) {
+             var link = e.relatedTarget(),
+                 modal = $(this),
+                 username = link.data("service_id"),
+                 email = link.data("email");
+   
+             modal.find("#email").val(email);
+             modal.find("#username").val(username);
+         });
+   
+         function myFunction(x) {
+             x.className = "nav-link active router-link-active";
+         }
+   
+   
+   
+   
+        
+     <script>
+         $(document).ready(function() {
+             $('#myTable').dataTable({
+   
+                 dom: '<"float-left"f><"float-right"B><"float-right"l>rt<"row"<"col-sm-4"i><"col-sm-4"p>>',
+                 "oLanguage": {
+   
+                     "sSearch": "Quick Search:"
+   
+                 }
+             });
+         });
+     </script>
+   
+     <script>
+         $(document).ready(function() {
+             $('#myTable1').dataTable({
+                 dom: '<"float-left"f><"float-right"B><"float-right"l>rt<"row"<"col-sm-4"i><"col-sm-4"p>>',
+             });
+   
+   
+         });
+     </script>
+   
+   
+     <!--------Main NavBar Change Active----->
+   
+     <script type="text/javascript">
+         function myFunctionNavbar(x) {
+             // alert(x);
+             var element = document.getElementById(x);
+             tabcontent = document.getElementsByClassName("nav-link active router-link-active");
+             //tabcontent.className="nav-link";
+             for (var i = 0; i < tabcontent.length; i++) {
+                 tabcontent[i].className = "nav-link active router-link-active";
+             }
+             element.className = "nav-link ";
+             /*var menu = document.getElementById("myDIV1");
+   
+             var links = menu.getElementsByClassName("nav-link active");
+             for (var i = 0; i < links.length; i++) {
+             links[i].className="nav-link";
+             }*/
+   
+             //alert(element.className);
+   
+             $('#main-container').load('/navbar-content/' + x);
+         }
+     </script>
+     <!------------------Main Contain change in BCSINfo-------->
+     <script type="text/javascript">
+         function load_main_content1(x) {
+             // alert(x);
+             var element = document.getElementById(x);
+             var home = document.getElementById("home");
+             tabcontent = document.getElementsByClassName("nav-link active");
+             //tabcontent.className="nav-link";
+             for (var i = 0; i < tabcontent.length; i++) {
+                 tabcontent[i].className = "nav-link";
+             }
+             element.className = "nav-link active";
+             home.className = "nav-link active router-link-active"
+             alert(x);
+             $('#main_content_div').load('/main-content/' + x);
+         }
+     </script>
+   
+   
+     <!------Main content change in div----->
+     <script type="text/javascript">
+         function load_main_content(x) {
+             // alert(x);
+             var element = document.getElementById(x);
+             var home = document.getElementById("home");
+             tabcontent = document.getElementsByClassName("nav-link active");
+             //tabcontent.className="nav-link";
+             for (var i = 0; i < tabcontent.length; i++) {
+                 tabcontent[i].className = "nav-link";
+             }
+             element.className = "nav-link active";
+             home.className = "nav-link active router-link-active"
+             /*var menu = document.getElementById("myDIV1");
+   
+             var links = menu.getElementsByClassName("nav-link active");
+             for (var i = 0; i < links.length; i++) {
+             links[i].className="nav-link";
+             }*/
+   
+             //alert(element.className);
+   
+             $('#main_content_div').load('/main-content/' + x);
+         }
+     </script>
+   
+     <!-----------------Leftmenu Active status--------------->
+     <script>
+         // Add active class to the current button (highlight it)
+         var menu = document.getElementById("myDIV");
+         var btns = menu.getElementsByClassName("btn");
+         for (var i = 0; i < btns.length; i++) {
+             btns[i].addEventListener("click", function() {
+                 var current = document.getElementsByClassName("btn active");
+                 current[0].className = current[0].className.replace(" active", "");
+                 this.className += " active";
+             });
+         }
+     </script>
+     <!---------Member list search------->
+     <script>
+         function myFunction2() {
+             var input, filter, table, tr, td, i, txtValue;
+             input = document.getElementById("myInput");
+             filter = input.value.toUpperCase();
+             table = document.getElementById("myTable2");
+             tr = table.getElementsByTagName("tr");
+             for (i = 0; i < tr.length; i++) {
+                 td = tr[i].getElementsByTagName("td")[0];
+                 if (td) {
+                     txtValue = td.textContent || td.innerText;
+                     if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                         tr[i].style.display = "";
+                     } else {
+                         tr[i].style.display = "none";
+                     }
+                 }
+             }
+         }
+     </script>
+     <!------ Text Area movement-------------->
+     <script>
+         function expandTextarea(id) {
+             document.getElementById(id).addEventListener('keyup', function() {
+                 this.style.overflow = 'hidden';
+                 this.style.height = 0;
+                 this.style.height = this.scrollHeight + 'px';
+             }, false);
+         }
+   
+         expandTextarea('newsbody');
+     </script>
+     <!--------Selection with search--------------->
+     <script>
+         /* When the user clicks on the button,
+     toggle between hiding and showing the dropdown1 content */
+         function myFunction() {
+             document.getElementById("mydropdown1").classList.toggle("show");
+         }
+   
+         function filterFunction() {
+             var input, filter, ul, li, a, i;
+             input = document.getElementById("myInput2");
+             filter = input.value.toUpperCase();
+             div = document.getElementById("mydropdown1");
+             a = div.getElementsByTagName("option");
+             for (i = 0; i < a.length; i++) {
+                 txtValue = a[i].textContent || a[i].innerText;
+                 if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                     a[i].style.display = "";
+                 } else {
+                     a[i].style.display = "none";
+                 }
+             }
+         }
+   
+         function myFunctionclick(e) {
+   
+             var d = document.getElementById(e);
+             var d1 = document.getElementById('select');
+             document.getElementById("mydropdown1").classList.toggle("show");
+             d1.value = d.id;
+   
+   
+         }
+     </script>
+   
+   
+     <!--------Selection with search--------------->
+     <script>
+         /* When the user clicks on the button,
+     toggle between hiding and showing the dropdown1 content */
+         function myFunctionSelect2() {
+   
+             document.getElementById("mydropdownSelect2").classList.toggle("show");
+         }
+   
+         function filterFunctionSelect2() {
+             var input, filter, ul, li, a, i;
+             input = document.getElementById("myInputSelect2");
+             filter = input.value.toUpperCase();
+             div = document.getElementById("mydropdownSelect2");
+             a = div.getElementsByTagName("option");
+             for (i = 0; i < a.length; i++) {
+                 txtValue = a[i].textContent || a[i].innerText;
+                 if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                     a[i].style.display = "";
+                 } else {
+                     a[i].style.display = "none";
+                 }
+             }
+         }
+   
+         function myFunctionclickSelect2(e) {
+   
+             var d = document.getElementById(e);
+             var d1 = document.getElementById('select2');
+   
+             d1.value = d.id;
+             document.getElementById("mydropdownSelect2").classList.toggle("show");
+   
+         }
+     </script>
+     <script>
+         $(document).ready(function() {
+             $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function() {
+                 $(this).toggleClass('open');
+             });
+         });
+   
+        
+     </script>
+   
+   
+   
+   
+   </body></html>
