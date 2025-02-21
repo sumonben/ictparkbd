@@ -1,0 +1,178 @@
+
+
+{% extends 'basepage/user_layout.html' %}
+{% block content %} 
+{% if 'accountmembership' in request.resolver_match.url_name  %}
+{% include 'components/navbarhome.html'%}
+{%else %} 
+{% include 'components/navbarfront.html'%}
+{%endif %}
+ {% load static %}
+         <!----------------Page Banner (header)---------------------------->
+    {% include 'components/pagebanner.html' %}
+
+
+
+    <div class="content-body py-4">
+       <div class="container-wrapper">
+           <div class="row">
+   
+   
+               <!----------------leftmenu---------------------------->
+               <div class="col-lg-3">
+   
+                   <div class="sidebar-menu vue-affix affix-top" style="">
+                       <div class="sidebar-menu vue-affix affix-top" style="">
+                           {% include 'components/leftmenu.html' %}
+                         
+                          
+                     
+                           <!---->
+                       </div>
+                   </div>
+               </div>
+   
+   
+   
+               <div class="col-lg-9"><!---->
+                   <div data-v-3171110e="" id="example-content">
+   
+                       <div  style="background-color: transparent" id="main_content_div">
+                           <!---->
+                               <div data-v-3171110e="" class="row justify-content-center">
+                                   <div data-v-3171110e="" class="col-lg-7">
+                                       <div data-v-3171110e="" class="member-search">
+                                           <div data-v-3171110e="" class="search-body">
+                                               <h1 data-v-3171110e="">Search Member</h1>
+                                               <div data-v-3171110e="" class="searchBox"><input data-v-3171110e="" type="text"
+                                                       placeholder="Search by any information" id="myInput" onkeyup="myFunction2()"> <span
+                                                        class="fas fa-search"></span></div>
+                       
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                       
+                       
+                       
+                               <div data-v-3171110e="" class="row py-3">
+                                   <div data-v-3171110e="" class="col-lg-12">
+                                       <div data-v-3171110e="" class="card card-body shadow-sm">
+                                           <!----- Link Item------------->
+                                           
+                                           <!-----
+                                           <input type="text" id="myInput" onkeyup="myFunction2()" placeholder="Search for names.."
+                                               title="Type in a name">---->
+                       
+                                           <table  style="background-color: transparent" id="myTable2">
+                                              
+                                               {% for user in  users%}
+                                                   <tr  style="background-color: transparent" >
+                                                       <td>
+                                                           <div  style="background-color: transparent"  data-v-3171110e="" class="search-list-item row mb-3">
+                       
+                                                               <div  style="background-color: transparent"  data-v-3171110e="" class="col-lg-2 align-self-center text-center">
+                                                                   <img
+                                                                       data-v-3171110e="" alt=""
+                                                                       data-src="https://basis.org.bd/public/images/logo/88416f37e13872f50043c7cf9e1b82af.jpg"
+                                                                       
+                                                                       src="{%if user.image%}{{user.image.url}}{% else %} {% static 'images/avatar.jpg' %}  {% endif %}"
+                                                                        lazy="loaded">
+                       
+                       
+                       
+                       
+                       
+                                                               </div>
+                                                               <div  style="background-color: transparent"  data-v-3171110e="" class="col-lg-2 text-center border-right pl-0 pr-0">
+                       
+                                                                   <h1 data-v-3171110e="">{{ user.name }}</h1>
+                                                                   <h5 data-v-3171110e="">
+                                                                       {{ user.email }}
+                                                                   </h5> <a data-v-3171110e="" href="javascript:void(0);"
+                                                                       onclick="alert('Sorry!! profile has not uploaded yet')"
+                                                                       class="btn-custom">[PDF
+                                                                       Profile]</a>
+                       
+                       
+                                                               </div>
+                       
+                                                               <div  style="background-color: transparent" data-v-3171110e="" class="col-lg-6">
+                                                                   <h4 data-v-3171110e=""><a data-v-3171110e=""
+                                                                           href="/company-profile/03-09-017" class=""
+                                                                           target="_blank">{{ user.name }}</a></h4> <small
+                                                                       data-v-3171110e="">{{ user.name }}</small>
+                                                                   <p data-v-3171110e="">
+                                                                       {{ user.phone }}<br>
+                                                                       {{ user.session }}<br>
+                                                                       {{ user.group }}<br>
+                                                                       {{ user.college }}
+                       
+                                                                   </p>
+                                                               </div>
+                                                               <div  style="background-color: transparent"  data-v-3171110e="" class="col-lg-2 align-self-center text-center"><a
+                                                                       data-v-3171110e="" href="/company-profile/03-09-017"
+                                                                       class="btn btn-sm btn-outline-explore" target="_blank">More
+                                                                       Details</a></div>
+                       
+                       
+                                                           </div>
+                                                       </td>
+                                                       </td>
+                       
+                       
+                                                   </tr>
+                                               {% endfor %}
+                       
+                                           </table>
+                                         
+                                             
+                                          
+                                         
+                             
+                       
+                                           <!----- Link Item------------->
+                       
+                                       
+                                       </div>
+                                       <!---->
+                                   </div>
+                               </div>
+                               <div data-v-3171110e="" class="row py-3 px-4 mx-0">
+                                   <div class="col-sm-12 col-md-5 px-0">
+                                       <div role="status" aria-live="polite">Showing 1 to 15 of 2432 entries</div>
+                                   </div>
+                                   <div class="col-sm-12 col-md-7 p-0">
+                                       <nav aria-label="Page navigation example">
+                                           {% if users.has_other_pages %}
+                                           <ul class="pagination">
+                                             {% if users.has_previous %}
+                                               <li><a href="?page={{ users.previous_page_number }}">&laquo;</a></li>
+                                             {% else %}
+                                               <li class="disabled"><span>&laquo;</span></li>
+                                             {% endif %}
+                                             {% for i in users.paginator.page_range %}
+                                               {% if users.number == i %}
+                                                 <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+                                               {% else %}
+                                                 <li><a href="?page={{ i }}">{{ i }}</a></li>
+                                               {% endif %}
+                                             {% endfor %}
+                                             {% if users.has_next %}
+                                               <li><a href="?page={{ users.next_page_number }}">&raquo;</a></li>
+                                             {% else %}
+                                               <li class="disabled"><span>&raquo;</span></li>
+                                             {% endif %}
+                                           </ul>
+                                         {% endif %}
+                                   </nav>
+                                   </div>
+                               </div>
+                           </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+   </div>
+{% endblock%}

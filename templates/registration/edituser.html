@@ -1,0 +1,487 @@
+
+{% extends 'basepage/user_layout.html' %}
+{% include 'components/navbarhome.html'%}           
+{% block content %} 
+ {% load static %}
+
+
+<form enctype="multipart/form-data" method="post" id="customuser_form" novalidate="">
+    <input type="hidden" name="csrfmiddlewaretoken" value="XL9wQmxNQOTQRsd7XlKGQHYrYw4fJbjN7uuAUSC3WiKa1SiDqfwZJjaS736gTT8C">
+    <div>
+    
+    
+    
+    
+    
+    
+    
+      <fieldset class="module aligned ">
+        
+        
+        
+            <div class="form-row field-password">
+                
+                
+                    <div>
+                        
+                            <div class="flex-container">
+                                
+                                    <label class="required" for="id_password">Password:</label>
+                                    
+                                        <input type="text" name="password" value="pbkdf2_sha256$720000$LvgPzI6Oq1miEV9Pnx3jBK$lNC3pQb9x5tsdZ6M2FhO61g/XMsSWZvkZRZh8MPc6wU=" class="vTextField" maxlength="128" required="" id="id_password">
+                                    
+                                
+                            </div>
+                        
+                    </div>
+                
+                
+            </div>
+        
+            <div class="form-row field-last_login">
+                
+                
+                    <div>
+                        
+                            <div class="flex-container">
+                                
+                                    <label>Last login:</label>
+                                    
+                                        <p class="datetime">
+      Date: <input type="text" name="last_login_0" class="vDateField" size="10" id="id_last_login_0"><span class="datetimeshortcuts">&nbsp;<a href="#">Today</a>&nbsp;|&nbsp;<a href="#" id="calendarlink0"><span class="date-icon" title="Choose a Date"></span></a></span>
+    
+    <br>
+      Time: <input type="text" name="last_login_1" class="vTimeField" size="8" id="id_last_login_1"><span class="datetimeshortcuts">&nbsp;<a href="#">Now</a>&nbsp;|&nbsp;<a href="#" id="clocklink0"><span class="clock-icon" title="Choose a Time"></span></a></span>
+    
+    
+    <div class="help timezonewarning">Note: You are 6 hours ahead of server time.</div></p>
+                                    
+                                
+                            </div>
+                        
+                    </div>
+                
+                
+            </div>
+        
+            <div class="form-row field-is_superuser">
+                
+                
+                    <div>
+                        
+                            <div class="flex-container checkbox-row">
+                                
+                                    <input type="checkbox" name="is_superuser" aria-describedby="id_is_superuser_helptext" id="id_is_superuser"><label class="vCheckboxLabel" for="id_is_superuser">Superuser status</label>
+                                
+                            </div>
+                        
+                            <div class="help" id="id_is_superuser_helptext">
+                                <div>Designates that this user has all permissions without explicitly assigning them.</div>
+                            </div>
+                        
+                    </div>
+                
+                
+            </div>
+        
+            <div class="form-row field-groups">
+                
+                
+                    <div>
+                        
+                            <div class="flex-container">
+                                
+                                    <label for="id_groups">Groups:</label>
+                                    
+                                        <div class="related-widget-wrapper" data-model-ref="group">
+        <select name="groups" aria-describedby="id_groups_helptext" id="id_groups" multiple="">
+    </select>
+        
+            <a class="related-widget-wrapper-link add-related" id="add_id_groups" data-popup="yes" href="/admin/auth/group/add/?_to_field=id&amp;_popup=1" title="Add another group"><img src="/static/admin/img/icon-addlink.svg" alt="" width="20" height="20"></a>
+        
+    </div>
+                                    
+                                
+                            </div>
+                        
+                            <div class="help" id="id_groups_helptext">
+                                <div>The groups this user belongs to. A user will get all permissions granted to each of their groups. Hold down “Control”, or “Command” on a Mac, to select more than one.</div>
+                            </div>
+                        
+                    </div>
+                
+                
+            </div>
+        
+            <div class="form-row field-user_permissions">
+                
+                
+                    <div>
+                        
+                            <div class="flex-container">
+                                
+                                    <label for="id_user_permissions">User permissions:</label>
+                                    
+                                        <div class="related-widget-wrapper" data-model-ref="permission">
+        <select name="user_permissions" aria-describedby="id_user_permissions_helptext" id="id_user_permissions" multiple="">
+      <option value="25">Accounts | user | Can add user</option>
+    
+      <option value="26">Accounts | user | Can change user</option>
+    
+      <option value="27">Accounts | user | Can delete user</option>
+    
+      <option value="28">Accounts | user | Can view user</option>
+    
+      <option value="1">Administration | log entry | Can add log entry</option>
+    
+      <option value="2">Administration | log entry | Can change log entry</option>
+    
+      <option value="3">Administration | log entry | Can delete log entry</option>
+    
+      <option value="4">Administration | log entry | Can view log entry</option>
+    
+      <option value="9">Authentication and Authorization | group | Can add group</option>
+    
+      <option value="10">Authentication and Authorization | group | Can change group</option>
+    
+      <option value="11">Authentication and Authorization | group | Can delete group</option>
+    
+      <option value="12">Authentication and Authorization | group | Can view group</option>
+    
+      <option value="5">Authentication and Authorization | permission | Can add permission</option>
+    
+      <option value="6">Authentication and Authorization | permission | Can change permission</option>
+    
+      <option value="7">Authentication and Authorization | permission | Can delete permission</option>
+    
+      <option value="8">Authentication and Authorization | permission | Can view permission</option>
+    
+      <option value="13">Content Types | content type | Can add content type</option>
+    
+      <option value="14">Content Types | content type | Can change content type</option>
+    
+      <option value="15">Content Types | content type | Can delete content type</option>
+    
+      <option value="16">Content Types | content type | Can view content type</option>
+    
+      <option value="21">Frontpage | carosel | Can add carosel</option>
+    
+      <option value="22">Frontpage | carosel | Can change carosel</option>
+    
+      <option value="23">Frontpage | carosel | Can delete carosel</option>
+    
+      <option value="24">Frontpage | carosel | Can view carosel</option>
+    
+      <option value="17">Sessions | session | Can add session</option>
+    
+      <option value="18">Sessions | session | Can change session</option>
+    
+      <option value="19">Sessions | session | Can delete session</option>
+    
+      <option value="20">Sessions | session | Can view session</option>
+    
+    </select>
+        
+            
+        
+    </div>
+                                    
+                                
+                            </div>
+                        
+                            <div class="help" id="id_user_permissions_helptext">
+                                <div>Specific permissions for this user. Hold down “Control”, or “Command” on a Mac, to select more than one.</div>
+                            </div>
+                        
+                    </div>
+                
+                
+            </div>
+        
+            <div class="form-row field-is_staff">
+                
+                
+                    <div>
+                        
+                            <div class="flex-container checkbox-row">
+                                
+                                    <input type="checkbox" name="is_staff" aria-describedby="id_is_staff_helptext" id="id_is_staff"><label class="vCheckboxLabel" for="id_is_staff">Staff status</label>
+                                
+                            </div>
+                        
+                            <div class="help" id="id_is_staff_helptext">
+                                <div>Designates whether the user can log into this admin site.</div>
+                            </div>
+                        
+                    </div>
+                
+                
+            </div>
+        
+            <div class="form-row field-is_active">
+                
+                
+                    <div>
+                        
+                            <div class="flex-container checkbox-row">
+                                
+                                    <input type="checkbox" name="is_active" aria-describedby="id_is_active_helptext" id="id_is_active"><label class="vCheckboxLabel" for="id_is_active">Active</label>
+                                
+                            </div>
+                        
+                            <div class="help" id="id_is_active_helptext">
+                                <div>Designates whether this user should be treated as active. Unselect this instead of deleting accounts.</div>
+                            </div>
+                        
+                    </div>
+                
+                
+            </div>
+        
+            <div class="form-row field-date_joined">
+                
+                
+                    <div>
+                        
+                            <div class="flex-container">
+                                
+                                    <label class="required">Date joined:</label>
+                                    
+                                        <p class="datetime">
+      Date: <input type="text" name="date_joined_0" value="2024-03-15" class="vDateField" size="10" required="" id="id_date_joined_0"><span class="datetimeshortcuts">&nbsp;<a href="#">Today</a>&nbsp;|&nbsp;<a href="#" id="calendarlink1"><span class="date-icon" title="Choose a Date"></span></a></span>
+    
+    <br>
+      Time: <input type="text" name="date_joined_1" value="08:27:08" class="vTimeField" size="8" required="" id="id_date_joined_1"><span class="datetimeshortcuts">&nbsp;<a href="#">Now</a>&nbsp;|&nbsp;<a href="#" id="clocklink1"><span class="clock-icon" title="Choose a Time"></span></a></span>
+    
+    
+    <div class="help timezonewarning">Note: You are 6 hours ahead of server time.</div></p><input type="hidden" name="initial-date_joined_0" value="2024-03-15" id="initial-id_date_joined_0"><input type="hidden" name="initial-date_joined_1" value="08:27:08" id="initial-id_date_joined_1">
+                                    
+                                
+                            </div>
+                        
+                    </div>
+                
+                
+            </div>
+        
+            <div class="form-row field-email">
+                
+                
+                    <div>
+                        
+                            <div class="flex-container">
+                                
+                                    <label class="required" for="id_email">Email:</label>
+                                    
+                                        <input type="email" name="email" value="sumonbfcsedu@gmail.com" class="vTextField" maxlength="100" required="" id="id_email">
+                                    
+                                
+                            </div>
+                        
+                    </div>
+                
+                
+            </div>
+        
+            <div class="form-row field-name">
+                
+                
+                    <div>
+                        
+                            <div class="flex-container">
+                                
+                                    <label class="required" for="id_name">Name:</label>
+                                    
+                                        <input type="text" name="name" value="Md. Tariqul Islam" class="vTextField" maxlength="100" required="" id="id_name">
+                                    
+                                
+                            </div>
+                        
+                    </div>
+                
+                
+            </div>
+        
+            <div class="form-row field-phone">
+                
+                
+                    <div>
+                        
+                            <div class="flex-container">
+                                
+                                    <label class="required" for="id_phone">Phone:</label>
+                                    
+                                        <input type="text" name="phone" value="0171235669569" class="vTextField" maxlength="20" required="" id="id_phone">
+                                    
+                                
+                            </div>
+                        
+                    </div>
+                
+                
+            </div>
+        
+            <div class="form-row field-roll">
+                
+                
+                    <div>
+                        
+                            <div class="flex-container">
+                                
+                                    <label class="required" for="id_roll">Roll:</label>
+                                    
+                                        <input type="text" name="roll" class="vTextField" maxlength="100" required="" id="id_roll">
+                                    
+                                
+                            </div>
+                        
+                    </div>
+                
+                
+            </div>
+        
+            <div class="form-row field-session">
+                
+                
+                    <div>
+                        
+                            <div class="flex-container">
+                                
+                                    <label class="required" for="id_session">Session:</label>
+                                    
+                                        <input type="text" name="session" value="2022-23" class="vTextField" maxlength="100" required="" id="id_session">
+                                    
+                                
+                            </div>
+                        
+                    </div>
+                
+                
+            </div>
+        
+            <div class="form-row field-group">
+                
+                
+                    <div>
+                        
+                            <div class="flex-container">
+                                
+                                    <label class="required" for="id_group">Group:</label>
+                                    
+                                        <input type="text" name="group" value="বিজ্ঞান" class="vTextField" maxlength="100" required="" id="id_group">
+                                    
+                                
+                            </div>
+                        
+                    </div>
+                
+                
+            </div>
+        
+            <div class="form-row field-college">
+                
+                
+                    <div>
+                        
+                            <div class="flex-container">
+                                
+                                    <label class="required" for="id_college">College:</label>
+                                    
+                                        <input type="text" name="college" class="vTextField" maxlength="100" required="" id="id_college">
+                                    
+                                
+                            </div>
+                        
+                    </div>
+                
+                
+            </div>
+        
+            <div class="form-row field-image">
+                
+                
+                    <div>
+                        
+                            <div class="flex-container">
+                                
+                                    <label for="id_image">Image:</label>
+                                    
+                                        <input type="file" name="image" accept="image/*" id="id_image">
+                                    
+                                
+                            </div>
+                        
+                    </div>
+                
+                
+            </div>
+        
+            <div class="form-row field-email_is_verified">
+                
+                
+                    <div>
+                        
+                            <div class="flex-container">
+                                
+                                    <label for="id_email_is_verified">Email is verified:</label>
+                                    
+                                        <select name="email_is_verified" id="id_email_is_verified">
+      <option value="unknown">Unknown</option>
+    
+      <option value="true" selected="">Yes</option>
+    
+      <option value="false">No</option>
+    
+    </select>
+                                    
+                                
+                            </div>
+                        
+                    </div>
+                
+                
+            </div>
+        
+    </fieldset>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="submit-row">
+    
+    <input type="submit" value="Save" class="default" name="_save">
+    
+    <input type="submit" value="Save and add another" name="_addanother">
+    <input type="submit" value="Save and continue editing" name="_continue">
+    
+    
+        
+        <a href="/admin/accounts/customuser/14/delete/" class="deletelink">Delete</a>
+    
+    
+    </div>
+    
+    
+    
+        <script id="django-admin-form-add-constants" src="/static/admin/js/change_form.js" async="">
+        </script>
+    
+    
+    
+    
+    <script id="django-admin-prepopulated-fields-constants" src="/static/admin/js/prepopulate_init.js" data-prepopulated-fields="[]">
+    </script>
+    
+    
+    </div>
+    </form>
+{% endblock %}

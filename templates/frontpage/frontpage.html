@@ -1,15 +1,17 @@
 
-               {% extends 'basepage/basepage.html' %}
-               {% include 'components/navbarfront.html'%}           
+{% extends 'basepage/user_layout.html' %}
+
                {% block content %} 
+        
+               {% include 'components/navbarfront.html'%}           
+
                 {% load static %}
- 
                     
                    
                              
                
-                       <div data-v-6f04a53f="" class="home">
-                       <div class="slider">
+
+  <div class="slider">
                            <div id="carouselExampleCaptions" data-pause="false" data-ride="carousel" data-interval="5000" class="carousel vert slide">
                                <ol class="carousel-indicators">
                                    <li data-target="#carouselExampleCaptions" data-slide-to="0" class=""></li>
@@ -69,7 +71,7 @@
                        </div>
                                            
                        
-                       <div style="width: 100%;  position: relative;background-color: transparent">
+                       <div class="parent" >
                            
                            <div id="rightpan" data-aos="fade-left" data-aos-offset="100" data-aos-duration="1000" class="col-lg-4 tab-pane active aos-init aos-animate">
                                 
@@ -89,95 +91,79 @@
                                          alt="/images/avater.jpg" class="rounded-circle img-fluid"
                                          style="width: 150px"></span>
                                          ----->
-                                   <div style="background-color: transparent" class="card-body">
+                                   <div class="card-body">
                                        <div data-aos="fade-up" data-aos-offset="100" data-aos-duration="1000" style="background-color: transparent" class="column block aos-init aos-animate">
-                                           <p style="text-align:center"><strong><span style="font-size:14px">&nbsp;<span style="font-size:20px"> মাননীয় আইসিটি  উপদেষ্টা</span></span> </strong></p>
-                                           <h1 class="bk-org title">
-                                                     </h1>
-                                         
-                                         <p style="text-align:center"><img alt="
-                                                 মাননীয় মন্ত্রী  	" src="/images/ictadvisor.jpg" style="height:190px; width:150px"></p>
-                                       
-                                       <p style="text-align:center"><strong><span style="font-size:14px">&nbsp;<span style="font-size:20px">সজীব ওয়াজ়েদ জয়</span></span> </strong></p>
-                                       <p>
-                                               <a href="https://moedu.portal.gov.bd/site/page/5521b4ae-db5f-4410-b24e-3e34f460a926" class="btn" style="display:block;text-align:center;width:100%;" title="বিস্তারিত">বিস্তারিত</a>
-                                             </p>
+                                           
                                        </div>
                                        <div data-aos="fade-up" data-aos-offset="100" data-aos-duration="1000" class="column block aos-init aos-animate">
-                                           <p style="text-align:center"><strong><span style="font-size:14px">&nbsp;<span style="font-size:20px"> মাননীয় মন্ত্রী </span></span> </strong></p>
-                                           <h1 class="bk-org title">
-                                                     </h1>
-                                         
-                                         <p style="text-align:center"><img alt="
-                                                 মাননীয় মন্ত্রী  	" src="/images/minister.jpg" style="height:190px; width:150px"></p>
-                                       
-                                       <p style="text-align:center"><strong><span style="font-size:14px">&nbsp;<span style="font-size:20px">ডা. দীপু মনি</span> এম.পি.</span> </strong></p>
+                                           
  
- 
- 
+                                        </div>
+
                                        <div data-aos="fade-up" data-aos-offset="100" data-aos-duration="1000" class="column block aos-init aos-animate">
-                                           <p style="text-align:center"><strong><span style="font-size:14px">&nbsp;<span style="font-size:20px"> মাননীয়  প্রতিমন্ত্রী</span></span> </strong></p>
+                                           <p style="text-align:center"><strong><span style="font-size:14px">&nbsp;<span style="font-size:20px"> প্রধান প্রশিক্ষক ও ডেভেলপার</span></span> </strong></p>
                                            <h1 class="bk-org title">
                                                      </h1>
                                          
                                          <p style="text-align:center"><img alt="
-                                                 মাননীয় মন্ত্রী  	" src="/images/dminister.jpg" style="height:190px; width:150px"></p>
+                                            প্রধান প্রশিক্ষক 	" src="{% static 'images/sumon.jpg'%}" style="height:190px; width:150px"></p>
                                        
-                                       <p style="text-align:center"><strong><span style="font-size:14px">&nbsp;<span style="font-size:20px">মহিবুল হাসান চৌধুরী</span></span> </strong></p>
+                                       <p style="text-align:center"><strong><span style="font-size:14px">&nbsp;<span style="font-size:20px">ত্বরিক সুমন</span></span> </strong></p>
                                        <p>
                                                <a href="https://moedu.portal.gov.bd/site/page/5521b4ae-db5f-4410-b24e-3e34f460a926" class="btn" style="display:block;text-align:center;width:100%;" title="বিস্তারিত">বিস্তারিত</a>
                                              </p>
                                        </div>
                                            
-                                           <h4>Honourable Minister</h4> 
-                                       <img alt="localMarketimage" data-src="https://basis.org.bd/public/images/local-market.svg" src="/images/minister.jpg" lazy="loading">
-                                           <h4>Honourable Deputy Minister</h4> 
-                                       <img alt="localMarketimage" data-src="https://basis.org.bd/public/images/local-market.svg" src="/images/dminister.jpg" lazy="loading">
- 
                                            
  
  
                                        <ul>
-                                           <li><a href="/market-details/1" class="">Local Market
-                                                   Research</a></li>
-                                           <li><a href="http://nbr.gov.bd/nbr-enlisted/eng" target="_blank">NBR Enlisted Companies</a></li>
-                                           <li><a href="https://basisegovhub.info" target="_blank">Government Tender</a></li>
-                                           <li><span></span></li>
-                                           <li><span></span></li>
-                                           <li><a href="https://basis.org.bd/public/files/publication/5e125f5ee61760449abd28a25178d046facfec994d97e.pdf" target="_blank">Software and IT Service Catalog</a></li>
-                                                   <li><a href="/market-details/1" class="">Local Market
-                                                       Research</a></li>
-                                               <li><a href="http://nbr.gov.bd/nbr-enlisted/eng" target="_blank">NBR Enlisted Companies</a></li>
-                                               <li><a href="https://basisegovhub.info" target="_blank">Government Tender</a></li>
-                                               <li><span></span></li>
-                                               <li><span></span></li>
-                                               <li><a href="https://basis.org.bd/public/files/publication/5e125f5ee61760449abd28a25178d046facfec994d97e.pdf" target="_blank">Software and IT Service Catalog</a></li>
-                                                       <li><a href="/market-details/1" class="">Local Market
-                                                           Research</a></li>
-                                                   <li><a href="http://nbr.gov.bd/nbr-enlisted/eng" target="_blank">NBR Enlisted Companies</a></li>
-                                                   <li><a href="https://basisegovhub.info" target="_blank">Government Tender</a></li>
-                                                   <li><span></span></li>
-                                                   <li><span></span></li>
-                                                   <li><a href="https://basis.org.bd/public/files/publication/5e125f5ee61760449abd28a25178d046facfec994d97e.pdf" target="_blank">Software and IT Service Catalog</a></li>
-                                                           <li><a href="/market-details/1" class="">Local Market
-                                                               Research</a></li>
-                                                       <li><a href="http://nbr.gov.bd/nbr-enlisted/eng" target="_blank">NBR Enlisted Companies</a></li>
-                                                       <li><a href="https://basisegovhub.info" target="_blank">Government Tender</a></li>
-                                                       <li><span></span></li>
-                                                       <li><span></span></li>
-                                                       <li><a href="https://basis.org.bd/public/files/publication/5e125f5ee61760449abd28a25178d046facfec994d97e.pdf" target="_blank">Software and IT Service Catalog</a></li>
-                                           <li>
-                                               <!---->
-                                           </li>
-                                           <li>
-                                               <!---->
-                                           </li>
-                                           <li>
-                                               <!---->
-                                           </li>
-                                           <li><a href="/ea/local/events" class="">Events</a></li>
-                                           <li><a href="/ea/local/awards" class="">Awards</a></li>
+                                        <li><a href="https://www.gmrwc.edu.bd/" class="btn btn-primary">সরকারি মুজিবুর রহমান মহিলা কলেজ</a></li>
+                                        <li><a href="http://nbr.gov.bd/nbr-enlisted/eng"
+                                                target="_blank" class="btn btn-primary">সরকারি আজিজুল হক কলেজ</a></li>
+                                        <li><a href="https://basisegovhub.info"
+                                                target="_blank" class="btn btn-primary">সরকারি শাহ-সুলতান কলেজ</a></li>
+                                        <li><span ><a href="https://basisegovhub.info"
+                                            target="_blank" class="btn btn-primary">আইসিটি বিষয়ক ট্রেনিং</a></span></li>
+                                        <li><span><a href="https://basisegovhub.info"
+                                            target="_blank" class="btn btn-primary">নেকটার এর প্রশিক্ষণসমুহ</a></span></li>
+                                        <li><a href="https://basis.org.bd/public/files/publication/5e125f5ee61760449abd28a25178d046facfec994d97e.pdf"
+                                                target="_blank" class="btn btn-primary">মাধ্যমিক ও উচ্চশিক্ষা অধিদপ্তর </a></li>
+                                                <li><a href="/market-details/1" class="btn btn-primary">জাতীয় বিশ্ববিদ্যালয়
+                                    </a></li>
+                                            <li><a href="http://nbr.gov.bd/nbr-enlisted/eng"
+                                                    target="_blank" class="btn btn-primary">তথ্য ও যোগাযোগ প্রযুক্তি অধিদপ্তর</a></li>
+                                            <li><a href="https://basisegovhub.info"
+                                                    target="_blank" class="btn btn-primary">মাধ্যমিক ও উচ্চশিক্ষা বিভাগ</a></li>
+                                            
+                                            <li><a href="https://basis.org.bd/public/files/publication/5e125f5ee61760449abd28a25178d046facfec994d97e.pdf"
+                                                    target="_blank" class="btn btn-primary">বাংলাদেশ সরকারি কর্ম কমিশন</a></li>
+                                                    <li><a href="/market-details/1" class="btn btn-primary">তথ্য ও যোগাযোগ প্রযুক্তি বিভাগ
+                                                        </a></li>
+                                                <li><a href="http://nbr.gov.bd/nbr-enlisted/eng"
+                                                        target="_blank" class="btn btn-primary">বাংলাদেশ সরকারি কর্ম কমিশন</a></li>
+                                                <li><a href="https://basisegovhub.info"
+                                                        target="_blank"class="btn btn-primary">বেসরকারি শিক্ষক নিবন্ধন</a></li>
+                                                
+                                                <li><a href="https://basis.org.bd/public/files/publication/5e125f5ee61760449abd28a25178d046facfec994d97e.pdf"
+                                                        target="_blank" class="btn btn-primary">প্রাথমিক শিক্ষা অধিদপ্তর</a></li>
+                                                        <li><a href="/market-details/1" class="">
+                                                            </a></li>
+                                        
                                        </ul> <a href="/market/LocalMarket" class="btn btn-outline-primary">View All</a>
+                                         <div data-aos="fade-up" data-aos-offset="100" data-aos-duration="1000" class="column block aos-init aos-animate">
+                                           <p style="text-align:center"><strong><span style="font-size:14px">&nbsp;<span style="font-size:20px"> মনোগ্রাম</span></span> </strong></p>
+                                           <h1 class="bk-org title">
+                                                     </h1>
+                                         
+                                         <p style="text-align:center"><img alt="
+                                            প্রধান প্রশিক্ষক 	" src="{% static 'images/ictpark_monogram.png'%}" style="height:150px; width:150px"></p>
+                                       
+                                      
+                                       <p>
+                                               <a href="https://moedu.portal.gov.bd/site/page/5521b4ae-db5f-4410-b24e-3e34f460a926" class="btn" style="display:block;text-align:center;width:100%;" title="বিস্তারিত">বিস্তারিত</a>
+                                             </p>
+                                       </div>
                                    </div>
                                </div>
                            </div>
@@ -187,24 +173,11 @@
                        
                        <!---->
                        <div class="services"><span class="shape1"></span> <span class="shape2"></span>
-                        <h1>
-                            {% if carosel %}
-
-                            <h1>Found </h1>
-                            {% else %}
-                            <h2> Not Found</h2>
-                                
-                            {% endif %} </h1>
-                       <marquee width="100%" direction="left" height="50px" style="font-size: 35px;margin-top: 5px">
-                                              *.... এইচএসসি-২০২৫ সালের সকল পরীক্ষার্থীদের জন্য নতুন ব্যাচ চালু হবে,আজই রেজিস্ট্রেশন করো....*
-                           
-                                              *.... সবাইকে ইংরেজি নববর্ষের অগ্রীম শুভেচ্ছা, আগামীকাল নির্বাচনের ডিউটি প্রশিক্ষণের কারণে ব্যাচসমূহের কার্যক্রম বন্ধ থাকবে....*
-                           
-                                              *.... jhvjh....*
-                           
-                                              *.... jkhjkuuhbjhv....*
-                           
-                                              *.... jm,gjh,....*
+                        
+                       <marquee  width="100%" direction="left" height="25px" style="font-size: 20px;margin-top: 5px">
+                                              {% for news in news %}
+                                             <a href="" > {{news.title}}***</a>
+                                              {% endfor %}
                            
                                         
                        </marquee>
@@ -501,24 +474,9 @@
                                                    <h3>Notices</h3>
                                                    <p>
                                                    </p><ul>
-                                                                                                               <li>এইচএসসি-২০২৫ সালের সকল পরীক্ষার্থীদের জন্য নতুন ব্যাচ চালু হবে,আজই রেজিস্ট্রেশন করো
-                                                           </li>
-                                                                                                               <li>সবাইকে ইংরেজি নববর্ষের অগ্রীম শুভেচ্ছা, আগামীকাল নির্বাচনের ডিউটি প্রশিক্ষণের কারণে ব্যাচসমূহের কার্যক্রম বন্ধ থাকবে
-                                                           </li>
-                                                                                                               <li>jhvjh
-                                                           </li>
-                                                                                                               <li>jkhjkuuhbjhv
-                                                           </li>
-                                                                                                               <li>jm,gjh,
-                                                           </li>
-                                                                                                               <li>jhgyujk
-                                                           </li>
-                                                                                                               <li>kjhdjm,tbgkdfv
-                                                           </li>
-                                                                                                               <li>jhgjhkvjk
-                                                           </li>
-                                                                                                               <li>jhgjhkvjk
-                                                           </li>
+                                                    {% for news in news|slice:"0:5" %}
+                                                           <li>{{news.title}}</li>
+                                                           {% endfor %}
                                                                                                               
                                                    </ul>
                                                    <p></p> <a href="https://israbentech.com/media/news" class="btn btn-sm btn-success mt-4">
@@ -532,8 +490,8 @@
                                            <div class="becomeMemberApply">
                                                
                                                <h1>
-                                                   <div sty="" class="btn-apply"><a href="add-data" class="">
-                                                       REGISTER NOW
+                                                   <div sty="" class="btn-apply"><a href="{%url 'register' %}" class="">
+                                                       REGISTER
                                                        <i aria-hidden="false" class="fa fa-play play-i white-color">
                                                            
                                                        </i></a>
@@ -549,268 +507,80 @@
                                </div>
                            </div>
                        </div>
+                       
                        <div class="services"><span class="shape1"></span> <span class="shape2"></span>
-                           <div class="container-wrapper">
-                               <div class="service-tab">
-                                   <div class="content-header mb-5">
-                                       <h1 class="title text-center">ICT Study Materials</h1>
-                                       <ul id="myTab" role="tablist" class="nav nav-tabs justify-content-center">
-                                           <li class="nav-item"><a id="members-tab" data-toggle="tab" href="#members" role="tab" aria-controls="members" aria-selected="true" class="nav-link active">Lectures</a></li>
-                                           <li class="nav-item"><a id="nonmembers-tab" data-toggle="tab" href="#nonmembers" role="tab" aria-controls="nonmembers" aria-selected="false" class="nav-link">Books</a></li>
- 
-                                       </ul>
-                                   </div>
-                                                                       <div id="myTabContent" class="service-item tab-content">
-                                       <div id="members" role="tabpanel" aria-labelledby="members-tab" class="members tab-pane fade show active">
-                                           <div class="row">
-                                                                                              
-                                               <div data-aos="fade-up" data-aos-offset="100" data-aos-duration="1000" class="col-6 col-lg-4 aos-init">
-                                                   <a href="" class="">
-                                                 
-                                                   <div class="card card-body shadow-sm mb-4">
-                                                       
-                                                       <label>অধ্যায়ঃ2 ডাটা কমিউনিকেশন ও নেটওয়ার্কিং<br>টপিক <h3><u>১।  ডাটা কমিউনিকেশন</u></h3><form method="POST" action="https://israbentech.com/downloadbase64file">
-                                                           <input type="hidden" name="_token" value="s1jrPtVBdGFxHOfnJRuqRy6uZXqkCielnj1vQjvS">                                                            <input style="display: none" type="text" name="download" id="download" value="6">
-                                                           <input type="submit" value="Download">
-                                                           </form> </label>
-                                                       
-                                                              
-                                                       
-                                                       <div>
-                                                       
-                                                       </div>
-                                                       <h3>ডাটা কমিউনিকেশন ও নেটওয়ার্কিং</h3>
-                                                       
-                                                   </div>
-                                               </a>
-                                               
-                                               </div>
-                                                                                              
-                                               <div data-aos="fade-up" data-aos-offset="100" data-aos-duration="1000" class="col-6 col-lg-4 aos-init">
-                                                   <a href="" class="">
-                                                 
-                                                   <div class="card card-body shadow-sm mb-4">
-                                                       
-                                                       <label>অধ্যায়ঃ2 ডাটা কমিউনিকেশন ও নেটওয়ার্কিং<br>টপিক <h3><u>2.ডেটা ট্রান্সমিশন মেথড</u></h3><form method="POST" action="https://israbentech.com/downloadbase64file">
-                                                           <input type="hidden" name="_token" value="s1jrPtVBdGFxHOfnJRuqRy6uZXqkCielnj1vQjvS">                                                            <input style="display: none" type="text" name="download" id="download" value="7">
-                                                           <input type="submit" value="Download">
-                                                           </form> </label>
-                                                       
-                                                              
-                                                       
-                                                       <div>
-                                                       
-                                                       </div>
-                                                       <h3>ডাটা কমিউনিকেশন ও নেটওয়ার্কিং</h3>
-                                                       
-                                                   </div>
-                                               </a>
-                                               
-                                               </div>
-                                                                                              
-                                               <div data-aos="fade-up" data-aos-offset="100" data-aos-duration="1000" class="col-6 col-lg-4 aos-init">
-                                                   <a href="" class="">
-                                                 
-                                                   <div class="card card-body shadow-sm mb-4">
-                                                       
-                                                       <label>অধ্যায়ঃ2 ডাটা কমিউনিকেশন ও নেটওয়ার্কিং<br>টপিক <h3><u>৩। ডেটা ট্রান্সমিশন মোড</u></h3><form method="POST" action="https://israbentech.com/downloadbase64file">
-                                                           <input type="hidden" name="_token" value="s1jrPtVBdGFxHOfnJRuqRy6uZXqkCielnj1vQjvS">                                                            <input style="display: none" type="text" name="download" id="download" value="8">
-                                                           <input type="submit" value="Download">
-                                                           </form> </label>
-                                                       
-                                                              
-                                                       
-                                                       <div>
-                                                       
-                                                       </div>
-                                                       <h3>ডাটা কমিউনিকেশন ও নেটওয়ার্কিং</h3>
-                                                       
-                                                   </div>
-                                               </a>
-                                               
-                                               </div>
-                                                                                              
-                                               <div data-aos="fade-up" data-aos-offset="100" data-aos-duration="1000" class="col-6 col-lg-4 aos-init">
-                                                   <a href="" class="">
-                                                 
-                                                   <div class="card card-body shadow-sm mb-4">
-                                                       
-                                                       <label>অধ্যায়ঃ2 ডাটা কমিউনিকেশন ও নেটওয়ার্কিং<br>টপিক <h3><u>৪।  ডাটা কমিউনিকেশন মাধ্যম</u></h3><form method="POST" action="https://israbentech.com/downloadbase64file">
-                                                           <input type="hidden" name="_token" value="s1jrPtVBdGFxHOfnJRuqRy6uZXqkCielnj1vQjvS">                                                            <input style="display: none" type="text" name="download" id="download" value="9">
-                                                           <input type="submit" value="Download">
-                                                           </form> </label>
-                                                       
-                                                              
-                                                       
-                                                       <div>
-                                                       
-                                                       </div>
-                                                       <h3>ডাটা কমিউনিকেশন ও নেটওয়ার্কিং</h3>
-                                                       
-                                                   </div>
-                                               </a>
-                                               
-                                               </div>
-                                                                                              
-                                               <div data-aos="fade-up" data-aos-offset="100" data-aos-duration="1000" class="col-6 col-lg-4 aos-init">
-                                                   <a href="" class="">
-                                                 
-                                                   <div class="card card-body shadow-sm mb-4">
-                                                       
-                                                       <label>অধ্যায়ঃ2 ডাটা কমিউনিকেশন ও নেটওয়ার্কিং<br>টপিক <h3><u>৫।  তারবিহীন মাধ্যম</u></h3><form method="POST" action="https://israbentech.com/downloadbase64file">
-                                                           <input type="hidden" name="_token" value="s1jrPtVBdGFxHOfnJRuqRy6uZXqkCielnj1vQjvS">                                                            <input style="display: none" type="text" name="download" id="download" value="10">
-                                                           <input type="submit" value="Download">
-                                                           </form> </label>
-                                                       
-                                                              
-                                                       
-                                                       <div>
-                                                       
-                                                       </div>
-                                                       <h3>ডাটা কমিউনিকেশন ও নেটওয়ার্কিং</h3>
-                                                       
-                                                   </div>
-                                               </a>
-                                               
-                                               </div>
-                                                                                              
-                                               <div data-aos="fade-up" data-aos-offset="100" data-aos-duration="1000" class="col-6 col-lg-4 aos-init">
-                                                   <a href="" class="">
-                                                 
-                                                   <div class="card card-body shadow-sm mb-4">
-                                                       
-                                                       <label>অধ্যায়ঃ2 ডাটা কমিউনিকেশন ও নেটওয়ার্কিং<br>টপিক <h3><u>ওয়ারলেস কমিউনেকেশন সিস্টেম</u></h3><form method="POST" action="https://israbentech.com/downloadbase64file">
-                                                           <input type="hidden" name="_token" value="s1jrPtVBdGFxHOfnJRuqRy6uZXqkCielnj1vQjvS">                                                            <input style="display: none" type="text" name="download" id="download" value="11">
-                                                           <input type="submit" value="Download">
-                                                           </form> </label>
-                                                       
-                                                              
-                                                       
-                                                       <div>
-                                                       
-                                                       </div>
-                                                       <h3>ডাটা কমিউনিকেশন ও নেটওয়ার্কিং</h3>
-                                                       
-                                                   </div>
-                                               </a>
-                                               
-                                               </div>
-                                                                                           </div>
-                                           <div class="row pt-5">
-                                               <div class="col-lg-12 text-center"><a href="/service/member" class="btn btn-lg btn-primary rounded-50">
-                                                       View All
-                                                       <i class="fas fa-long-arrow-alt-right pl-1"></i></a></div>
-                                           </div>
-                                       </div>
-                                       
-                                       <div id="nonmembers" role="tabpanel" aria-labelledby="nonmembers-tab" class="nonmembers tab-pane fade">
-                                           <div class="row">
-                                                   
-                                                                                                
-                                               <div data-aos="fade-up" data-aos-offset="100" data-aos-duration="1000" class="col-6 col-lg-4 aos-init aos-animate"><a href="/service-details/30/member" class="">
-                                                 
-                                                   <div class="card card-body shadow-sm mb-4">
-                                                       <label>Chapter : 2<br> Topic : ১।  ডাটা কমিউনিকেশন </label>
-                                                       <form class="p-3 mt-3" method="POST" action="https://israbentech.com/downloadbase64file">
-                                                           <input type="hidden" name="_token" value="s1jrPtVBdGFxHOfnJRuqRy6uZXqkCielnj1vQjvS">                                                                <input style="display: none" type="text" name="download" id="download" value="6">
-                                                           <input type="submit" value="Download">
-                                                       </form>
-                                                       <h3>ডাটা কমিউনিকেশন ও নেটওয়ার্কিং</h3>
-                                                       
-                                                   </div>
-                                               </a>
-                                               </div>
-                                                                                              
-                                               <div data-aos="fade-up" data-aos-offset="100" data-aos-duration="1000" class="col-6 col-lg-4 aos-init aos-animate"><a href="/service-details/30/member" class="">
-                                                 
-                                                   <div class="card card-body shadow-sm mb-4">
-                                                       <label>Chapter : 2<br> Topic : 2.ডেটা ট্রান্সমিশন মেথড </label>
-                                                       <form class="p-3 mt-3" method="POST" action="https://israbentech.com/downloadbase64file">
-                                                           <input type="hidden" name="_token" value="s1jrPtVBdGFxHOfnJRuqRy6uZXqkCielnj1vQjvS">                                                                <input style="display: none" type="text" name="download" id="download" value="7">
-                                                           <input type="submit" value="Download">
-                                                       </form>
-                                                       <h3>ডাটা কমিউনিকেশন ও নেটওয়ার্কিং</h3>
-                                                       
-                                                   </div>
-                                               </a>
-                                               </div>
-                                                                                              
-                                               <div data-aos="fade-up" data-aos-offset="100" data-aos-duration="1000" class="col-6 col-lg-4 aos-init aos-animate"><a href="/service-details/30/member" class="">
-                                                 
-                                                   <div class="card card-body shadow-sm mb-4">
-                                                       <label>Chapter : 2<br> Topic : ৩। ডেটা ট্রান্সমিশন মোড </label>
-                                                       <form class="p-3 mt-3" method="POST" action="https://israbentech.com/downloadbase64file">
-                                                           <input type="hidden" name="_token" value="s1jrPtVBdGFxHOfnJRuqRy6uZXqkCielnj1vQjvS">                                                                <input style="display: none" type="text" name="download" id="download" value="8">
-                                                           <input type="submit" value="Download">
-                                                       </form>
-                                                       <h3>ডাটা কমিউনিকেশন ও নেটওয়ার্কিং</h3>
-                                                       
-                                                   </div>
-                                               </a>
-                                               </div>
-                                                                                              
-                                               <div data-aos="fade-up" data-aos-offset="100" data-aos-duration="1000" class="col-6 col-lg-4 aos-init aos-animate"><a href="/service-details/30/member" class="">
-                                                 
-                                                   <div class="card card-body shadow-sm mb-4">
-                                                       <label>Chapter : 2<br> Topic : ৪।  ডাটা কমিউনিকেশন মাধ্যম </label>
-                                                       <form class="p-3 mt-3" method="POST" action="https://israbentech.com/downloadbase64file">
-                                                           <input type="hidden" name="_token" value="s1jrPtVBdGFxHOfnJRuqRy6uZXqkCielnj1vQjvS">                                                                <input style="display: none" type="text" name="download" id="download" value="9">
-                                                           <input type="submit" value="Download">
-                                                       </form>
-                                                       <h3>ডাটা কমিউনিকেশন ও নেটওয়ার্কিং</h3>
-                                                       
-                                                   </div>
-                                               </a>
-                                               </div>
-                                                                                              
-                                               <div data-aos="fade-up" data-aos-offset="100" data-aos-duration="1000" class="col-6 col-lg-4 aos-init aos-animate"><a href="/service-details/30/member" class="">
-                                                 
-                                                   <div class="card card-body shadow-sm mb-4">
-                                                       <label>Chapter : 2<br> Topic : ৫।  তারবিহীন মাধ্যম </label>
-                                                       <form class="p-3 mt-3" method="POST" action="https://israbentech.com/downloadbase64file">
-                                                           <input type="hidden" name="_token" value="s1jrPtVBdGFxHOfnJRuqRy6uZXqkCielnj1vQjvS">                                                                <input style="display: none" type="text" name="download" id="download" value="10">
-                                                           <input type="submit" value="Download">
-                                                       </form>
-                                                       <h3>ডাটা কমিউনিকেশন ও নেটওয়ার্কিং</h3>
-                                                       
-                                                   </div>
-                                               </a>
-                                               </div>
-                                                                                              
-                                               <div data-aos="fade-up" data-aos-offset="100" data-aos-duration="1000" class="col-6 col-lg-4 aos-init aos-animate"><a href="/service-details/30/member" class="">
-                                                 
-                                                   <div class="card card-body shadow-sm mb-4">
-                                                       <label>Chapter : 2<br> Topic : ওয়ারলেস কমিউনেকেশন সিস্টেম </label>
-                                                       <form class="p-3 mt-3" method="POST" action="https://israbentech.com/downloadbase64file">
-                                                           <input type="hidden" name="_token" value="s1jrPtVBdGFxHOfnJRuqRy6uZXqkCielnj1vQjvS">                                                                <input style="display: none" type="text" name="download" id="download" value="11">
-                                                           <input type="submit" value="Download">
-                                                       </form>
-                                                       <h3>ডাটা কমিউনিকেশন ও নেটওয়ার্কিং</h3>
-                                                       
-                                                   </div>
-                                               </a>
-                                               </div>
-                                                                                               <div data-aos="fade-up" data-aos-offset="100" data-aos-duration="500" class="col-6 col-lg-4 aos-init aos-animate"><a href="/service-details/65/non_member" class="">
-                                                       <div class="card card-body shadow-sm mb-3">
-                                                           <div class="iconbox"><span><i class="flaticon-airplane-flight-in-circle-around-earth"></i></span>
-                                                           </div>
-                                                           <h3></h3>
-                                                       </div>
-                                                   </a></div>
- 
-                                                   
-                                       
-                                           </div>
-                                           <div class="row pt-5">
-                                               <div class="col-lg-12 text-center"><a href="/service/non_member" class="btn btn-lg btn-primary rounded-50">
-                                                       View All
-                                                       <i class="fas fa-long-arrow-alt-right pl-1"></i></a></div>
-                                           </div>
-                                       </div>
-                                   </div>
-                               </div>
-                           </div>
-                       </div>
+                        <div class="container-wrapper">
+                            <div class="service-tab">
+                                <div class="content-header mb-5">
+                                    <h1 class="title text-center">ICT Study Materials</h1>
+                                    <div class="filters filter-menu">
+
+                                    <ul id="myTab" role="tablist" class="nav nav-tabs justify-content-center">
+                                        <li class="nav-item"><a id="members-tab" data-toggle="tab" href="#members" role="tab" aria-controls="members" aria-selected="true" class="nav-link active">Lectures</a></li>
+                                        <li class="nav-item"><a id="nonmembers-tab" data-toggle="tab" href="#nonmembers" role="tab" aria-controls="nonmembers" aria-selected="false" class="nav-link">Books</a></li>
+                                        </div>
+                                    </ul>
+                                </div>
+                                                                    
+                                <div id="myTabContent" class="service-item tab-content">
+                                    <div id="members" role="tabpanel" aria-labelledby="members-tab" class="members tab-pane fade show active">
+                                        <div style="height:auto" class="row">
+                                            {% for chapter in chapters %}                                             
+                                            <div data-aos="fade-up" data-aos-offset="100" data-aos-duration="1000" class="col-6 col-lg-4 aos-init">
+                                                <a href="{{chapter.get_absolute_url}}" class="">
+
+                                                <div class="card card-body shadow-sm mb-4">
+                                                    <img height="100%" width="100%" src="{{chapter.chapter_image.url}}">
+
+                                                    
+                                                </div>
+                                            </a>
+                                            
+                                            </div>
+                                            {% endfor %}
+                                                  
+                                             
+                                                                                        </div>
+                                        <div class="row pt-5">
+                                            <div class="col-lg-12 text-center"><a href="/service/member" class="btn btn-lg btn-primary rounded-50">
+                                                    View All
+                                                    <i class="fas fa-long-arrow-alt-right pl-1"></i></a></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div id="nonmembers" role="tabpanel" aria-labelledby="nonmembers-tab" class="nonmembers tab-pane fade">
+                                        <div class="row">
+                                                
+                                                                                           
+                                            <div data-aos="fade-up" data-aos-offset="100" data-aos-duration="1000" class="col-6 col-lg-4 aos-init aos-animate"><a href="/service-details/30/member" class="">
+                                              
+                                                <div class="card card-body shadow-sm mb-4">
+                                                    <label>Chapter : 2<br> Topic : ৪।  ডাটা কমিউনিকেশন মাধ্যম </label>
+                                                    <form class="p-3 mt-3" method="POST" action="https://israbentech.com/downloadbase64file">
+                                                        <input type="hidden" name="_token" value="s1jrPtVBdGFxHOfnJRuqRy6uZXqkCielnj1vQjvS">                                                                <input style="display: none" type="text" name="download" id="download" value="9">
+                                                        <input type="submit" value="Download">
+                                                    </form>
+                                                    <h3>ডাটা কমিউনিকেশন ও নেটওয়ার্কিং</h3>
+                                                    
+                                                </div>
+                                            </a>
+                                            </div>
+                                                          
+
+                                                
+                                    
+                                        </div>
+                                        <div class="row pt-5">
+                                            <div class="col-lg-12 text-center"><a href="/service/non_member" class="btn btn-lg btn-primary rounded-50">
+                                                    View All
+                                                    <i class="fas fa-long-arrow-alt-right pl-1"></i></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                        <div class="memberCalender">
                            <div class="container-wrapper">
                                <div class="row">
@@ -827,7 +597,7 @@
                                                                <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 250px;">
                                                                    <div class="owl-item active" style="width: 235px; margin-right: 15px;">
                                                                        <div class="items text-left">
-                                                                           <div class="card border-0"><img alt="public event image." class="d-block w-100" data-src="/images/ictbatch2.jpg" src="/images/ictbatch2.jpg" lazy="loading">
+                                                                           <div class="card border-0"><img alt="public event image." class="d-block w-100" data-src="/images/ictbatch2.jpg" src="{%static 'images/private.jpg'%}" lazy="loading">
                                                                                <div class="ml-3" style="height: 0px;">
                                                                                    <!---->
                                                                                </div>
@@ -837,8 +607,7 @@
                                                                                    Eagered Students are being cordially invited to sign infor new batches...</p>
                                                                                </div>
                                                                                <div class="card-footer bg-transparent border-0">
-                                                                                   <a href="/event-details/nasa-space-apps-challenge" class="btn btn-sm btn-outline-primary">View
-                                                                                       More</a></div>
+                                                                                   <a href="{% url 'register' %}" class="btn btn-sm btn-outline-primary">Join Now</a></div>
                                                                            </div>
                                                                        </div>
                                                                    </div>
@@ -1201,55 +970,52 @@
                                </div>
                            </div>
                        </div>
+                       
+                       
+                       
+                       
                        <div class="marketing">
                            <div class="container-wrapper">
                                <div class="content-header mb-5">
-                                   <h1 class="title text-center">Important Information</h1>
+                                   <h1 class="title text-center">Our All Service</h1>
                                </div>
                                <ul class="nav nav-tabs visible-phone">
-                                   <li><a href="#local" data-toggle="tab" class="active">Local</a></li>
-                                   <li><a href="#inter" data-toggle="tab">International</a></li>
-                                   <li><a href="#policy" data-toggle="tab">Policies, Acts &amp; Laws</a></li>
+                                   <li><a href="#local" data-toggle="tab" class="active">HSC ICT</a></li>
+                                   <li><a href="#inter" data-toggle="tab">IT Training </a></li>
+                                   <li><a href="#policy" data-toggle="tab">Software, App & Web </a></li>
                                </ul>
                                <div class="row tab-content">
                                    <div id="local" data-aos="fade-right" data-aos-offset="100" data-aos-duration="1000" class="col-lg-4 tab-pane active aos-init">
                                        <div class="card border border-dark">
                                            <div class="card-body">
-                                               <h4>Local Market</h4>
+                                               <h4>ICT Private Programme</h4><img alt="ICT Private Programme" data-src="https://basis.org.bd/public/images/international-market.svg" src="{%static 'images/student.jpg' %}" lazy="loading">
                                                <ul>
-                                                   <li><a href="/market-details/1" class="">Local Market
-                                                           Research</a></li>
-                                                   <li><a href="http://nbr.gov.bd/nbr-enlisted/eng" target="_blank">NBR Enlisted Companies</a></li>
-                                                   <li><a href="https://basisegovhub.info" target="_blank">Government Tender</a></li>
-                                                   <li><span></span></li>
-                                                   <li><span></span></li>
-                                                   <li><a href="https://basis.org.bd/public/files/publication/5e125f5ee61760449abd28a25178d046facfec994d97e.pdf" target="_blank">Software and IT Service Catalog</a></li>
-                                                   <li>
-                                                       <!---->
-                                                   </li>
-                                                   <li>
-                                                       <!---->
-                                                   </li>
-                                                   <li>
-                                                       <!---->
-                                                   </li>
-                                                   <li><a href="/ea/local/events" class="">Events</a></li>
-                                                   <li><a href="/ea/local/awards" class="">Awards</a></li>
-                                               </ul> <a href="/market/LocalMarket" class="btn btn-outline-primary">View All</a>
+                                                   <li><a href="/market-details/1" class="">HSC ICT 
+                                                           </a></li>
+                                                   <li><a href="http://nbr.gov.bd/nbr-enlisted/eng" target="_blank">Exam Preparation</a></li>
+                                                   <li><a href="https://basisegovhub.info" target="_blank">Helpful Notes</a></li>
+                                                   <li><span>Lab Preparation</span></li>
+                                                   <li><span>Special care in HTML & C</span></li>
+                                                   <li><a href="" target="_blank">Understanding Frontier Technology</a></li>
+                                                   
+                                               </ul> 
+                                               <a href="/market/LocalMarket" class="btn btn-outline-primary">View All</a>
                                            </div>
                                        </div>
                                    </div>
                                    <div id="inter" data-aos="fade-up" data-aos-offset="100" data-aos-duration="1500" class="col-lg-4 tab-pane aos-init aos-animate">
                                        <div class="card border border-dark">
                                            <div class="card-body">
-                                               <h4>International Market</h4> <img alt="international_Marketimage" data-src="https://basis.org.bd/public/images/international-market.svg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" lazy="loading">
+                                               <h4>IT Training</h4> <img alt="international_Marketimage" data-src="https://basis.org.bd/public/images/international-market.svg" src="{%static 'images/ittraining.jpg' %}" lazy="loading">
                                                <ul>
-                                                   <li><a href="/market-details/5" class="">International
-                                                           Market Research</a></li>
-                                                   <li><a href="/b2b" class="">B2B</a></li>
-                                                   <li><a href="/ea/international/events" class="">Events</a>
+                                                   <li><a href="/market-details/5" class="">Basic Computer Training
+                                                    </a></li>
+                                                   <li><a href="/b2b" class="">Microsoft Office,Excell and Internet</a></li>
+                                                   <li><a href="/ea/international/events" class="">Graphics Design</a>
                                                    </li>
-                                                   <li><a href="/ea/international/awards" class="">Awards</a>
+                                                   <li><a href="/ea/international/events" class="">C,JAVA, Python Android Learning</a>
+                                                   </li>
+                                                   <li><a href="/ea/international/awards" class="">Software, App,Web Design Learning</a>
                                                    </li>
                                                </ul> <a href="/market/InternationalMarket" class="btn btn-outline-primary">View All</a>
                                            </div>
@@ -1258,15 +1024,14 @@
                                    <div id="policy" data-aos="fade-left" data-aos-offset="100" data-aos-duration="2000" class="col-lg-4 tab-pane aos-init aos-animate">
                                        <div class="card border border-dark">
                                            <div class="card-body">
-                                               <h4>Policies, Acts &amp; Laws</h4> <img alt="policyimage" data-src="https://basis.org.bd/public/images/policy.svg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" lazy="loading">
+                                               <h4>Sotware ,App & Web Development</h4> <img alt="policyimage" data-src="https://basis.org.bd/public/images/policy.svg" src="{%static 'images/engineering.jpg' %}" lazy="loading">
                                                <ul>
-                                                   <li><a href="https://basis.org.bd/public/files/policy/5e164eef132ff1. BNDA.pdf" target="_blank">BNDA</a></li>
-                                                   <li><a href="https://basis.org.bd/public/files/policy/5e16502b8ae85Export Policy.pdf" target="_blank">Export Policy</a></li>
-                                                   <li><a href="https://basis.org.bd/public/files/policy/5e165080e9f18EPB_Ordinance_(Bangla) (1).pdf" target="_blank">EPB Ordinance</a></li>
-                                                   <li><a href="https://basis.org.bd/public/files/policy/5e16509e92820Import Policy order.pdf" target="_blank">Import Policy order</a></li>
-                                                   <li><a href="https://basis.org.bd/public/files/policy/5e1651f4abac2ICT in Education Master Plan Review Report-2019.pdf" target="_blank">ICT in Education Master Plan Review
-                                                           Report-2019</a></li>
-                                                   <li><a href="https://basis.org.bd/public/files/policy/5e1653db166e8Digital-Security-Act-2018-English-version.pdf" target="_blank">Digital Security Act 2018</a></li>
+                                                   <li><a href="https://basis.org.bd/public/files/policy/5e164eef132ff1. BNDA.pdf" target="_blank">Software Development</a></li>
+                                                   <li><a href="https://basis.org.bd/public/files/policy/5e16502b8ae85Export Policy.pdf" target="_blank">Website Creation</a></li>
+                                                   <li><a href="https://basis.org.bd/public/files/policy/5e165080e9f18EPB_Ordinance_(Bangla) (1).pdf" target="_blank">Domain and Hosting</a></li>
+                                                   <li><a href="https://basis.org.bd/public/files/policy/5e16509e92820Import Policy order.pdf" target="_blank">ICT Equipments</a></li>
+                                                   <li><a href="https://basis.org.bd/public/files/policy/5e1651f4abac2ICT in Education Master Plan Review Report-2019.pdf" target="_blank">Facebook Promotion</a></li>
+                                                   <li><a href="https://basis.org.bd/public/files/policy/5e1653db166e8Digital-Security-Act-2018-English-version.pdf" target="_blank">Building Network</a></li>
                                                </ul> <a href="/policy/Policies" class="btn btn-outline-primary">View All</a>
                                            </div>
                                        </div>
@@ -1276,131 +1041,34 @@
                        </div>
  
  
+                    <div class="gallery-tab">
+                        <div class="container-wrapper">
+                            <div class="title-container">
+                                <div>
+                                    <h3 class="title">Our Gallery</h3>
+                                </div> 
+                                <div class="filters filter-menu">
+                                    <span class="filter">All</span>
+                                     <span class="filter active">Photo Gallery</span> 
+                                     <span class="filter">Video Gallery</span>
+                                </div>
+                            </div>
+
+
+
+
+
+                        </div>
+                    </div>
  
  
  
  
  
- 
-                       <div class="gallery-tab">
-                           <div class="container-wrapper">
-                               <div class="title-container">
-                                   <div>
-                                       <h3 class="title">Our Gallery</h3>
-                                   </div>
-                                   <div class="filters filter-menu"><span class="filter active">All</span> <span class="filter">Photo Gallery</span> <span class="filter">Video
-                                           Gallery</span></div>
-                               </div> <span class="projects row">
-                                   <div class="project col-6 col-lg-4">
-                                       <div class="project-image-wrapper">
-                                           <div class="image"><img alt="photo" data-src="https://basis.org.bd/public/img/photoGallery/thumb/637328251bea0.jpeg" src="/images/ictbook1.jfif" lazy="loading">
-                                               <div class="overlay">
-                                                   <div class="icons"><a href="/photos/100/album" class=""><i title="Details" class="fa fa-link"></i></a></div>
-                                               </div>
-                                           </div>
-                                           <div class="info">
-                                               <h4>ICT Books</h4>
-                                           </div>
-                                       </div>
-                                   </div>
-                                   <div class="project col-6 col-lg-4">
-                                       <div class="project-image-wrapper">
-                                           <div class="image"><img alt="photo" data-src="https://basis.org.bd/public/img/photoGallery/thumb/basis-japan-dayt637dee45edc88.jpeg" src="/images/ictbooks2.jfif" lazy="loading">
-                                               <div class="overlay">
-                                                   <div class="icons"><a href="/photos/101/album" class=""><i title="Details" class="fa fa-link"></i></a></div>
-                                               </div>
-                                           </div>
-                                           <div class="info">
-                                               <h4></h4>
-                                           </div>
-                                       </div>
-                                   </div>
-                                   <div class="project col-6 col-lg-4">
-                                       <div class="project-image-wrapper">
-                                           <div class="image"><img alt="photo" data-src="https://basis.org.bd/public/img/photoGallery/thumb/photos-of-20236459f2cd5087a.jpg" src="/images/ictbatch2.jpg" lazy="loading">
-                                               <div class="overlay">
-                                                   <div class="icons"><a href="/photos/103/album" class=""><i title="Details" class="fa fa-link"></i></a></div>
-                                               </div>
-                                           </div>
-                                           <div class="info">
-                                               <h4>Photos Of 2024</h4>
-                                           </div>
-                                       </div>
-                                   </div>
-                                   <div class="project col-6 col-lg-4">
-                                       <div class="project-image-wrapper">
-                                           <div class="image">
-                                               <div class="y-video">
-                                                   <div class="y-video__inner" style="padding-bottom: 56.25%;">
-                                                       <picture>
-                                                           <iframe width="420" height="315" src="https://www.youtube.com/watch?v=aZ5EsdnpLMI">
-                                                           </iframe>
-                                                       </picture> <button type="button" aria-label="Play video" class="y-video__button"><svg viewBox="0 0 68 48" version="1.1" width="100%" height="100%">
-                                                               <path d="M66.5 7.7c-.8-2.9-2.5-5.4-5.4-6.2C55.8.1 34 0 34 0S12.2.1 6.9 1.6c-3 .7-4.6 3.2-5.4 6.1a89.6 89.6 0 0 0 0 32.5c.8 3 2.5 5.5 5.4 6.3C12.2 47.9 34 48 34 48s21.8-.1 27.1-1.6c3-.7 4.6-3.2 5.4-6.1C68 35 68 24 68 24s0-11-1.5-16.3z" class="y-video__button-shape"></path>
-                                                               <path d="M45 24L27 14v20" class="y-video__button-icon"></path>
-                                                           </svg></button>
-                                                   </div>
-                                               </div>
-                                               <!---->
-                                           </div>
-                                           <div class="info">
-                                               <h4>Artificial Intelligence in Future</h4>
-                                           </div>
-                                       </div>
-                                   </div>
-                                   <div class="project col-6 col-lg-4">
-                                       <div class="project-image-wrapper">
-                                           <div class="image">
-                                               <div class="y-video">
-                                                   <div class="y-video__inner" style="padding-bottom: 56.25%;">
-                                                       <picture>
-                                                           <iframe width="420" height="315" src="https://www.youtube.com/watch?v=bzZEKGRoZwc">
-                                                           </iframe>
-                                                       </picture> <button type="button" aria-label="Play video" class="y-video__button"><svg viewBox="0 0 68 48" version="1.1" width="100%" height="100%">
-                                                               <path d="M66.5 7.7c-.8-2.9-2.5-5.4-5.4-6.2C55.8.1 34 0 34 0S12.2.1 6.9 1.6c-3 .7-4.6 3.2-5.4 6.1a89.6 89.6 0 0 0 0 32.5c.8 3 2.5 5.5 5.4 6.3C12.2 47.9 34 48 34 48s21.8-.1 27.1-1.6c3-.7 4.6-3.2 5.4-6.1C68 35 68 24 68 24s0-11-1.5-16.3z" class="y-video__button-shape"></path>
-                                                               <path d="M45 24L27 14v20" class="y-video__button-icon"></path>
-                                                           </svg></button>
-                                                   </div>
-                                               </div>
-                                               <!---->
-                                           </div>
-                                           <div class="info">
-                                               <h4>Virtual Reality in ICT</h4>
-                                           </div>
-                                       </div>
-                                   </div>
-                                   <div class="project col-6 col-lg-4">
-                                       <div class="project-image-wrapper">
-                                           <div class="image">
-                                               <div class="y-video">
-                                                   <div class="y-video__inner" style="padding-bottom: 56.25%;">
-                                                       <picture>
-                                                           <source <iframe="" width="420" height="315" src="https://www.youtube.com/watch?v=1GcMAiIMQYU">
-                                                           
-                                                       </picture> <button type="button" aria-label="Play video" class="y-video__button"><svg viewBox="0 0 68 48" version="1.1" width="100%" height="100%">
-                                                               <path d="M66.5 7.7c-.8-2.9-2.5-5.4-5.4-6.2C55.8.1 34 0 34 0S12.2.1 6.9 1.6c-3 .7-4.6 3.2-5.4 6.1a89.6 89.6 0 0 0 0 32.5c.8 3 2.5 5.5 5.4 6.3C12.2 47.9 34 48 34 48s21.8-.1 27.1-1.6c3-.7 4.6-3.2 5.4-6.1C68 35 68 24 68 24s0-11-1.5-16.3z" class="y-video__button-shape"></path>
-                                                               <path d="M45 24L27 14v20" class="y-video__button-icon"></path>
-                                                           </svg></button>
-                                                   </div>
-                                               </div>
-                                               <!---->
-                                           </div>
-                                           <div class="info">
-                                               <h4>IOT for Future </h4>
-                                           </div>
-                                       </div>
-                                   </div>
-                               </span>
-                               <div class="row mt-3 mb-5">
-                                   <div class="col-lg-12 text-center"><a href="/photo-gallery" class="btn btn-lg btn-primary rounded-50">View All Photos</a> <a href="/video-gallery" class="btn btn-lg btn-primary rounded-50">View All
-                                           Videos</a></div>
-                               </div>
-                           </div>
-                       </div>
-                       
-                   </div>
-                  </div>   
-                <a href="/whats-new" class="btn btn-whatsnew">Go for new?</a> <a href="#" class="scroll-top"><i class="fa fa-arrow-up"></i></a>
+                   
+                
+                
+                       <a href="{% url 'media' 'news' %}" class="btn btn-whatsnew">Go for new?</a> <a href="#" class="scroll-top"><i class="fa fa-arrow-up"></i></a>
                        <a href="#" class="scroll-top active"><i class="fa fa-arrow-up"></i></a>
                
                
@@ -1409,36 +1077,7 @@
               
            </div>
        </div>
-        <footer data-v-6f04a53f="">
-                   
-                   <div class="footer-bottom">
-                       <div class="container-wrapper">
-                           <div class="row align-items-center">
-                               <div class="col-lg-3">
-                                   <p>©Copyright 2024</p>
-                               </div>
-                               <div class="col-lg-5 text-center">
-                                   <div class="d-flex align-items-center justify-content-start">
-                                       <p>We Accept</p>
-                                       <ul class="nav">
-                                           <li><img alt="img1" data-src="https://basis.org.bd/public/images/icon/bkash.svg" src="https://basis.org.bd/public/images/icon/mastercard.svg" lazy="loaded"></li>
-                                           <li><img alt="img2" data-src="https://basis.org.bd/public/images/icon/amex.svg" src="https://basis.org.bd/public/images/icon/amex.svg" lazy="loaded"></li>
-                                           <li><img alt="img3" data-src="https://basis.org.bd/public/images/icon/visa.svg" src="https://basis.org.bd/public/images/icon/visa.svg" lazy="loaded"></li>
-                                       </ul>
-                                   </div>
-                               </div>
-                               <div class="col-lg-4">
-                                   <p>
-                                       Contributed by :
-                                       <strong><a href="http://israbentech.com/" target="_blank"><img alt="Tarique Sumon" data-src="/images/sumon.jpg" src="/images/sumon.jpg" lazy="loaded"> Tarique Sumon
-                                           </a></strong>
-                                   </p>
-                               </div>
-                           </div>
-                       </div>
-                   </div> <!----> <a href="#" class="scroll-top"><i class="fa fa-arrow-up"></i></a>
-               </footer> <!---->
-   </div>
+        
    <script src="https://basis.org.bd/public/js/frontend_app.js"></script>
    <div>
        <div class="toast-container toast-top-right"></div>
@@ -1451,6 +1090,21 @@
        <div class="toast-container toast-bottom-center"></div>
    </div>
  
+   <script>
+    // When the user scrolls down 50px from the top of the document, resize the header's font size
+    window.onscroll = function() {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+            document.getElementById("header").className = "header sticky";
+            
+        } else {
+            document.getElementById("header").className = "header";
+        }
+    }
+</script>
 
    {% endblock %}
  

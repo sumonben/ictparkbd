@@ -1,0 +1,32 @@
+
+{% extends 'basepage/user_layout.html' %}
+{% block content %} 
+{% if 'accountmedia' in request.resolver_match.url_name  %}
+{% include 'components/navbarhome.html'%}
+{%else %} 
+{% include 'components/navbarfront.html'%}
+{%endif %}
+ {% load static %}
+    <!----------------Page Banner (header)---------------------------->
+    {% include 'components/pagebanner.html' %}
+
+
+
+ <div class="content-body py-4">
+    <div class="container-wrapper">
+        <div class="row">
+
+
+        <div class="gallery-tab"><div class="container-wrapper"><div class="title-container"><div><h3 class="title">Our Gallery</h3></div> <div class="filters filter-menu"><span class="filter active">All</span> <span class="filter">Photo Gallery</span> <span class="filter">Video Gallery</span></div></div> <span class="projects row">
+            
+            <div class="project col-6 col-lg-4"><div class="project-image-wrapper"><div class="image"><img alt="photo" data-src="https://basis.org.bd/public/img/photoGallery/thumb/photos-of-20236459f2cd5087a.jpg" src="{% static 'images/family.jpg'%}" lazy="loaded"> <div class="overlay"><div class="icons"><a href="/photos/103/album" class=""><i title="Details" class="fa fa-link"></i></a></div></div></div> <div class="info"><h4>Photos Of 2023</h4></div></div></div><div class="project col-6 col-lg-4"><div class="project-image-wrapper"><div class="image"><img alt="photo" data-src="https://basis.org.bd/public/img/photoGallery/thumb/photos-of-2022636350ec2e14f.jpeg" src="{% static 'images/mirisha.jpg'%}" lazy="loaded"> <div class="overlay"><div class="icons"><a href="/photos/72/album" class=""><i title="Details" class="fa fa-link"></i></a></div></div></div> <div class="info"><h4>Photos Of 2022</h4></div></div></div><div class="project col-6 col-lg-4"><div class="project-image-wrapper"><div class="image"><img alt="photo" data-src="https://basis.org.bd/public/img/photoGallery/thumb/photos-of-202161e8fc4712e0d.jpeg" src="{% static 'images/class.jpg'%}" lazy="loaded"> <div class="overlay"><div class="icons"><a href="/photos/62/album" class=""><i title="Details" class="fa fa-link"></i></a></div></div></div> <div class="info"><h4>Photos of 2021</h4></div></div></div>
+            <div class="col-lg-12 text-center"><a href="/photo-gallery" class="btn btn-lg btn-primary rounded-50">View All Photos</a>
+            </div>
+           
+            
+    </div>
+</div>
+</div>
+
+
+{% endblock%}

@@ -1,0 +1,77 @@
+{% load static %}
+<div class="sidebar-menu vue-affix affix-top" style="">
+    <div class="sidebar-menu vue-affix affix-top" style="">
+        
+      
+    
+        <div id="left-menu" class="leftside-menu">
+<a class="fas fa-bars" onclick="closeNav()"></a>
+       
+
+
+<div style="background-color: #eaefef" class="card card-body p-0 rounded-10 shadow-lg">
+<div style="text-align: center;" class="card-header bg-transparent">
+
+    <h4>{{header_name}}</h4>
+    
+
+
+
+    <div style="position: relative;" class="logo1">
+<img src="{%if user.image%}{{user.image.url}}{% else %} {% static 'images/avatar.jpg' %}  {% endif %}"  class="rounded-circle img-fluid" style="width: 120px;height: 120px"> 
+
+            {% if user.is_authenticated %}
+            
+    <h5 class="my-3">{{user.name}}</h5>
+    <p>{{user.group}}({{user.session}})<br>{{user.college}}</p>
+            
+    {% else %}
+    <br>
+    <br>
+
+    <h3> You are not Logged In</h3>
+    <a class="btn btn-success" href="{% url 'login' %}" >Login Now</a>
+
+    {% endif %}
+                                
+</div>
+   
+
+
+</div>
+
+<span class="bubble1"> <img src="{%if user.image%}{{user.image.url}}{% else %} {% static 'images/avatar.jpg' %}  {% endif %}" alt="/images/avater.jpg" class="rounded-circle img-fluid" style="width: 150px"></span><span class="bubble5"><img src="/images/ict_logo.jpg" alt="/images/avater.jpg" class="rounded-circle img-fluid"></span><span class="shape2"></span>
+   
+
+
+
+
+<ul id="myDiv1" class="nav flex-column">
+
+   {% for key,value in leftmenulist.items %}
+<ul class="nav-item"><a href="{%url url value %}" id="profile" onclick=" load_main_content(this.id)" class="{% if value in request.path %}nav-link active router-link-active{%else%}nav-link {%endif%}">{{key}}</a></ul>
+   {% endfor %}
+
+
+
+</ul>
+
+
+
+</div>
+</div>
+
+
+
+<!---->
+
+
+
+  
+        <!---->
+    </div>
+</div>
+ 
+         
+         
+           

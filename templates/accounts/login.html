@@ -1,17 +1,35 @@
 
-{% extends 'basepage/basepage.html' %}
-{% include 'components/navbarfront.html'%}           
+{% extends 'basepage/user_layout.html' %}
 {% block content %} 
+{% include 'components/navbarfront.html'%}           
+
  {% load static %}
  
  <div class="wrapper">
         <div class="logo1">
-            <img src="/images/ict_logo.jpg" alt="">
+            <img src="{% static 'images/ictpark_monogram.png'%}" alt="">
         </div>
-
+       
+                
                 <div class="text-center mt-4 name">
-            বিসিএস(সাধারণ শিক্ষা) আইসিটি লগিন
+            <u>ICT Park Bangladesh</u> Members Login
         </div>
+        
+                 {%if email %}
+                
+                <div class="alert alert-danger" role="alert">
+                  <strong>{{email}}</strong> 
+                </div>
+                {% endif %}
+                
+                {%if password %}
+                
+                <div class="alert alert-danger" role="alert">
+                  <strong>{{password}}</strong> 
+                </div>
+                
+                {% endif %}
+                
                 <form class="p-3 mt-3" method="POST">
                   {% csrf_token %}
             <input type="hidden" name="_token" value="5LGo3Lk7bRzFZHLF5avbcxcuy0zFl6iL3zq96W40">            <div class="form-field d-flex align-items-center">
@@ -25,7 +43,7 @@
             <button class="btn mt-3">লগ-ইন</button>
         </form>
         <div class="text-center fs-6">
-            <a href="https://israbentech.com/forgot-password">Forget password?</a> or <a href="https://israbentech.com/add-data">রেজিস্ট্রেশন</a>
+            <a href="{% url 'password_reset' %}">Forget password?</a> or <a href="{% url 'register' %}">রেজিস্ট্রেশন</a>
         </div>
     </div>
 

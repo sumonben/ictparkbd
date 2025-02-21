@@ -2,7 +2,7 @@
     {% load static %}
      <meta charset="utf-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
-     <title>BCSGEICT</title>
+     <title>ICT Park Bangladesh</title>
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
      <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
      <link rel="stylesheet" href="https://israbentech.com/css/twitterstyle.css">
@@ -676,6 +676,28 @@
              border-radius: 50%;
              opacity: .05;
          }
+         
+.marquee {
+    background-color: #ddd;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .marquee span {
+    display: inline-block;
+    font-size: 20px;
+    position: relative;
+    left: 100%;
+    animation: marquee 8s linear infinite;
+  }
+  .marquee:hover span {
+    animation-play-state: paused;
+  }
+  
+  
+  
+ 
      </style>
    </head>
    
@@ -683,7 +705,6 @@
      <div id="app">
          <div id="allpage">
              <div data-v-6f04a53f="" id="app"><!---->
-                 {% include 'components/navbarfront.html'%}           
                  {% block content %} {% endblock %}
    
    
@@ -915,7 +936,7 @@
          function myFunctionclick(e) {
    
              var d = document.getElementById(e);
-             var d1 = document.getElementById('select');
+             var d1 = document.getElementById('group');
              document.getElementById("mydropdown1").classList.toggle("show");
              d1.value = d.id;
    
@@ -952,7 +973,7 @@
          function myFunctionclickSelect2(e) {
    
              var d = document.getElementById(e);
-             var d1 = document.getElementById('select2');
+             var d1 = document.getElementById('session');
    
              d1.value = d.id;
              document.getElementById("mydropdownSelect2").classList.toggle("show");

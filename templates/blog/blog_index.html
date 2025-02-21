@@ -1,0 +1,542 @@
+
+{% extends 'basepage/blog_layout.html' %}
+{% block content %} 
+{% load static %}
+
+ 
+
+  
+ <main data-v-6f04a53f="" class="main">
+  <!---->
+  <div data-v-6f04a53f="" class="home">  
+   <div id="preloader">
+  <div id="status">&nbsp;</div>
+</div> 
+  <div class="page-banner py-3">
+            
+  
+    
+
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <div class="latest_newsarea"> <span>সাম্প্রতিক নিউজ</span>
+            <ul id="ticker01" class="news_sticker">
+              {% for p in allpost|slice:":15"%}
+              <li><a href="{{ p.get_absolute_url }}"><img src="{%if p.image %}{{p.image.url}}{% elif user.image%}{{user.image.url}}{% else %} {% static 'images/avatar.jpg' %}  {% endif %}" alt="">{{p.title}}</a></li>
+              {% endfor %}
+            </ul>
+            <div class="social_area">
+              <ul class="social_nav">
+                <li class="facebook"><a href="#"></a></li>
+                <li class="twitter"><a href="#"></a></li>
+                <li class="flickr"><a href="#"></a></li>
+                <li class="pinterest"><a href="#"></a></li>
+                <li class="googleplus"><a href="#"></a></li>
+                <li class="vimeo"><a href="#"></a></li>
+                <li class="youtube"><a href="#"></a></li>
+                <li class="mail"><a href="#"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+  </div>
+    <section id="sliderSection">
+      <div class="row">
+        <div class="col-lg-8 col-md-8 col-sm-8">
+            
+                <div data-v-3171110e="" id="example-content">
+        
+                    <div  style="background-color: transparent" id="main_content_div">
+                        <!---->
+                           
+                    
+                    
+                    
+                                    <div data-v-3171110e="" class="card card-body shadow-sm">
+                                        <!----- Link Item------------->
+                                        
+                                        <!-----
+                                        <input type="text" id="myInput" onkeyup="myFunction2()" placeholder="Search for names.."
+                                            title="Type in a name">---->
+                    
+                                        <table  style="background-color: transparent" id="myTable2">
+                                           
+                                            {% for p in  post%}
+                                                <tr  style="background-color: transparent" >
+                                                    <td>
+                                                        <div  style="background-color: transparent"  data-v-3171110e="" class="search-list-item row mb-3">
+                    
+                                                            <div  style="background-color: transparent"  data-v-3171110e="" class="col-lg-2 align-self-center text-center">
+                                                                <img
+                                                                    data-v-3171110e="" alt=""
+                                                                    data-src="https://basis.org.bd/public/images/logo/88416f37e13872f50043c7cf9e1b82af.jpg"
+                                                                    
+                                                                    src="{%if p.image %}{{p.image.url}}{% elif user.image%}{{user.image.url}}{% else %} {% static 'images/avatar.jpg' %}  {% endif %}"
+                                                                     lazy="loaded">
+                    
+                    
+                    
+                    
+                    
+                                                            </div>
+                                        
+                    
+                                                            <div  style="background-color: transparent" data-v-3171110e="" class="col-lg-8">
+                                                                <h4 data-v-3171110e=""><a data-v-3171110e=""
+                                                                        href="{{p.get_absolute_url}}" class=""
+                                                                        target="_blank">{{ p.title }}</a></h4> <small
+                                                                    data-v-3171110e="">{{ p.date_created }}</small>
+                                                                <p data-v-3171110e="">
+                                                                    
+                                                                    {{ p.body|safe|slice:":100" }}
+                    
+                                                                </p>
+                                                            </div>
+                                                            <div  style="background-color: transparent "  data-v-3171110e="" ><a
+                                                                    data-v-3171110e="" href="{{p.get_absolute_url}}"
+                                                                    class="btn btn-sm btn-outline-explore" target="_blank" >বিস্তারিত...
+                                                                    </a></div>
+                    
+                    
+                                                        </div>
+                                                    </td>
+                                                  
+                    
+                    
+                                                </tr>
+                                            {% endfor %}
+                    
+                                        </table>
+                                      
+                                          
+                                       
+                                      
+                          
+                    
+                                        <!----- Link Item------------->
+                    
+                                    
+                                    </div>
+                                    <!---->
+                                
+                            <div data-v-3171110e="" class="row py-3 px-4 mx-0">
+                                <div class="col-sm-12 col-md-5 px-0">
+                                    <div role="status" aria-live="polite">Showing {{post.start_index}} to {{post.end_index}} of {{post.paginator.count}} entries</div>
+                                </div>
+                                <div class="col-sm-12 col-md-7 p-0">
+                                    <nav aria-label="Page navigation example">
+                                        {% if post.has_other_pages %}
+                                        <ul class="pagination">
+                                          {% if post.has_previous %}
+                                            <li><a href="?page={{ post.previous_page_number }}">&laquo;</a></li>
+                                          {% else %}
+                                            <li class="disabled"><span>&laquo;</span></li>
+                                          {% endif %}
+                                          {% for i in post.paginator.page_range %}
+                                            {% if post.number == i %}
+                                              <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+                                            {% else %}
+                                              <li><a href="?page={{ i }}">{{ i }}</a></li>
+                                            {% endif %}
+                                          {% endfor %}
+                                          {% if post.has_next %}
+                                            <li><a href="?page={{ post.next_page_number }}">&raquo;</a></li>
+                                          {% else %}
+                                            <li class="disabled"><span>&raquo;</span></li>
+                                          {% endif %}
+                                        </ul>
+                                      {% endif %}
+                                </nav>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <div class="latest_post">
+            <h2><span>সাম্প্রতিক পোস্ট সমূহ</span></h2>
+            <div class="latest_post_container">
+              <div id="prev-button"><i class="fa fa-chevron-up"></i></div>
+              <ul class="latest_postnav">
+                {%for lp in latest_posts %}
+                <li>
+                  <div class="media"> <a href="{{lp.get_absolute_url}}" class="media-left"> <img alt="" src="{%if lp.image %}{{lp.image.url}}{% elif lp.author.user.image%}{{lp.author.user.image.url}}{% else %} {% static 'images/avatar.jpg' %}{%endif %}"> </a>
+                    <div class="media-body"> <a href="{{lp.get_absolute_url}}" class="catg_title"> {{lp.title}}</a> </div>
+                  </div>
+                </li>
+                {% endfor %}
+                
+              </ul>
+              <div id="next-button"><i class="fa  fa-chevron-down"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contentSection">
+      <div class="row">
+        <div class="col-lg-8 col-md-8 col-sm-8">
+          <div class="left_content">
+            <div class="single_post_content">
+              <h2><span>কবিতা ও ছোটগল্প</span></h2>
+              <div class="single_post_content_left">
+                <ul class="business_catgnav  wow fadeInDown">
+                    
+                    {% for p in allpost|slice:"2:5" %}
+                  <li>
+                    <figure class="bsbig_fig"> <a href="pages/single_page.html" class="featured_img"> <img alt="" src="images/featured_img1.jpg"> <span class="overlay"></span> </a>
+                      <figcaption> <a href="{{p.get_absolute_url}}">{{p.title}}</a> </figcaption>
+                      <figure>
+                      {{p.body|safe|slice:":100"}}....<a
+                        data-v-3171110e="" href="{{p.get_absolute_url}}"
+                         target="_blank">আরও পড়ুন</a>
+                    </figure>
+                    <small><a href="tech-author.html" title=""> {% for answer in p.categories.all %}
+                      {{ answer }},
+                    {% endfor %}</a></small>                    <small><a href="tech-single.html" title="">{{p.date_created}}</a></small>
+                    <small><a href="tech-author.html" title="">by {{p.author.bio}} {% for answer in p.tags.all %}
+                        {{ answer }}
+                      {% endfor %}</a></small>
+                        <small><a href="tech-single.html" title=""><i class="fa fa-eye"></i> 1114</a></small>
+                  </li>
+                  {%endfor%}
+                </ul>
+              </div>
+              <div class="single_post_content_right">
+                <ul class="spost_nav">
+                  {%for p in allpost %}
+                  {%for answer in p.categories.all %}
+
+                  {% if answer|stringformat:"s" == 'কবিতা'|stringformat:"s" %}
+                  <li>
+                    <div class="media wow fadeInDown"> <a href="{{p.get_absolute_url}}" class="media-left"> <img alt="" src="{%if p.image %}{{p.image.url}}{% elif user.image%}{{user.image.url}}{% else %} {% static 'images/avatar.jpg' %}{% endif %}"> </a>
+                      <div class="media-body"> <a href="{{p.get_absolute_url}}" class="catg_title">{{p.title}}</a> </div>
+                     
+                    </div>
+                  </li>
+                  {% endif %}
+                  {% endfor %}
+                  
+                  {% endfor %}
+                  
+                </ul>
+              </div>
+            </div>
+            <div class="fashion_technology_area">
+              <div class="fashion">
+                <div class="single_post_content">
+                  <h2><span>গল্প </span></h2>
+                  <ul class="business_catgnav wow fadeInDown">
+                    
+                  {%for p in allpost|slice:":1" %}
+                  {%for answer in p.categories.all %}
+
+                  {% if answer|stringformat:"s" == 'গল্প'|stringformat:"s" %}
+                    <li>
+                      <figure class="bsbig_fig"> <a href="{{p.get_absolute_url}}" class="featured_img"> <img alt="" src="{%if p.image %}{{p.image.url}}{% elif user.image%}{{user.image.url}}{% else %} {% static 'images/avatar.jpg' %}{% endif %}"> <span class="overlay"></span> </a>
+                        <figcaption> <a href="pages/single_page.html">{{p.title}}</a> </figcaption>
+                        <p>{{p.boddy|safe|slice:"100"}}</p>
+                      </figure>
+                    </li>
+                    
+                    {%endif%}
+                    {% endfor %}
+                    {% endfor %}
+                  </ul>
+                  <ul class="spost_nav">
+                    
+                  {%for p in allpost|slice:"1:" %}
+                  {%for answer in p.categories.all %}
+
+                  {% if answer|stringformat:"s" == 'গল্প'|stringformat:"s" %}
+                    <li>
+                      <div class="media wow fadeInDown"> <a href="{{p.get_absolute_url}}" class="media-left"> <img alt="" src="{%if p.image %}{{p.image.url}}{% elif user.image%}{{user.image.url}}{% else %} {% static 'images/avatar.jpg' %}{% endif %}"> </a>
+                        <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> {{p.title}}</a> </div>
+                      </div>
+                    </li>
+                    {%endif%}
+                    {% endfor %}
+                    {% endfor %}
+
+                  </ul>
+                </div>
+              </div>
+              <div class="technology">
+                <div class="single_post_content">
+                  <h2><span>তথ্যপ্রযুক্তি</span></h2>
+                  <ul class="business_catgnav">
+                    
+                  {%for p in allpost|slice:":1" %}
+                  {%for answer in p.categories.all %}
+
+                  {% if answer|stringformat:"s" == 'গল্প'|stringformat:"s" %}
+                    <li>
+                      <figure class="bsbig_fig"> <a href="{{p.get_absolute_url}}" class="featured_img"> <img alt="" src="{%if p.image %}{{p.image.url}}{% elif user.image%}{{user.image.url}}{% else %} {% static 'images/avatar.jpg' %}{% endif %}"> <span class="overlay"></span> </a>
+                        <figcaption> <a href="{{p.get_absolute_url}}">{{p.title}}</a> </figcaption>
+                        <p>{{p.boddy|safe|slice:"100"}}</p>
+                      </figure>
+                    </li>
+                    
+                    {%endif%}
+                    {% endfor %}
+                    {% endfor %}
+                  </ul>
+                  <ul class="spost_nav">
+                    
+                  {%for p in allpost %}
+                  {%for answer in p.categories.all %}
+
+                  {% if answer|stringformat:"s" == 'কবিতা'|stringformat:"s" %}
+                    <li>
+                      <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="{%if p.image %}{{p.image.url}}{% elif user.image%}{{user.image.url}}{% else %} {% static 'images/avatar.jpg' %}{% endif %}"> </a>
+                        <div class="media-body"> <a href="{{p.get_absolute_url}}" class="catg_title"> {{p.title}}</a> </div>
+                      </div>
+                    </li>
+                    {%endif%}
+                    {% endfor %}
+                    {% endfor %}
+                    
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="single_post_content">
+              <h2><span>পড়াশোনা</span></h2>
+              <ul class="photograph_nav  wow fadeInDown">
+                <li>
+                  <div class="photo_grid">
+                    <figure class="effect-layla"> <a class="fancybox-buttons" data-fancybox-group="button" href="images/photograph_img2.jpg" title="Photography Ttile 1"> <img src="{%if p.image %}{{p.image.url}}{% elif user.image%}{{user.image.url}}{% else %} {% static 'images/avatar.jpg' %}{% endif %}" alt=""/></a> </figure>
+                  </div>
+                </li>
+                <li>
+                  <div class="photo_grid">
+                    <figure class="effect-layla"> <a class="fancybox-buttons" data-fancybox-group="button" href="images/photograph_img3.jpg" title="Photography Ttile 2"> <img src="images/photograph_img3.jpg" alt=""/> </a> </figure>
+                  </div>
+                </li>
+                <li>
+                  <div class="photo_grid">
+                    <figure class="effect-layla"> <a class="fancybox-buttons" data-fancybox-group="button" href="images/photograph_img4.jpg" title="Photography Ttile 3"> <img src="images/photograph_img4.jpg" alt=""/> </a> </figure>
+                  </div>
+                </li>
+                <li>
+                  <div class="photo_grid">
+                    <figure class="effect-layla"> <a class="fancybox-buttons" data-fancybox-group="button" href="images/photograph_img4.jpg" title="Photography Ttile 4"> <img src="images/photograph_img4.jpg" alt=""/> </a> </figure>
+                  </div>
+                </li>
+                <li>
+                  <div class="photo_grid">
+                    <figure class="effect-layla"> <a class="fancybox-buttons" data-fancybox-group="button" href="images/photograph_img2.jpg" title="Photography Ttile 5"> <img src="images/photograph_img2.jpg" alt=""/> </a> </figure>
+                  </div>
+                </li>
+                <li>
+                  <div class="photo_grid">
+                    <figure class="effect-layla"> <a class="fancybox-buttons" data-fancybox-group="button" href="images/photograph_img3.jpg" title="Photography Ttile 6"> <img src="images/photograph_img3.jpg" alt=""/> </a> </figure>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="single_post_content">
+              <h2><span>রম্য গল্প(জোকস)</span></h2>
+              <div class="single_post_content_left">
+                <ul class="business_catgnav">
+                  
+                  {%for p in allpost|slice:":1" %}
+                  {%for answer in p.categories.all %}
+
+                  {% if answer|stringformat:"s" == 'রম্য রচনা'|stringformat:"s" %}
+                    <li>
+                      <figure class="bsbig_fig"> <a href="{{p.get_absolute_url}}" class="featured_img"> <img height="250px" width="auto" alt="" src="{%if p.image %}{{p.image.url}}{% elif user.image%}{{user.image.url}}{% else %} {% static 'images/avatar.jpg' %}{% endif %}"> <span class="overlay"></span> </a>
+                        <figcaption> <a href="{{p.get_absolute_url}}">{{p.title}}</a> </figcaption>
+                        <p>{{p.boddy|safe|slice:"100"}}</p>
+                      </figure>
+                    </li>
+                    
+                    {%endif%}
+                    {% endfor %}
+                    {% endfor %}
+                    
+                  {%for p in allpost|slice:"1:3" %}
+                  {%for answer in p.categories.all %}
+
+                  {% if answer|stringformat:"s" == 'রম্য রচনা'|stringformat:"s" %}
+                    <li>
+                      <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="{%if p.image %}{{p.image.url}}{% elif user.image%}{{user.image.url}}{% else %} {% static 'images/avatar.jpg' %}{% endif %}"> </a>
+                        <div class="media-body"> <a href="{{p.get_absolute_url}}" class="catg_title"> {{p.title}}</a> </div>
+                      </div>
+                    </li>
+                    {%endif%}
+                    {% endfor %}
+                    {% endfor %}
+                </ul>
+              </div>
+              <div class="single_post_content_right">
+                <ul class="spost_nav">
+                  
+                  {%for p in allpost|slice:"3:10" %}
+                  {%for answer in p.categories.all %}
+
+                  {% if answer|stringformat:"s" == 'রম্য রচনা'|stringformat:"s" %}
+                    <li>
+                      <div class="media wow fadeInDown"> <a href="{{p.get_absolute_url}}" class="media-left"> <img alt="" src="{%if p.image %}{{p.image.url}}{% elif user.image%}{{user.image.url}}{% else %} {% static 'images/avatar.jpg' %}{% endif %}"> </a>
+                        <div class="media-body"> <a href="{{p.get_absolute_url}}" class="catg_title"> {{p.title}}</a> </div>
+                      </div>
+                    </li>
+                    {%endif%}
+                    {% endfor %}
+                    {% endfor %}
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <aside class="right_content">
+            <div class="single_sidebar">
+              <h2><span>সর্বাধিক পঠিত পোস্টসমূহ</span></h2>
+              <ul class="spost_nav">
+                {%for p in popular_posts %}
+                <li>
+                  <div class="media wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;"> <a href="{{p.get_absolute_url}}" class="media-left"> <img alt="" src="{%if p.image %}{{p.image.url}}{% elif user.image%}{{user.image.url}}{% else %} {% static 'images/avatar.jpg' %}{% endif %}"> </a>
+                    <div class="media-body"> <a href="{{p.get_absolute_url}}" class="catg_title"> {{p.title}}</a> </div>
+                  </div>
+                </li>
+                {% endfor %}
+                <li>
+                  <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="images/post_img2.jpg"> </a>
+                    <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 2</a> </div>
+                  </div>
+                </li>
+                
+              </ul>
+            </div>
+            <div class="single_sidebar">
+              <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#category" aria-controls="home" role="tab" data-toggle="tab">ক্যাটাগরি</a></li>
+                <li role="presentation"><a href="#video" aria-controls="profile" role="tab" data-toggle="tab">ভিডিও</a></li>
+                <li role="presentation"><a href="#comments" aria-controls="messages" role="tab" data-toggle="tab">মন্তব্যসমূহ</a></li>
+              </ul>
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="category">
+                  <ul>
+                    
+                  {% for category in categories %}
+                  <li class="cat-item"><a href="{% url 'showmultiple' 'category' category.id  %}">{{category.name}}</a></li>
+                  {% endfor %}
+                  </ul>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="video">
+                  <div class="vide_area">
+                    <iframe width="100%" height="250" src="http://www.youtube.com/embed/h5QWbURNEpA?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+                  </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="comments">
+                  <ul class="spost_nav">
+                    <li>
+                      <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="images/post_img1.jpg"> </a>
+                        <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 1</a> </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="images/post_img2.jpg"> </a>
+                        <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 2</a> </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="images/post_img1.jpg"> </a>
+                        <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 3</a> </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media wow fadeInDown"> <a href="pages/single_page.html" class="media-left"> <img alt="" src="images/post_img2.jpg"> </a>
+                        <div class="media-body"> <a href="pages/single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 4</a> </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="single_sidebar wow fadeInDown">
+              <h2><span>বিজ্ঞাপন</span></h2>
+              <a class="sideAdd" href="#"><img src="{% static 'images/ictpark_monogram.png' %}" height="250px" width="250px" alt=""></a> </div>
+            <div class="single_sidebar wow fadeInDown">
+              <h2><span>আর্কাইভ ক্যাটাগরি</span></h2>
+              <select class="catgArchive">
+                <option>ক্যাটাগরি নির্বাচন</option>
+              {% for category in categories %}
+              <option> <a href="{% url 'showmultiple' 'category' category.id  %}">{{category.name}}</a></option>
+              {% endfor %}
+              </select>
+            </div>
+            <div class="single_sidebar wow fadeInDown">
+              <h2><span>লিঙ্কসমূহ</span></h2>
+              <ul>
+                <li><a href="{% url 'blog' %}">ব্লগ </a></li>
+                <li><a href="{% url 'register' %}">রেজিস্টার</a></li>
+                <li><a href="{% url 'login' %}">লগিন</a></li>
+                <li><a href="{% url 'createpost' %}">ব্লগ লিখুন </a></li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+    <footer id="footer">
+      <div class="footer_top">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="footer_widget wow fadeInLeftBig">
+              <h2>আর্কাইভ পোস্ত
+
+              </h2>
+              {% regroup all_posts by date_created.year as year_list %}
+
+              <ul class="tag_nav">
+              {% for year in year_list %}
+                  <li>
+                      {% regroup year.list by date_created.month as month_list %}
+                      <ul>
+                      {% for month in month_list %}
+                          <li><a href="{% url 'post_archive_month' year.grouper month.grouper %}">{{ month.list.0.date_created|date }} ({{ month.list|length }})</a></li>
+                      {% endfor %}
+                      </ul>
+                  </li>
+              {% endfor %}
+              </ul>
+ 
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="footer_widget wow fadeInDown">
+              <h2>ট্যাগসমূহ</h2>
+              <ul class="tag_nav">
+                {% for tag in tags %}
+                <li><a href="{% url 'showmultiple' 'tag' tag.id  %}">{{tag.name}}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="footer_widget wow fadeInRightBig">
+              <h2>Contact</h2>
+              <img src="{% static 'images/sumon.jpg'%}" class="rounded-circle" height="50" width="50" alt="/images/ict_logo.jpg" loading="lazy">
+              <address>
+              Tarique Sumon<br>
+              Israben Tech<br>
+              cell: 01712539569
+              </address>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer_bottom">
+        <p class="copyright">Copyright &copy; 2024 <a href="index.html">Tarique Sumon</a></p>
+        <p class="developer">Developed By Israbentech</p>
+      </div>
+    </footer>
+  </div>
+  </main>
+{% endblock %}

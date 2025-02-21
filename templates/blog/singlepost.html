@@ -1,0 +1,327 @@
+
+{% extends 'basepage/blog_layout.html' %}
+{% block content %} 
+
+
+ {% load static %}
+<div id="preloader">
+  <div id="status">&nbsp;</div>
+</div>
+ <main data-v-6f04a53f="" class="main">
+  <!---->
+  <div data-v-6f04a53f="" class="home"> 
+ 
+
+  <div style="margin-top:7%" class="page-banner py-3">
+    <div class="row">
+      <div class="col-lg-12 col-md-12">
+        <div class="latest_newsarea"> <span>সাম্প্রতিক পোস্ট</span>
+          <ul id="ticker01" class="news_sticker">
+            {% for p in allpost|slice:":15"%}
+              <li><a href="{{ p.get_absolute_url }}"><img src="{%if p.image %}{{p.image.url}}{% elif user.image%}{{user.image.url}}{% else %} {% static 'images/avatar.jpg' %}  {% endif %}" alt="">{{p.title}}</a></li>
+              {% endfor %}
+          </ul>
+          <div class="social_area">
+            <ul class="social_nav">
+              <li class="facebook"><a href="#"></a></li>
+              <li class="twitter"><a href="#"></a></li>
+              <li class="flickr"><a href="#"></a></li>
+              <li class="pinterest"><a href="#"></a></li>
+              <li class="googleplus"><a href="#"></a></li>
+              <li class="vimeo"><a href="#"></a></li>
+              <li class="youtube"><a href="#"></a></li>
+              <li class="mail"><a href="#"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+</div>
+    
+    
+  <section id="contentSection">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-8">
+        <div class="left_content">
+          <div class="single_page">
+            <ol class="breadcrumb">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="#">{{singlepost.categories}}</a></li>
+              <li class="active">Mobile</li>
+            </ol>
+            <h1>{{singlepost.title}}</h1>
+            <div class="post_commentbox"> <a href="#"><i class="fa fa-cogs" aria-hidden="true"></i></a>{% for cats in singlepost.categories.all %}
+              {{ cats }},
+            {% endfor %}</a> <span><i class="fa fa-calendar"></i>{{singlepost.date_created}}</span> <a href="#"><i class="fa fa-tags"></i>{% for tag in singlepost.tags.all %}
+              {{ tag }},
+            {% endfor %}</a> <a href="#"><i class="fa fa-user"></i>{{singlepost.author.user.name}}</a> </div>
+            <div class="single_page_content"> 
+              <p> {{singlepost.title}}</p>
+               {{singlepost.body|safe}}
+
+               <div  class="post_commentbox">
+
+              {% if user.is_authenticated %}
+              <form action="{% url 'blog_posts' singlepost.id %}" method="POST">
+                {% csrf_token %}
+            
+                {% if post_is_liked %}
+                <button type="submit" name="blogpost_id" value="{{singlepost.id}}" class="btn btn-info">Unlike</button>
+                {% else %}
+                <button type="submit" name="blogpost_id" value="{{singlepost.id}}" class="btn btn-info">Like</button>
+                {% endif %}
+                <i class="fa fa-thumbs-o-up"></i>
+              </form>
+            {% else %}
+              <a class="btn btn-outline-info" href="{% url 'login' %}?next={{request.path}}">Log in to like this article!</a><br>
+            {% endif %}
+            <strong class="text-secondary">{{ number_of_likes }} Like{{ number_of_likes|pluralize }}</strong>
+              <!-- Form to leave comment -->
+            </div>
+  <div class="row mt-5">
+    <div class="col-lg-6 offset-lg-3">
+         
+      <h3>মন্তব্য করুন</h3>
+       {%if login %}
+                
+                <div class="alert alert-danger" role="alert">
+                  <strong>কমেন্ট করতে লগিন করুন</strong> 
+                </div>
+                
+                {% endif %}
+      <form method='POST'>
+        {% csrf_token %}
+        <div class="form-group">
+          
+        {{form.as_p}}
+        {{form.media}}
+        </div>
+        <button class="btn btn-primary ml-2" type="submit">সাবমিট</button>
+      </form>
+    </div>
+  </div>
+
+</div>
+              
+            <div class="social_link">
+              <ul class="sociallink_nav">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+              </ul>
+            </div>
+            <div class="container-fluid my-5">
+
+              <!-- ... -->
+              
+               <!-- List of comments -->
+                {% if comments %}
+                <div class="row mt-5">
+                  <div class="col-lg-6 offset-lg-3">
+                   <h3> মন্তব্যসমূহ{{ comments.count|pluralize }}
+                    <span class="badge badge-dark ml-2">{{ comments.count }}</span></h3>
+                  </div>
+                  {% for comment in comments %}
+                  
+                  <div class="col-lg-6 offset-lg-3 mt-2">
+                    <div class="card p-2">
+                      <div class="row">
+                        <div class="col-12">
+                          <img class="rounded-circle mr-2" hight="50" width="50" src="{%if comment.author.user.image%}{{comment.author.user.image.url}}{% else %} {% static 'images/avatar.jpg' %}  {% endif %}" alt="Avatar">
+                          <strong>{{ comment.author.user.name }}</strong> বলেছেনঃ 
+                        </div>
+                        <div class="col-12">
+                          <p class="m-1 mt-3">{{ comment.content|safe }}</p>
+                          <p class="text-right text-muted"><small>{{ comment.created }}</small></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {% endfor %}
+                </div>
+                {% endif %}
+              
+          </div>
+            <div class="related_post">
+              <h2>এ সম্পর্কিত আরও পড়ুন </h2>
+              <ul class="spost_nav wow fadeInDown animated animated" style="visibility: visible; animation-name: fadeInDown;">
+                {%for p in related_posts|slice:":6" %}
+                <li>
+                  <div class="media"> <a class="media-left" href="{{p.get_absolute_url}}"> <img src="{% if p.image %}{{p.image.url}}{% elif p.author.user.image%}{{p.author.user.image.url}}{% else %} {% static 'images/avatar.jpg' %}  {% endif %}" alt=""> </a>
+                    <div class="media-body"> <a class="catg_title" href="{{p.get_absolute_url}}"> {{p.title}}</a> </div>
+                  </div>
+                </li>
+                {% endfor %}
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="nav-slit"> <a class="prev" href="{{next.get_absolute_url}}"> <span class="icon-wrap"><i class="fa fa-angle-left"></i></span>
+        <div>
+          <h3>{{previous.title}}</h3>
+          <img src="{%if previous.author.user.image%}{{previous.author.user.image.url}}{% else %} {% static 'images/avatar.jpg' %}  {% endif %}" alt=""> </div>
+        </a> <a class="next" href="{{previous.get_absolute_url}}"> <span class="icon-wrap"><i class="fa fa-angle-right"></i></span>
+        <div>
+          <h3>{{next.title}}</h3>
+          <img src="{%if next.author.user.image%}{{next.author.user.image.url}}{% else %} {% static 'images/avatar.jpg' %}{%endif %}" alt=""> </div>
+        </a> </nav>
+
+        <nav class="nav-slit"> 
+          <a class="prev" href="{{previous.get_absolute_url}}"> <span class="icon-wrap"><i class="fa fa-angle-left"></i></span>
+          <div>
+            <h3>{{previous.title}}</h3>
+            <img src="{%if previous.author.user.image%}{{previous.author.user.image.url}}{% else %} {% static 'images/avatar.jpg' %}  {% endif %}" alt=""/> </div>
+          </a> 
+          <a class="next" href="{{next.get_absolute_url}}"> <span class="icon-wrap"><i class="fa fa-angle-right"></i></span>
+          <div>
+            <h3>{{next.title}}</h3>
+            <img src="{%if next.author.user.image%}{{next.author.user.image.url}}{% else %} {% static 'images/avatar.jpg' %}{%endif %}" alt=""/> </div>
+          </a> 
+        </nav>
+
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <aside class="right_content">
+          <div class="single_sidebar">
+            <h2><span>জনপ্রিয় পোস্টসমূহ</span></h2>
+            <ul class="spost_nav">
+              {%for p in popular_posts %}
+                <li>
+                  <div class="media wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;"> <a href="{{p.get_absolute_url}}" class="media-left"> <img alt="" src="{%if p.image %}{{p.image.url}}{% elif user.image%}{{user.image.url}}{% else %} {% static 'images/avatar.jpg' %}{% endif %}"> </a>
+                    <div class="media-body"> <a href="{{p.get_absolute_url}}" class="catg_title"> {{p.title}}</a> </div>
+                  </div>
+                </li>
+                {% endfor %}
+              
+              
+            </ul>
+          </div>
+          <div class="single_sidebar">
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#category" aria-controls="home" role="tab" data-toggle="tab">ক্যাটাগরি</a></li>
+              <li role="presentation"><a href="#video" aria-controls="profile" role="tab" data-toggle="tab">ভিডিও</a></li>
+              <li role="presentation"><a href="#comments" aria-controls="messages" role="tab" data-toggle="tab">মন্তব্যসমূহ</a></li>
+            </ul>
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="category">
+                <ul>
+                  {% for category in categories %}
+                  <li class="cat-item"><a href="{% url 'showmultiple' 'category' category.id  %}">{{category.name}}</a></li>
+                  {% endfor %}
+                </ul>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="video">
+                <div class="vide_area">
+                  <iframe width="100%" height="250" src="http://www.youtube.com/embed/h5QWbURNEpA?feature=player_detailpage" frameborder="0" allowfullscreen=""></iframe>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="comments">
+                <ul class="spost_nav">
+                  <li>
+                    <div class="media wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;"> <a href="single_page.html" class="media-left"> <img alt="" src="../images/post_img1.jpg"> </a>
+                      <div class="media-body"> <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 1</a> </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="media wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;"> <a href="single_page.html" class="media-left"> <img alt="" src="../images/post_img2.jpg"> </a>
+                      <div class="media-body"> <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 2</a> </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="media wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;"> <a href="single_page.html" class="media-left"> <img alt="" src="../images/post_img1.jpg"> </a>
+                      <div class="media-body"> <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 3</a> </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="media wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;"> <a href="single_page.html" class="media-left"> <img alt="" src="../images/post_img2.jpg"> </a>
+                      <div class="media-body"> <a href="single_page.html" class="catg_title"> Aliquam malesuada diam eget turpis varius 4</a> </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="single_sidebar wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
+            <h2><span>বিজ্ঞাপন</span></h2>
+            <a class="sideAdd" href="#"><img src="{% static 'images/ictpark_monogram.png' %}" height="200px" width="200px" alt=""></a> </div>
+          <div class="single_sidebar wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
+            <h2><span>আর্কাইভ ক্যাটাগরি</span></h2>
+            <select class="catgArchive">
+              <option>ক্যাটাগরি নির্বাচন</option>
+              {% for category in categories %}
+              <option> <a href="{% url 'showmultiple' 'category' category.id  %}">{{category.name}}</a></option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="single_sidebar wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;">
+            <h2><span>লিংকসমূহ </span></h2>
+            <ul>
+              <li><a href="{% url 'blog' %}">ব্লগ </a></li>
+              <li><a href="{% url 'register' %}">রেজিস্টার</a></li>
+              <li><a href="{% url 'login' %}">লগিন</a></li>
+              <li><a href="{% url 'createpost' %}">ব্লগ লিখুন &amp; </a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+  </section>
+    <footer id="footer">
+      <div class="footer_top">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="footer_widget wow fadeInLeftBig">
+              <h2>আর্কাইভ পোস্টসমূহ</h2>
+              {% regroup all_posts by date_created.year as year_list %}
+
+              <ul class="tag_nav">
+              {% for year in year_list %}
+                  <li>
+                      {% regroup year.list by date_created.month as month_list %}
+                      <ul>
+                      {% for month in month_list %}
+                          <li><a href="{% url 'post_archive_month' year.grouper month.grouper %}">{{ month.list.0.date_created|date }} ({{ month.list|length }})</a></li>
+                      {% endfor %}
+                      </ul>
+                  </li>
+              {% endfor %}
+              </ul>
+ 
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="footer_widget wow fadeInDown">
+              <h2>ট্যাগসমূহ</h2>
+              <ul class="tag_nav">
+                {% for tag in tags %}
+                <li><a href="{% url 'showmultiple' 'tag' tag.id  %}">{{tag.name}}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4">
+            <div class="footer_widget wow fadeInRightBig">
+              <h2>যোগাযোগ</h2>
+              <img src="{% static 'images/sumon.jpg'%}" class="rounded-circle" height="50" width="50" alt="/images/ict_logo.jpg" loading="lazy">
+              <address>
+              Tarique Sumon<br>
+              Israben Tech<br>
+              cell: 01712539569
+              </address>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer_bottom">
+        <p class="copyright">Copyright &copy; 2024 <a href="index.html">Tarique Sumon</a></p>
+        <p class="developer">Developed By Israbentech</p>
+      </div>
+    </footer>
+  </div>
+  </main>
+{% endblock %}

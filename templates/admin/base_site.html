@@ -1,0 +1,12 @@
+{% extends "admin/base.html" %}
+{%load static %}
+{% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | {{ site_title|default:_('Israben Tech site admin') }}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'home' %}"><img height="80px" width="auto" src="{% static 'images/ictparkbd_logo.jpg'%}" alt="ictparkbd_logo">ICT Park Bangladesh Administration</a></h1>
+{% endblock %}
+{% if user.is_anonymous %}
+  {% include "admin/color_theme_toggle.html" %}
+{% endif %}
+
+{% block nav-global %}{% endblock %}

@@ -1,5 +1,7 @@
 from django.shortcuts import redirect, render
-from frontpage.models import Carosel
+from .models import Carosel,News
+from accounts.models import CustomUser
+from studymaterials.models import Lecture,Chapter,Subject
 from django.views.decorators.csrf import csrf_exempt
 from .serializers import frontpageSerializer
 from rest_framework.renderers import JSONRenderer
@@ -12,6 +14,7 @@ from rest_framework.renderers import TemplateHTMLRenderer
 from rest_framework import status
 from rest_framework.response import Response
 from django.shortcuts import get_object_or_404
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 class Carousel_Create(ListCreateAPIView):
     renderer_classes = [TemplateHTMLRenderer]
@@ -19,6 +22,8 @@ class Carousel_Create(ListCreateAPIView):
     def get(self, request):
         if self.request.user.is_staff:
             carousel = Carosel.objects.all
+            
+
             serializer = frontpageSerializer(carousel,many=True)
             return Response({'serializer': serializer, 'carousel': carousel})
         return HttpResponse('You have no permission to add carousel')
@@ -42,8 +47,13 @@ class frontpage_view(ListCreateAPIView):
     template_name = 'frontpage/frontpage.html'
     def get(self, request):
         carousel = Carosel.objects.all
+        chapters = Chapter.objects.all
+        news = News.objects.all
+        #chapters="sumon"
+        #for chapter in singlepost:
+        # print(chapter.name)
         serializer = frontpageSerializer(carousel,many=True)
-        return Response({'serializer': serializer, 'carousel': carousel})
+        return Response({'serializer': serializer, 'carousel': carousel, 'chapters': chapters, 'news': news})
 # Create your views here.
 def frontpage(request):
     carosel=Carosel.objects.all()
@@ -107,3 +117,98 @@ def carousel(request):
     serilizer=frontpageSerializer(caro,many=True)
     json_data=JSONRenderer().render(serilizer.data)
     return HttpResponse(json_data, content_type='application/json')
+
+
+def about(request,pk):
+    
+    leftmenulist={
+        'Mission':"mission",
+        'Vision':"vision",
+        'Ideology':"ideology",}
+    context={
+        'url':'about',
+        'leftmenulist':leftmenulist,
+        'header_name':'About',
+        
+        'page_banner':'About/Mission',
+        'app_name':'Abouts'}
+    if(pk=='mission'):
+        return render(request,'frontpage/about/mission.html',context)
+    elif(pk=='vision'):
+        return render(request,'frontpage/about/vision.html',context)
+    else:
+        return render(request,'frontpage/about/ideology.html',context)
+
+
+ ###############Membership####################
+def memberShip(request,pk):
+    users=CustomUser.objects.all()
+
+    page = request.GET.get('page', 1)
+    paginator = Paginator(users, 2)
+    try:
+         users = paginator.page(page)
+    except PageNotAnInteger:
+         users = paginator.page(1)
+    except EmptyPage:
+         users = paginator.page(paginator.num_pages)    
+    leftmenulist={
+        'Member List':'memberlist',
+        'Rule and Regulations':'rules-n-regulations',
+        'code-of-conduct':'code-of-conduct',
+        'Becme A Member':'register'}
+    context={
+        'users':users,
+        'url':'membership',
+        'leftmenulist':leftmenulist,
+        'header_name':'Membership',
+        'app_name':'Accounts'}
+    if(pk=='memberlist'):
+        return render(request,'accounts/membership/memberlist.html',context)
+    elif(pk=='rules-n-regulations'):
+        return render(request,'accounts/membership/rules_n_regulation.html',context)   
+    else:
+        return render(request,'accounts/register.html',context)   
+
+        
+
+
+###############Media News Image Video####################
+
+def mediaCenter(request,pk):
+    
+    news=News.objects.all().order_by('-id')
+    page = request.GET.get('page', 1)
+    paginator = Paginator(news, 2)
+    try:
+         news = paginator.page(page)
+    except PageNotAnInteger:
+         news = paginator.page(1)
+    except EmptyPage:
+         news = paginator.page(paginator.num_pages)
+            
+    leftmenulist={
+        
+        'Blog Page':"blog",
+        'Create Blog Post':"createpost",
+        'News':"news",
+        'Image Gallery':"image-gallery",
+        'Viedo Gallery':'video-gallery'}
+    context={
+        'url':'media',
+        'leftmenulist':leftmenulist,
+        'header_name':'Media Center',
+        'news':news,
+        'page_banner':'Media/News,Image,Video',
+        'app_name':'Media Center'}
+    if(pk=='blog'):
+        return redirect('blog')
+    elif(pk=='createpost'):
+        return render(request,'blog/postcreate.html',context)
+    elif(pk=='image-gallery'):
+        return render(request,'media/imagegallery.html',context)
+    elif(pk=='video-gallery'):
+        return render(request,'media/videogallery.html',context)
+    else:
+        return render(request,'media/news.html',context)
+        

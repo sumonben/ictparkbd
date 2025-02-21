@@ -1,0 +1,31 @@
+
+{% extends 'basepage/user_layout.html' %}
+{% block content %} 
+{% if 'accountmedia' in request.resolver_match.url_name  %}
+{% include 'components/navbarhome.html'%}
+{%else %} 
+{% include 'components/navbarfront.html'%}
+{%endif %}
+ {% load static %}
+    <!----------------Page Banner (header)---------------------------->
+    {% include 'components/pagebanner.html' %}
+
+
+
+ <div class="content-body py-4">
+    <div class="container-wrapper">
+        <div class="row">
+
+
+            
+
+            <div class="gallery-tab"><div class="container-wrapper"><div class="title-container"><div><h3 class="title">Our Gallery</h3></div> <div class="filters filter-menu"><span class="filter active">All</span> <span class="filter">Photo Gallery</span> <span class="filter">Video Gallery</span></div></div> <span class="projects row">
+                
+                <div class="project col-6 col-lg-4"><div class="project-image-wrapper"><div class="image"><div class="y-video"><div class="y-video__inner" style="padding-bottom: 56.25%;"><picture><source srcset="{% static 'images/ict_logo.jpg' %}" type="image/webp"> <img src="{% static 'images/ict_logo.jpg' %}" alt="Video thumbnail" class="y-video__media y-video__media--type--img"></picture> <button type="button" aria-label="Play video" class="y-video__button"><svg viewBox="0 0 68 48" version="1.1" width="100%" height="100%"><path d="M66.5 7.7c-.8-2.9-2.5-5.4-5.4-6.2C55.8.1 34 0 34 0S12.2.1 6.9 1.6c-3 .7-4.6 3.2-5.4 6.1a89.6 89.6 0 0 0 0 32.5c.8 3 2.5 5.5 5.4 6.3C12.2 47.9 34 48 34 48s21.8-.1 27.1-1.6c3-.7 4.6-3.2 5.4-6.1C68 35 68 24 68 24s0-11-1.5-16.3z" class="y-video__button-shape"></path> <path d="M45 24L27 14v20" class="y-video__button-icon"></path></svg></button></div></div> <!----></div> <div class="info"><h4>BASIS Executive Council's Installation Night</h4></div></div></div><div class="project col-6 col-lg-4"><div class="project-image-wrapper"><div class="image"><div class="y-video"><div class="y-video__inner" style="padding-bottom: 56.25%;"><picture><source srcset="{% static 'images/private.jpg'%}" type="image/webp"> <img src="https://img.youtube.com/vi/bYkrcpl9Dvs/hqdefault.jpg" alt="Video thumbnail" class="y-video__media y-video__media--type--img"></picture> <button type="button" aria-label="Play video" class="y-video__button"><svg viewBox="0 0 68 48" version="1.1" width="100%" height="100%"><path d="M66.5 7.7c-.8-2.9-2.5-5.4-5.4-6.2C55.8.1 34 0 34 0S12.2.1 6.9 1.6c-3 .7-4.6 3.2-5.4 6.1a89.6 89.6 0 0 0 0 32.5c.8 3 2.5 5.5 5.4 6.3C12.2 47.9 34 48 34 48s21.8-.1 27.1-1.6c3-.7 4.6-3.2 5.4-6.1C68 35 68 24 68 24s0-11-1.5-16.3z" class="y-video__button-shape"></path> <path d="M45 24L27 14v20" class="y-video__button-icon"></path></svg></button></div></div> <!----></div> <div class="info"><h4>Somoy TV: BASIS BB-Sat-1 (App on Bangabandhu Satellite-1)</h4></div></div></div><div class="project col-6 col-lg-4"><div class="project-image-wrapper"><div class="image"><div class="y-video"><div class="y-video__inner" style="padding-bottom: 56.25%;"><picture><source srcset="{% static 'images/student.jpg' %}" type="image/webp"> <img src="{% static 'images/student.jpg' %}" alt="Video thumbnail" class="y-video__media y-video__media--type--img"></picture> <button type="button" aria-label="Play video" class="y-video__button"><svg viewBox="0 0 68 48" version="1.1" width="100%" height="100%"><path d="M66.5 7.7c-.8-2.9-2.5-5.4-5.4-6.2C55.8.1 34 0 34 0S12.2.1 6.9 1.6c-3 .7-4.6 3.2-5.4 6.1a89.6 89.6 0 0 0 0 32.5c.8 3 2.5 5.5 5.4 6.3C12.2 47.9 34 48 34 48s21.8-.1 27.1-1.6c3-.7 4.6-3.2 5.4-6.1C68 35 68 24 68 24s0-11-1.5-16.3z" class="y-video__button-shape"></path> <path d="M45 24L27 14v20" class="y-video__button-icon"></path></svg></button></div></div> <!----></div> <div class="info"><h4>BASIS SoftExpo 2018 Promo Video</h4></div></div></div></span> <div class="row mt-3 mb-5"><div class="col-lg-12 text-center"> <a href="/video-gallery" class="btn btn-lg btn-primary rounded-50">View All Videos</a></div></div></div></div>           
+            
+    </div>
+</div>
+</div>
+
+
+{% endblock%}

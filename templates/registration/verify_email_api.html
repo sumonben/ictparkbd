@@ -1,0 +1,19 @@
+{% extends 'basepage/basepage.html' %}
+{% include 'components/navbarfront.html'%}           
+{% block content %} 
+ {% load static %}
+ <br><br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+<h1>You need to verify your email</h1>
+<form method="post" action="{% url 'verify_email_api'  %}">
+    {% csrf_token %}
+    <input type="text" id="email" name="email" >
+
+    <input class="btn btn-primary max-btn" type="submit" value="Verify">
+</form>
+{% endblock %}

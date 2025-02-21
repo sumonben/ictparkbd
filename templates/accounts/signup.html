@@ -1,0 +1,163 @@
+
+{% extends 'basepage/user_layout.html' %}
+{% block content %} 
+{% include 'components/navbarfront.html'%}           
+
+ {% load static %}
+ <div style="align-content: center;" class="wrapper1">
+  
+    
+    <div style="width:100px;height: 100px;" class="logo1">
+        <img style="width:100px;height: 100px;" src="{% static 'images/ict_logo.jpg' %}" alt="" class="reounded-circle ">
+    </div>
+    
+    {%if messages%}
+    <div class="alert alert-success">
+        <a class="close" href="#" data-dismiss="alert">×</a>
+           {{ messages }}
+    </div>
+     {% endif %}
+
+    <div style="font-size: 30px" class="text-center mt-4 name">
+       রেজিস্ট্রেশন করুন 
+    </div>
+         
+        <form method="post" action="{% url 'signup-api' %}">
+            {% csrf_token %}
+        <input type="hidden" name="_token" value="BNyGCxSEdW4bXOrgQ7weiiLceHfdsKU5YT1fBQVp">       
+        <div style=" float: right" class="form-field d-flex align-items-center">
+            <div class="loginBox">
+            <span class="far fa-envelope"></span>
+            <input style="width: 100%" type="text" name="email" id="email" placeholder=" আপনার ই-মেইল" required="">
+            </div>
+        </div>
+        
+        <div style="float:left" class="form-field d-flex align-items-center">
+            <div class="loginBox">
+            <span class="far fa-user"></span>
+            <input style="width: 100%" type="text" name="name" id="name" placeholder="আপনার নাম" required="">
+            </div>
+        </div>
+        
+        <div style="float:center" class="form-field d-flex align-items-center">
+            <div class="loginBox">
+            <span class="fas fa-phone"></span>
+            <input id="phone" class="block mt-1 w-full" type="text" name="phone" placeholder="আপনার ফোন বা মোবাইল নং" required="">
+        </div>
+        </div>
+        <div style="float:right;margin-left: 2%" class="form-field1 d-flex align-items-center">
+            <div class="loginBox">
+            <span class="fas fa-pen-nib"></span>
+            <input style="width:100%;background: transparent;text-align: center" id="session" name="session" onclick="myFunctionSelect2()" class="dropbtn1" placeholder="ব্যাচ">
+            </div>
+              
+          <div style="margin-left: -110%;margin-top: 20%;position: relative;width: 100%;" class="dropdown1">
+            
+            <div id="mydropdownSelect2" class="dropdown1-content">
+                
+                <div class="form-field3 d-flex align-items-center">
+                    <div class="loginBox">
+                    <span class="fas fa-search"></span>
+              <input type="text" placeholder="সার্চ করুন.." id="myInputSelect2" onkeyup="filterFunctionSelect2()">
+                    </div>
+                </div>
+              
+                            <div class="form-field4 d-flex align-items-center">
+               
+              <option style="width: 100%;text-align: center" id="2022-23" onclick="myFunctionclickSelect2(this.id)">2022-23</option>
+             
+              </div>
+                            <div class="form-field4 d-flex align-items-center">
+               
+              <option style="width: 100%;text-align: center" id="2023-24" onclick="myFunctionclickSelect2(this.id)">2023-24</option>
+             
+              </div>
+                            <div class="form-field4 d-flex align-items-center">
+               
+              <option style="width: 100%;text-align: center" id="2024-25" onclick="myFunctionclickSelect2(this.id)">2024-25</option>
+             
+              </div>
+                            <div class="form-field4 d-flex align-items-center">
+               
+              <option style="width: 100%;text-align: center" id="2025-26" onclick="myFunctionclickSelect2(this.id)">2025-26</option>
+             
+              </div>
+                          </div>
+            
+            
+          </div>
+          </div>
+
+          <div style="float: right;margin-right: 2%;position: relative;" class="form-field1 d-flex align-items-center">
+            <div class="loginBox">
+            <span class="fas fa-pen-nib"></span>
+            <input style="width:100%;background: transparent;text-align: center" id="group" name="group" onclick="myFunction()" class="dropbtn1" placeholder="বিভাগ" required="">
+            </div>
+               
+          
+          <div style="margin-left: -110%;margin-top: 20%;width:100%" class="dropdown1">
+            
+            <div style="overflow: srcoll;width:100%" id="mydropdown1" class="dropdown1-content">
+                
+                <div class="form-field3 d-flex align-items-center">
+                    <div class="loginBox">
+                    <span class="fas fa-search"></span>
+              <input type="text" placeholder="সার্চ করুন.." id="myInput2" onkeyup="filterFunction()">
+                    </div>
+                </div>
+              
+                            <div class="form-field4 d-flex align-items-center">
+              
+              <option style="width: 100%;text-align: center" id="বিজ্ঞান" onclick="myFunctionclick(this.id)">বিজ্ঞান</option>
+                
+              </div>
+                            <div class="form-field4 d-flex align-items-center">
+              
+              <option style="width: 100%;text-align: center" id="মানবিক" onclick="myFunctionclick(this.id)">মানবিক</option>
+                
+              </div>
+                            <div class="form-field4 d-flex align-items-center">
+              
+              <option style="width: 100%;text-align: center" id="ব্যবসা শিক্ষা" onclick="myFunctionclick(this.id)">ব্যবসা শিক্ষা</option>
+                
+              </div>
+                          </div>
+            
+            
+          </div>
+          </div>
+      
+
+
+
+
+      
+        
+
+          
+          <div  class="form-field d-flex align-items-center">
+            <div class="loginBox">
+                <span class=""></span>
+            <input style="width: 100%" type="password" name="password" id="password" placeholder="PASSWORD" required="true">
+            </div>
+        </div>
+        <div  class="form-field d-flex align-items-center">
+            <div class="loginBox">
+                <span class=""></span>
+            <input style="width: 100%" type="password" name="pass2" id="pass2" placeholder=" CONFIRM PASSWORD" required="true">
+            </div>
+        </div>
+
+        
+        <div class="loginBox">
+            <button  class="btn mt-3">সাবমিট</button>
+            <div style="float: right" class="text-center fs-6">
+                <a href="https://israbentech.com/edit-user">ফিরে যান</a> or <a href="https://israbentech.com/active-users"> ইউজার সমূহ</a>
+            </div>
+            </div>
+        
+        </form>
+        
+    
+</div>
+{% endblock %}

@@ -18,8 +18,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATE_DIR =os.path.join(BASE_DIR,'templates')
 STATIC_DIR =os.path.join(BASE_DIR,'static')
 
-MEDIA_ROOT =  BASE_DIR / 'media' 
-MEDIA_URL = '/media/'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
@@ -30,7 +28,7 @@ SECRET_KEY = 'django-insecure-u49#-=5@$@0)%f5qg*p0)wtqz_7$px=hke%w&yzvemhzyslg)^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ictparkbd.com','www.ictparkbd.com','*']
 AUTH_USER_MODEL='accounts.CustomUser'
 
 # Application definition
@@ -43,10 +41,90 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'django_rest_passwordreset',
+    'rest_framework.authtoken',
     'frontpage',
-    'clearcache',
     'accounts',
+    'payments',
+    'ckeditor',
+    'blog',
+    'studymaterials',
+    
+    
+    
 ]
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': [
+            [ 'Format','Font', 'FontSize','Undo', 'Redo',
+             '-', 'Bold', 'Italic', 'Underline',
+             '-', 'Link', 'Unlink', 'Anchor',
+             '-', 'Subscript', 'Superscript', '-', 'RemoveFormat','Cut', 'Copy', 'Paste','Find', 'Replace', '-', 'SelectAll',
+             
+             '-', 'Maximize',
+             
+            ],
+        ],
+        
+        'height': 200,
+        'width': 'full',
+        'toolbarCanCollapse': True,
+
+    },
+    
+    'awesome_ckeditor': {
+        'toolbar': [
+            [ 'Format','Undo', 'Redo',
+             '-', 'Bold', 'Italic', 'Underline',
+             '-', 'Link', 'Unlink', 'Anchor',
+             '-',
+             
+             '-', 'Maximize',
+             
+            ],
+        ],  
+        'width': 'auto',
+        'toolbarCanCollapse': True,
+        'height': 100,
+    },
+     'body_ckeditor': {
+        'toolbar': [
+            ['Undo', 'Redo',
+             '-', 'Bold', 'Italic', 'Underline',
+             '-', 'Link', 'Unlink', 'Anchor',
+             '-', 'Format',
+             
+             '-', 'Maximize',
+             
+            ],
+        ],  
+        'width': '95%',
+        'toolbarCanCollapse': True,
+        'height': '50%',
+    }
+}
+
+'''
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': [
+            ['Undo', 'Redo',
+             '-', 'Bold', 'Italic', 'Underline',
+             '-', 'Link', 'Unlink', 'Anchor',
+             '-', 'Format',
+             
+             '-', 'Maximize',
+             
+            ],
+        ],  
+        'width': 'auto',
+        'toolbarCanCollapse': True,
+        
+        'height': 'auto',
+        
+    },
+}'''
 REST_AUTH_SERIALIZERS = {
     'LOGIN_SERIALIZER': 'Accounts.serializers.LoginUserSerializer',
 }
@@ -76,6 +154,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.request',
+                'blog.context_processors.posts',
 
             ],
         },
@@ -132,6 +211,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS= [STATIC_DIR, ]
+#STATIC_ROOT=os.path.join(BASE_DIR,'static/')
+#MEDIA_ROOT =  BASE_DIR / 'media' 
+MEDIA_URL = "media/"
+MEDIA_ROOT = os.path.join(BASE_DIR,'media/')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -146,18 +229,33 @@ AUTHENTICATION_BACKENDS = [
     
     
 ]
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_PARSER_CLASSES': (
+        'rest_framework.parsers.FormParser',
+        'rest_framework.parsers.MultiPartParser',
+        'rest_framework.parsers.JSONParser',
+        'rest_framework.renderers.JSONRenderer',
+        
+     )
+ }
+
 #Email setup
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
-EMAIL_HOST_USER = '6228c4b61e3fca'
-EMAIL_HOST_PASSWORD = '3f1cc562d51fea'
-EMAIL_PORT = '2525'
+EMAIL_HOST = 'ssd1.mellowhost.com'
+EMAIL_HOST_USER = 'sumon@israbentech.com' # use any valid webmail address
+DEFAULT_FROM_EMAIL = 'sumon@israbentech.com'
+EMAIL_HOST_PASSWORD = 'Sumon@747934'
+EMAIL_PORT = 465
+EMAIL_USE_SSL = True
 EMAIL_USE_TLS = False
-EMAIL_USE_SSL = False
 
 
-LOGIN_REDIRECT_URL = "/account/home"
+
+
+LOGIN_REDIRECT_URL = "/account/dashboard"
 LOGOUT_REDIRECT_URL = '/accounts/login'
 # Provider specific settings
 SOCIALACCOUNT_PROVIDERS = {

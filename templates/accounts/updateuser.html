@@ -1,0 +1,83 @@
+{% extends 'basepage/user_layout.html'%}
+{%block content %}
+{% include 'components/navbarhome.html'%}           
+
+{% load  static %}
+<div class="wrapper1">
+<form class="form-horizontal" role="form" method="POST" action="{% url 'updateuser' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+        <div class="text-center">
+            <img src="{%if user.image%}{{user.image.url}}{% else %} {% static 'images/avatar.jpg' %}  {% endif %}" class="avatar img-circle" alt="avatar"
+                 style="width: 100px; height: 100px;">
+            <h1>{{user.name}}</h1>
+            <div  class="form-field d-flex align-items-center">
+                <h2>{{ form.email.label_tag }}</h2>             
+                <div class="loginBox">
+                     <span class="far fa-user"></span>
+            {{ form.email }}                
+
+                </div>
+            </div>
+            <div class="form-field d-flex align-items-center">
+                <h2>{{ form.name.label_tag }}</h2>
+                <div class="loginBox">
+                <span class="far fa-user"></span>
+            {{ form.name }}
+                </div>
+            </div>
+            <div  class="form-field d-flex align-items-center">
+                <h2>{{ form.phone.label_tag }}</h2>
+                <div class="loginBox">
+                <span class="far fa-phone"></span>
+            {{ form.phone }}
+        </div>
+    </div>
+            <div  class="form-field d-flex align-items-center">
+                <h2>{{ form.session.label_tag }}</h2>
+                <div class="loginBox">
+                
+            {{ form.session }}
+        </div>
+    </div>
+            <div  class="form-field d-flex align-items-center">
+                <h2>{{ form.group.label_tag }}</h2>
+                <div class="loginBox">
+                
+
+            {{ form.group }}
+        </div>
+    </div>
+            <div  class="form-field d-flex align-items-center">
+                <h2>{{ form.college.label_tag }}</h2>
+                <div class="loginBox">
+                
+            {{ form.college }}
+        </div>
+    </div>
+            <div  class="form-field d-flex align-items-center">
+                <h2>{{ form.roll.label_tag }}</h2>
+                <div class="loginBox">
+                <span class="far fa-user"></span>
+            {{ form.roll }}
+        </div>
+    </div>
+            <div  class="form-field d-flex align-items-center">
+                <h2>{{ form.image.label_tag }}</h2>
+                <div class="loginBox">
+                <span class="far fa-user"></span>
+            {{ form.image }}
+                </div>
+            </div>
+        </div>
+    
+        
+            
+            <div class="loginBox">
+                <button style="width: 50%; margin-left: 20%" class="btn mt-3">সাবমিট</button>
+                
+                </div>
+        
+</form>
+<br><br>
+</div>
+{% endblock content%}

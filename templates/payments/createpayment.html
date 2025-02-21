@@ -1,0 +1,84 @@
+{% extends 'basepage/user_layout.html'%}
+{%block content %}
+{% load  static %}
+<div class="wrapper1">
+<form class="form-horizontal" role="form" method="POST" action="{% url 'create_payment' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+        <div class="text-center">
+            <img src="{%if user.image%}{{user.image.url}}{% else %} {% static 'images/avatar.jpg' %}  {% endif %}" class="avatar img-circle" alt="avatar"
+                 style="width: 100px; height: 100px;">
+            <h1>{{user.name}}</h1>
+            <div  class="form-field d-flex align-items-center">
+                <div class="loginBox">
+                
+            {{ form.email }}
+                </div>
+            </div>
+
+            <div  class="form-field d-flex align-items-center">
+                <div class="loginBox">
+                
+            {{ form.user_id }}
+                </div>
+            </div>
+            
+            
+            
+            <div  class="form-field d-flex align-items-center">
+                <div class="loginBox">
+                
+            {{ form.amount }}
+                </div>
+            </div>
+
+            <div  class="form-field d-flex align-items-center">
+                <div class="loginBox">
+                
+            {{ form.status }}
+                </div>
+            </div>
+
+            <div  class="form-field d-flex align-items-center">
+                <div class="loginBox">
+                
+            {{ form.month }}
+                </div>
+            </div>
+            <div  class="form-field d-flex align-items-center">
+                <div class="loginBox">
+                
+            {{ form.applicable }}
+                </div>
+            </div>
+            <div class="form-field d-flex align-items-center">
+                <div class="loginBox">
+                
+            {{ form.start_date }}
+                </div>
+            </div>
+            <div  class="form-field d-flex align-items-center">
+                <div class="loginBox">
+                
+            {{ form.end_date }}
+        </div>
+    </div>
+        <div  class="form-field d-flex align-items-center">
+            <div class="loginBox">
+            
+        {{ form.deadline }}
+    </div>
+    </div>
+          
+            
+    
+        
+            
+            <div class="loginBox">
+                <button style="width: 50%; margin-left: 20%" class="btn mt-3">সাবমিট</button>
+                
+                </div>
+        
+</form>
+<br><br>
+</div>
+{% endblock content%}

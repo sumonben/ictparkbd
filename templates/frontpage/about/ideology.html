@@ -1,0 +1,79 @@
+
+{% extends 'basepage/user_layout.html' %}
+
+{% block content %}
+
+{% if 'accountabout' in request.resolver_match.url_name  %}
+{% include 'components/navbarhome.html'%}
+{%else %} 
+{% include 'components/navbarfront.html'%}
+{%endif %}
+
+ <main data-v-6f04a53f="" class="main">
+  <!---->
+  <div data-v-6f04a53f="" class="home"> 
+ {% load static %}
+    <!----------------Page Banner (header)---------------------------->
+
+
+
+ <div class="content-body py-4">
+    <div class="container-wrapper">
+        <div class="row">
+
+
+            <!----------------leftmenu---------------------------->
+            <div class="col-lg-3">
+
+                <div class="sidebar-menu vue-affix affix-top" style="">
+                    <div class="sidebar-menu vue-affix affix-top" style="">
+                        {% include 'components/leftmenu.html' %}
+                      
+                       
+                  
+                        <!---->
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-9"><!---->
+                <div data-v-3171110e="" id="example-content">
+
+                                                        <div data-aos="fade-right" class="col-xs-12 col-lg-12 aos-init aos-animate">
+<h5 class="page-title font-weight-bold text-uppercase">Ideology</h5>
+<p class="text-justify">
+To develop powerful mind and soul, capacity and sustainable growth of the students, and to lead for the building nation for the future Bangladesh.
+</p><p style="text-align:justify"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><strong><span style="font-size:12.0pt">Trustworthy</span></strong><span style="font-size:12.0pt">&nbsp;- in
+            its representation of its member companies, in the delivery of its operations, and its
+            relationships with its partners and stakeholders</span></span></span></p>
+
+<p style="text-align:justify"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><strong><span style="font-size:12.0pt">Respected</span></strong><span style="font-size:12.0pt">&nbsp;- as
+            the recognized national trade body for the software and IT service industry of
+            Bangladesh</span></span></span></p>
+
+<p style="text-align:justify"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><strong><span style="font-size:12.0pt">Innovative</span></strong><span style="font-size:12.0pt">&nbsp;- in
+            the services it provides through its secretariat, and it undertakes programmes and development
+            initiatives&nbsp; to support the sustainable growth of the sector</span></span></span></p>
+
+<p style="text-align:justify"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><strong><span style="font-size:12.0pt">Ambitious</span></strong><span style="font-size:12.0pt">&nbsp;- in
+            its aims aspirations for the software and IT service industry in Bangladesh</span></span></span>
+</p>
+
+<p style="text-align:justify"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><strong><span style="font-size:12.0pt">Representative</span></strong><span style="font-size:12.0pt">&nbsp;- in embracing companies from across the software and IT service
+            industry of Bangladesh</span></span></span></p>
+<p></p>
+</div> <!----> <!---->
+
+                                                                                                                                                                                                    </div>
+            </div>
+
+
+           
+            
+    </div>
+</div>
+</div>
+</div>
+</main>
+
+{% endblock%}
