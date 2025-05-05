@@ -1,4 +1,122 @@
 {% load static %}
+<style>
+    .heading{
+        color:#fff;
+        text-shadow: 8px 8px 8px rgb(65, 7, 7);
+        font-size: 40px;
+        text-align:center;
+        font-family:kalpurush;
+        font-weight:bold;
+        margin-left:10px;
+        
+        
+        
+
+    }
+    .sub-heading{
+        color:#fff;
+        text-shadow: 2px 2px 2px rgb(65, 7, 7);
+        font-size:17px;
+        font-family:kalpurush;
+        font-weight:bold;
+
+    }
+    #main-heading{
+        width:100px;
+        margin-top:-40px;
+    }
+    
+    .header.sticky #main-heading{
+        margin-top: -5px;
+    }
+    .header.sticky .heading{
+        font-size:35px;
+        line-height:1;
+    } 
+    .header.sticky .sub-heading{
+        display:none;
+    } 
+    @media(max-width:767px){
+        
+        .heading{
+            color:#fff;
+            text-shadow: 4px 4px 4px rgb(65, 7, 7);
+            font-size: 23px;
+            padding:0px;
+            text-align:center;
+            font-family:kalpurush;
+            font-weight:bold;
+        } 
+        .sub-heading{
+            color:#fff;
+            margin-left:10px;
+            text-shadow: 2px 2px 2px rgb(65, 7, 7);
+            font-size:14px;
+            font-family:kalpurush;
+
+    
+        }
+        #main-heading{
+            width:100px;
+            margin-top:-15px;
+            margin-left:-130px;
+        }
+        .header.sticky #main-heading{
+            margin-top: -15px;
+        }
+        .header.sticky .heading{
+            font-size:23px;
+        } 
+        .header.sticky .sub-heading{
+            display:block;
+        } 
+        #logo_img{
+            width:100px;
+        }
+    }
+    @media(min-width:768px) and (max-width:989px){
+        #navbarSupportedContent{
+            background-color:#035a4c;
+        }
+        .navbar-toggler{
+            margin-top:-20px;
+
+        }
+        .heading{
+            color:#fff;
+            text-shadow: 1px 1px 1px rgb(65, 7, 7);
+            font-size: 40px;
+            margin-left:-150px;
+            margin-top:-110px;
+            padding:0px;
+            text-align:center;
+        } 
+        .header .sub-heading{
+            color:#fff;
+            font-size:15px;
+            margin-left:-150px;
+    
+        }
+        #main-heading{
+            width:100px;
+            margin-left:-130px;
+        }
+        .header.sticky #main-heading{
+            margin-top:-30px;
+        } 
+        .header.sticky .heading{
+            font-size:30px;
+        } 
+        .header.sub-heading{
+            display:block;
+        }.header .sticky .sub-heading{
+            display:block;
+        } 
+    }
+
+</style>
+
+
 <header data-v-6f04a53f="" class="header" id="header">
     <div class="search-box">
         <div class="box">
@@ -26,7 +144,18 @@
   <div class="main-header">
                   
         <span class="shape2New"> </span><span class="shape3New"> </span><span class="shape1New"> </span>
-    <nav class="navbar navbar-expand-lg p-lg-0"><a href="/" class="navbar-brand logo active router-link-active" aria-current="page"> <img  src="{% static 'images/9999.png'%}" alt="ictparkbd_logo"></a> <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler mMenu collapsed"><span class="fas fa-bars"></span></button>
+    <nav class="navbar navbar-expand-lg p-lg-0" style="margin-left:-10px;margin-top:-10px;"><a href="/" class="navbar-brand logo active router-link-active" aria-current="page"> 
+        <img  src="{% static 'images/9999.png'%}" width="100px" alt="ictparkbd_logo"></a> 
+        <a id="main-heading" href="/" class="navbar-brand logo active router-link-active" aria-current="page" > 
+           
+                                          
+            <span class="heading" id="heading">ICT PARK BANGLADESH</span><br>
+            <span id="sub-heading" class="sub-heading" style="font-family: kalpurush;" >BOGURA SADAR, BOGURA</span>
+
+         
+       
+  </a>
+        <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler mMenu collapsed"><span class="fas fa-bars"></span></button>
         <div id="navbarSupportedContent" class="navbar-collapse collapse" style="">
             <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler mMenu collapsed"><span class="fa fa-close"></span></button>
             <ul class="navbar-nav ml-auto">
@@ -180,4 +309,19 @@
   </div>
   </header>  
 
-  
+  <script>
+    // When the user scrolls down 50px from the top of the document, resize the header's font size
+    window.onscroll = function() {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop >50 || document.documentElement.scrollTop > 50) {
+          document.getElementById("header").className = "header sticky";
+            
+        } else {
+          document.getElementById("header").className = "header";
+
+        }
+    }
+</script>

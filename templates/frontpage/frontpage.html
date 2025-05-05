@@ -1,9 +1,8 @@
 
-{% extends 'basepage/user_layout.html' %}
+{% extends 'basepage/ictparkbd_layout.html' %}
 
                {% block content %} 
         
-               {% include 'components/navbarfront.html'%}           
 
                 {% load static %}
                     
@@ -26,9 +25,9 @@
 
                                    <div class="carousel-item">
                                        <div class="row">
-                                           <div class="col-lg-8 p-0"><img src="{{carousel.cimage.url }}" alt="public slider" class="d-block w-100" data-src="public/img/sliderContent/thumb/basis-magazine-smart-bangladesh637c89b343cc8.jpeg" src="/media/sharmin.jpg" lazy="loaded"></div>
+                                           <div class="col-lg-8 p-0"><img src="{{carousel.cimage.url }}" alt="public slider" class="d-block w-100" data-src="public/img/sliderContent/thumb/basis-magazine-smart-bangladesh637c89b343cc8.jpeg" src="/media/sharmin.jpg" loading="lazy"></div>
                                            <div class="col-lg-4 p-0">
-                                               <div class="slider-caption"><span class="shape"><img src="{% static '/images/ict1.jpg' %}" alt="/images/avater.jpg" class="rounded-circle img-fluid"></span>
+                                               <div class="slider-caption"><span class="shape"><img src="{% static '/images/ictpak_logo.jpg' %}" alt="/images/avater.jpg" class="rounded-circle img-fluid" loading="lazy"></span>
                                                    <div class="caption">
                                                        <h4>
                                                        </h4>
@@ -52,11 +51,11 @@
                                    
                                    <div class="carousel-item active">
                                        <div class="row">
-                                           <div class="col-lg-8 p-0"><img src="{% static 'images/digitalbd.jpg' %}" alt="public slider" class="d-block w-100" data-src="public/img/sliderContent/thumb/get-basis-membership-certificate-through-home-delivery61e933d942940.jpeg" src="/images/ict3.jpg" lazy="loaded"></div>
+                                           <div class="col-lg-8 p-0"><img src="{% static 'images/9999.png' %}" alt="public slider" class="d-block w-100" data-src="public/img/sliderContent/thumb/get-basis-membership-certificate-through-home-delivery61e933d942940.jpeg" src="/images/ict3.jpg" lazy="loaded"></div>
                                            <div class="col-lg-4 p-0">
                                                <div class="slider-caption"><span class="shape"></span>
                                                    <div class="caption">
-                                                       <h1>BCS General Education ICT  in builing up society to meet the challege of 4IR</h1>
+                                                       <h1>ICT PARK BANGLADESH  in builing up society to meet the challege of 4IR</h1>
                                                        <p></p> The world is now on the cusp of what has been referred to as the 4IR. The 4IR has significant potential to increase productivity. The emerging technologies of the 4IR include Artificial Intelligence, Internet of Things, Big Data/Data Science, 3D-printing, Blockchain technologies, neurotechnologies, genetic modifications, drones, autonomous vehicles, machine visions among others.<a href="https://basis.org.bd/member/certificate-list">
                                                            Get started
                                                            <span class="mdi mdi-arrow-right"></span></a>
@@ -118,40 +117,43 @@
  
  
                                        <ul>
-                                        <li><a href="https://www.gmrwc.edu.bd/" class="btn btn-primary">সরকারি মুজিবুর রহমান মহিলা কলেজ</a></li>
-                                        <li><a href="http://nbr.gov.bd/nbr-enlisted/eng"
-                                                target="_blank" class="btn btn-primary">সরকারি আজিজুল হক কলেজ</a></li>
-                                        <li><a href="https://basisegovhub.info"
-                                                target="_blank" class="btn btn-primary">সরকারি শাহ-সুলতান কলেজ</a></li>
-                                        <li><span ><a href="https://basisegovhub.info"
-                                            target="_blank" class="btn btn-primary">আইসিটি বিষয়ক ট্রেনিং</a></span></li>
-                                        <li><span><a href="https://basisegovhub.info"
-                                            target="_blank" class="btn btn-primary">নেকটার এর প্রশিক্ষণসমুহ</a></span></li>
-                                        <li><a href="https://basis.org.bd/public/files/publication/5e125f5ee61760449abd28a25178d046facfec994d97e.pdf"
-                                                target="_blank" class="btn btn-primary">মাধ্যমিক ও উচ্চশিক্ষা অধিদপ্তর </a></li>
-                                                <li><a href="/market-details/1" class="btn btn-primary">জাতীয় বিশ্ববিদ্যালয়
+                                        <a href="ictdivision.gov.bd" class="btn btn-primary" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">তথ্য ও যোগাযোগ প্রযুক্তি বিভাগ
+                                        </a>
+                                        <a href="http://nbr.gov.bd/nbr-enlisted/eng"
+                                        target="_blank" class="btn btn-primary" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">তথ্য ও যোগাযোগ প্রযুক্তি অধিদপ্তর</a></li>
+                                        <span >
+                                            <a href="https://basisegovhub.info"
+                                            target="_blank" class="btn btn-primary" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">আইসিটি বিষয়ক ট্রেনিং</a></span></li>
+                                        <span><a href="https://basisegovhub.info"
+                                            target="_blank" class="btn btn-primary" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">নেকটার এর প্রশিক্ষণসমুহ</a></span></li>
+                                    
+
+                                        <a href="https://www.gmrwc.edu.bd/" class="btn btn-primary" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">সরকারি মুজিবুর রহমান মহিলা কলেজ</a></li>
+                                        <a href="http://nbr.gov.bd/nbr-enlisted/eng"
+                                                target="_blank" class="btn btn-primary" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">সরকারি আজিজুল হক কলেজ</a></li>
+                                        <a href="https://basisegovhub.info"
+                                                target="_blank" class="btn btn-primary" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">সরকারি শাহ-সুলতান কলেজ</a></li>
+                                            <a href="https://basis.org.bd/public/files/publication/5e125f5ee61760449abd28a25178d046facfec994d97e.pdf"
+                                                target="_blank" class="btn btn-primary" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">মাধ্যমিক ও উচ্চশিক্ষা অধিদপ্তর </a></li>
+                                                <a href="/market-details/1" class="btn btn-primary" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">জাতীয় বিশ্ববিদ্যালয়
                                     </a></li>
-                                            <li><a href="http://nbr.gov.bd/nbr-enlisted/eng"
-                                                    target="_blank" class="btn btn-primary">তথ্য ও যোগাযোগ প্রযুক্তি অধিদপ্তর</a></li>
-                                            <li><a href="https://basisegovhub.info"
-                                                    target="_blank" class="btn btn-primary">মাধ্যমিক ও উচ্চশিক্ষা বিভাগ</a></li>
+                                            <a href="https://basisegovhub.info"
+                                                    target="_blank" class="btn btn-primary" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">মাধ্যমিক ও উচ্চশিক্ষা বিভাগ</a></li>
                                             
-                                            <li><a href="https://basis.org.bd/public/files/publication/5e125f5ee61760449abd28a25178d046facfec994d97e.pdf"
-                                                    target="_blank" class="btn btn-primary">বাংলাদেশ সরকারি কর্ম কমিশন</a></li>
-                                                    <li><a href="/market-details/1" class="btn btn-primary">তথ্য ও যোগাযোগ প্রযুক্তি বিভাগ
-                                                        </a></li>
-                                                <li><a href="http://nbr.gov.bd/nbr-enlisted/eng"
-                                                        target="_blank" class="btn btn-primary">বাংলাদেশ সরকারি কর্ম কমিশন</a></li>
-                                                <li><a href="https://basisegovhub.info"
-                                                        target="_blank"class="btn btn-primary">বেসরকারি শিক্ষক নিবন্ধন</a></li>
+                                            <a href="https://basis.org.bd/public/files/publication/5e125f5ee61760449abd28a25178d046facfec994d97e.pdf"
+                                                    target="_blank" class="btn btn-primary" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">বাংলাদেশ সরকারি কর্ম কমিশন</a></li>
+                                                <a href="http://nbr.gov.bd/nbr-enlisted/eng"
+                                                        target="_blank"  class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">বাংলাদেশ সরকারি কর্ম কমিশন</a></li>
+                                                <a href="https://basisegovhub.info"
+                                                        target="_blank" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">বেসরকারি শিক্ষক নিবন্ধন</a>
                                                 
-                                                <li><a href="https://basis.org.bd/public/files/publication/5e125f5ee61760449abd28a25178d046facfec994d97e.pdf"
-                                                        target="_blank" class="btn btn-primary">প্রাথমিক শিক্ষা অধিদপ্তর</a></li>
-                                                        <li><a href="/market-details/1" class="">
-                                                            </a></li>
+                                                <a href="https://basis.org.bd/public/files/publication/5e125f5ee61760449abd28a25178d046facfec994d97e.pdf"
+                                                        target="_blank" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">প্রাথমিক শিক্ষা অধিদপ্তর</a>
+                                                       
                                         
-                                       </ul> <a href="/market/LocalMarket" class="btn btn-outline-primary">View All</a>
+                                       </ul> 
                                          <div data-aos="fade-up" data-aos-offset="100" data-aos-duration="1000" class="column block aos-init aos-animate">
+
                                            <p style="text-align:center"><strong><span style="font-size:14px">&nbsp;<span style="font-size:20px"> মনোগ্রাম</span></span> </strong></p>
                                            <h1 class="bk-org title">
                                                      </h1>
@@ -465,7 +467,7 @@
                                               
                        <div class="benifits">
                            <div class="container-wrapper">
-                               <div data-aos="fade-right" data-aos-offset="100" data-aos-duration="1000" class="card card-body p-0 rounded-10 shadow-lg aos-init"><span class="shape"></span>
+                               <div data-aos="fade-right" data-aos-offset="100" data-aos-duration="1000" class="card card-body p-0 rounded-10 shadow-lg aos-init aos-animate"><span class="shape"></span>
                                    <span class="bubble1"></span> <span class="bubble2"></span> <span class="bubble3"></span> <span class="bubble4"></span> <span class="bubble5"></span>
                                    <div class="row">
                                        <div class="col-lg-5 pr-lg-0">
