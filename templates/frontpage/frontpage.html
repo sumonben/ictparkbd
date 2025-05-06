@@ -5,7 +5,28 @@
         
 
                 {% load static %}
-                    
+      
+                <style>
+                    #developer{
+                        display:none;
+                    }
+                    @media (max-width:768px) {
+                        .slider {
+                            margin-top: -10%;
+                            height: 100%;
+                            
+                        }
+                        .slider-caption {
+                            padding-top: 0px;
+                            height: 100%;
+                            
+                        }
+                        #developer{
+                            display:block;
+                        }
+
+                    }
+                </style>
                    
                              
                
@@ -25,15 +46,16 @@
 
                                    <div class="carousel-item">
                                        <div class="row">
-                                           <div class="col-lg-8 p-0"><img src="{{carousel.cimage.url }}" alt="public slider" class="d-block w-100 height-75" loading="lazy"></div>
+                                           <div class="col-lg-8 p-0"><img src="{{carousel.cimage.url }}" alt="public slider" class="d-block w-100" loading="lazy"></div>
                                            <div class="col-lg-4 p-0">
-                                               <div class="slider-caption"><span class="shape"><img src="{% static '/images/ictpark_logo.jpg' %}" alt="/images/avater.jpg" class="rounded-circle img-fluid" loading="lazy"></span>
+                                               <div class="slider-caption">
+                                                <span class="shape"><img src="{% static '/images/ictpark_logo.jpg' %}" alt="/images/avater.jpg" class="rounded-circle img-fluid" loading="lazy"></span>
                                                    <div class="caption">
-                                                       <h4>
-                                                       </h4>
+                                                      
                                                        <h1>{{carousel.cname}}</h1>
                                                        <p>{{carousel.ctext}}
-                                                       
+                                                        <a href="{% url 'admin:login' %}">
+                                                            Get started
 
                                                            
                                                        <a target="_blank" href="https://israbentech.com/add-data">
@@ -51,12 +73,12 @@
                                    
                                    <div class="carousel-item active">
                                        <div class="row">
-                                           <div class="col-lg-8 p-0"><img src="{% static 'images/caro_img.jpg' %}" alt="public slider" class="d-block w-100 h-75" ></div>
+                                           <div class="col-lg-8 p-0"><img src="{% static 'images/caro_img.jpg' %}" alt="public slider" class="d-block w-100"  ></div>
                                            <div class="col-lg-4 p-0">
                                                <div class="slider-caption"><span class="shape"></span>
                                                    <div class="caption">
                                                        <h1>ICT PARK BANGLADESH  in builing up society to meet the challege of 4IR</h1>
-                                                       <p></p> The world is now on the cusp of what has been referred to as the 4IR. The 4IR has significant potential to increase productivity. The emerging technologies of the 4IR include Artificial Intelligence, Internet of Things, Big Data/Data Science, 3D-printing, Blockchain technologies, neurotechnologies, genetic modifications, drones, autonomous vehicles, machine visions among others.<a href="https://basis.org.bd/member/certificate-list">
+                                                       <p></p> The world is now on the cusp of what has been referred to as the 4IR. The 4IR has significant potential to increase productivity. The emerging technologies of the 4IR include Artificial Intelligence, Internet of Things, Big Data/Data Science, 3D-printing, Blockchain technologies, neurotechnologies, genetic modifications, drones, autonomous vehicles, machine visions among others.<a href="{% url 'admin:login' %}">
                                                            Get started
                                                            <span class="mdi mdi-arrow-right"></span></a>
                                                    </div>
@@ -77,7 +99,7 @@
                        
                                <div style="background-color: transparent; position: relative" class="card border border-dark">
                                    
-                                   <!------
+                                   <!--
                                    <span class="bubble1"> <img  src="/images/ictadvisor.jpg"class="rounded-circle img-fluid" style="width: 150px"></span> <span class="bubble2"> <img   data-aos="fade-right"
                                          src="/images/minister.jpg"
                                    alt="/images/avater.jpg" class="rounded-circle img-fluid"
@@ -89,7 +111,7 @@
                                         
                                          alt="/images/avater.jpg" class="rounded-circle img-fluid"
                                          style="width: 150px"></span>
-                                         ----->
+                                         -->
                                    <div class="card-body">
                                        <div data-aos="fade-up" data-aos-offset="100" data-aos-duration="1000" style="background-color: transparent" class="column block aos-init aos-animate">
                                            
@@ -100,16 +122,16 @@
                                         </div>
 
                                        <div data-aos="fade-up" data-aos-offset="100" data-aos-duration="1000" class="column block aos-init aos-animate">
-                                           <p style="text-align:center"><strong><span style="font-size:14px">&nbsp;<span style="font-size:20px"> প্রধান প্রশিক্ষক ও ডেভেলপার</span></span> </strong></p>
+                                           <p style="text-align:center"><strong><span style="font-size:14px">&nbsp;<span style="font-size:20px"> Cheif Developer & Trainer</span></span> </strong></p>
                                            <h1 class="bk-org title">
                                                      </h1>
                                          
                                          <p style="text-align:center"><img alt="
                                             প্রধান প্রশিক্ষক 	" src="{% static 'images/sumon.jpg'%}" style="height:190px; width:150px"></p>
                                        
-                                       <p style="text-align:center"><strong><span style="font-size:14px">&nbsp;<span style="font-size:20px">ত্বরিক সুমন</span></span> </strong></p>
+                                       <p style="text-align:center"><strong><span style="font-size:14px">&nbsp;<span style="font-size:20px">Tarique Sumon</span></span> </strong></p>
                                        <p>
-                                               <a href="https://moedu.portal.gov.bd/site/page/5521b4ae-db5f-4410-b24e-3e34f460a926" class="btn" style="display:block;text-align:center;width:100%;" title="বিস্তারিত">বিস্তারিত</a>
+                                               <a href="https://moedu.portal.gov.bd/site/page/5521b4ae-db5f-4410-b24e-3e34f460a926" class="btn" style="display:block;text-align:center;width:100%;" title="বিস্তারিত">Read More..</a>
                                              </p>
                                        </div>
                                            
@@ -117,44 +139,44 @@
  
  
                                        <ul>
-                                        <a href="ictdivision.gov.bd" class="btn btn-primary" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">তথ্য ও যোগাযোগ প্রযুক্তি বিভাগ
+                                        <a href="ictdivision.gov.bd" class="btn btn-primary" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">ICT Division
                                         </a>
                                         <a href="http://nbr.gov.bd/nbr-enlisted/eng"
-                                        target="_blank" class="btn btn-primary" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">তথ্য ও যোগাযোগ প্রযুক্তি অধিদপ্তর</a></li>
+                                        target="_blank" class="btn btn-primary" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">Department of ICT</a></li>
                                         <span >
                                             <a href="https://basisegovhub.info"
-                                            target="_blank" class="btn btn-primary" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">আইসিটি বিষয়ক ট্রেনিং</a></span></li>
+                                            target="_blank" class="btn btn-primary" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">All ICT Training</a></span></li>
                                         <span><a href="https://basisegovhub.info"
-                                            target="_blank" class="btn btn-primary" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">নেকটার এর প্রশিক্ষণসমুহ</a></span></li>
+                                            target="_blank" class="btn btn-primary" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">Training of NACTAR, Bogura</a></span></li>
                                     
 
-                                        <a href="https://www.gmrwc.edu.bd/" class="btn btn-primary" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">সরকারি মুজিবুর রহমান মহিলা কলেজ</a></li>
+                                        <a href="https://www.gmrwc.edu.bd/" class="btn btn-primary" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">Govt. Mujibur Rahman Women's College</a></li>
                                         <a href="http://nbr.gov.bd/nbr-enlisted/eng"
-                                                target="_blank" class="btn btn-primary" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">সরকারি আজিজুল হক কলেজ</a></li>
+                                                target="_blank" class="btn btn-primary" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">Govt. Ajijul Haque College</a></li>
                                         <a href="https://basisegovhub.info"
-                                                target="_blank" class="btn btn-primary" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">সরকারি শাহ-সুলতান কলেজ</a></li>
+                                                target="_blank" class="btn btn-primary" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">Govt Shah Sultan College</a></li>
                                             <a href="https://basis.org.bd/public/files/publication/5e125f5ee61760449abd28a25178d046facfec994d97e.pdf"
-                                                target="_blank" class="btn btn-primary" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">মাধ্যমিক ও উচ্চশিক্ষা অধিদপ্তর </a></li>
-                                                <a href="/market-details/1" class="btn btn-primary" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">জাতীয় বিশ্ববিদ্যালয়
+                                                target="_blank" class="btn btn-primary" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">Department of Higher Secondary Education </a></li>
+                                                <a href="/market-details/1" class="btn btn-primary" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">National University
                                     </a></li>
                                             <a href="https://basisegovhub.info"
-                                                    target="_blank" class="btn btn-primary" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">মাধ্যমিক ও উচ্চশিক্ষা বিভাগ</a></li>
+                                                    target="_blank" class="btn btn-primary" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);"> Secondary and Higher Secondary Division</a></li>
                                             
                                             <a href="https://basis.org.bd/public/files/publication/5e125f5ee61760449abd28a25178d046facfec994d97e.pdf"
-                                                    target="_blank" class="btn btn-primary" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">বাংলাদেশ সরকারি কর্ম কমিশন</a></li>
+                                                    target="_blank" class="btn btn-primary" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">Bangladesh Civil Service Commission</a></li>
                                                 <a href="http://nbr.gov.bd/nbr-enlisted/eng"
-                                                        target="_blank"  class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">বাংলাদেশ সরকারি কর্ম কমিশন</a></li>
+                                                        target="_blank"  class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">Bangladesh Civil Service Commission</a></li>
                                                 <a href="https://basisegovhub.info"
-                                                        target="_blank" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">বেসরকারি শিক্ষক নিবন্ধন</a>
+                                                        target="_blank" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">Non-Government teacher Ragitration</a>
                                                 
                                                 <a href="https://basis.org.bd/public/files/publication/5e125f5ee61760449abd28a25178d046facfec994d97e.pdf"
-                                                        target="_blank" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">প্রাথমিক শিক্ষা অধিদপ্তর</a>
+                                                        target="_blank" class="btn btn-primary" style="width:100%;margin-bottm:50px;text-shadow: 4px 4px 4px rgb(73, 25, 11);">Department of Primary Education</a>
                                                        
                                         
                                        </ul> 
                                          <div data-aos="fade-up" data-aos-offset="100" data-aos-duration="1000" class="column block aos-init aos-animate">
 
-                                           <p style="text-align:center"><strong><span style="font-size:14px">&nbsp;<span style="font-size:20px"> মনোগ্রাম</span></span> </strong></p>
+                                           <p style="text-align:center"><strong><span style="font-size:14px">&nbsp;<span style="font-size:20px"> Monogram</span></span> </strong></p>
                                            <h1 class="bk-org title">
                                                      </h1>
                                          
@@ -163,7 +185,7 @@
                                        
                                       
                                        <p>
-                                               <a href="https://moedu.portal.gov.bd/site/page/5521b4ae-db5f-4410-b24e-3e34f460a926" class="btn" style="display:block;text-align:center;width:100%;" title="বিস্তারিত">বিস্তারিত</a>
+                                               <a href="/" class="btn" style="display:block;text-align:center;width:100%;" title="বিস্তারিত">Details</a>
                                              </p>
                                        </div>
                                    </div>
@@ -174,7 +196,7 @@
                    
                        
                        <!---->
-                       <div class="services"><span class="shape1"></span> <span class="shape2"></span>
+                       <div class="services" ><span class="shape1"></span> <span class="shape2"></span>
                         
                        <marquee  width="100%" direction="left" height="25px" style="font-size: 20px;margin-top: 5px">
                                               {% for news in news %}
@@ -187,140 +209,65 @@
                        <div data-v-2fe1039c="" id="counter" class="num-counter">
                            <div data-v-2fe1039c="" class="container-wrapper">
                                <div data-v-2fe1039c="" class="row justify-content-center">
-                                   <div data-v-2fe1039c="" data-aos="fade-up" data-aos-offset="100" data-aos-duration="500" class="col-4 col-sm-4 col-lg-2 aos-init aos-animate"><a data-v-2fe1039c="" href="https://israbentech.com/home/memberlist" class="text-black">
-                                           <div data-v-2fe1039c="" class="box"><svg data-v-2fe1039c="" version="1.1" id="counterIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="278.5 0 443 560" enable-background="new 278.5 0 443 560" xml:space="preserve">
-                                                   <path data-v-2fe1039c="" fill="none" stroke="#007F3D" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" d="M664.26,150.2
-                               c0-8.477-6.869-15.346-15.345-15.346H352.913c-8.476,0-15.346,6.869-15.346,15.346c0,8.477,6.87,15.345,15.346,15.345h296.002
-                               C657.391,165.545,664.26,158.677,664.26,150.2z">
-                                                   </path>
-                                                   <path data-v-2fe1039c="" fill="none" stroke="#007F3D" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" d="M623.747,93.59
-                               c0-8.477-6.87-15.346-15.348-15.346H393.425c-8.475,0-15.346,6.869-15.346,15.346c0,8.478,6.871,15.345,15.346,15.345h214.977
-                               C616.877,108.936,623.747,102.068,623.747,93.59z">
-                                                   </path>
-                                                   <path data-v-2fe1039c="" fill="none" stroke="#007F3D" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" d="M298.29,210.649
-                               l19.448,208.904c0.979,10.521,9.807,18.564,20.373,18.564h325.603c10.567,0,19.394-8.046,20.373-18.564l19.448-208.904
-                               c0.533-5.731-1.371-11.423-5.249-15.677c-3.877-4.253-9.366-6.68-15.123-6.68h-364.5c-5.756,0-11.247,2.427-15.125,6.68
-                               C299.661,199.226,297.756,204.918,298.29,210.649z">
-                                                   </path>
-                                                   <path data-v-2fe1039c="" fill="none" stroke="#007F3D" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" d="M412.249,374.81
-                               c0,11.299,9.161,20.461,20.461,20.461h136.407c0.015-0.002,0.026-0.002,0.04,0c11.301,0,20.462-9.16,20.464-20.461
-                               c0-0.569-0.024-1.134-0.07-1.689c-0.896-27.007-23.143-48.701-50.362-48.701h-14.684c15.102-8.346,25.356-24.431,25.356-42.87
-                               c0-26.99-21.956-48.947-48.947-48.947c-26.989,0-48.946,21.959-48.946,48.947c0,18.438,10.255,34.524,25.356,42.87H462.64
-                               C434.854,324.419,412.249,347.023,412.249,374.81z">
-                                                   </path>
-                                               </svg> <span data-v-2fe1039c="" data-to="2363" data-speed="1500" class="count count-num timer count-title count-number">143</span>
-                                               <h6 data-v-2fe1039c=""><b>Current Students</b></h6>
-                                           </div>
-                                       </a></div>
-                                   <div data-v-2fe1039c="" data-aos="fade-up" data-aos-offset="100" data-aos-duration="1000" class="col-4 col-sm-4 col-lg-2 aos-init aos-animate"><a data-v-2fe1039c="" href="https://israbentech.com/memberlist" class="text-black">
-                                           <div data-v-2fe1039c="" class="box"><svg data-v-2fe1039c="" version="1.1" id="counterIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="278.5 0 443 560" enable-background="new 278.5 0 443 560" xml:space="preserve">
-                                                   <path data-v-2fe1039c="" fill-rule="evenodd" clip-rule="evenodd" d="M555.187,258.005c19.991,8.186,39.195,16.056,58.405,23.909
-                               c17.305,7.078,34.661,14.035,51.892,21.305c3.133,1.32,6.45,3.324,8.49,5.945c20.112,25.826,34.979,54.217,38.696,87.18
-                               c1.258,11.166-0.184,22.643-0.544,33.975c-0.179,5.77-3.069,8.172-9.145,8.004c-13.505-0.373-27.034-0.109-40.551-0.115
-                               c-7.65-0.006-7.65-0.016-10.06-9.02c6.318,0,12.325,0,18.33-0.006c8.773,0,17.559-0.203,26.322,0.086
-                               c4.632,0.15,6.561-1.133,7.169-6.111c2.739-22.625-2.501-43.779-11.067-64.375c-2.184-5.238-4.957-10.225-7.436-15.338
-                               c-9.499-19.584-22.355-34.313-44.773-41.037c-22.314-6.689-43.465-17.268-66.752-26.807c2.427,5.79,4.217,10.215,6.127,14.586
-                               c5.214,11.934,10.217,23.969,15.834,35.709c3.168,6.625,3.105,12.416-2.183,17.51c-6.817,6.568-9.18,13.629-7.252,23.432
-                               c2.148,10.967-2.281,12.102-9.508,10.328c0-5.121,0.699-10.201-0.163-15c-1.373-7.684-0.088-14.248,5.844-19.34
-                               c6.734-5.775,6.347-11.564,2.623-19.188c-7.691-15.721-14.281-31.982-21.375-47.996c-3.794-8.561-14.618-11.823-22.547-7.202
-                               c-29.24,17.032-58.641,18.2-88.127,0.53c-4.242-2.543-14.056,0.497-16.303,5.484c-8.369,18.56-16.649,37.166-24.514,55.941
-                               c-0.892,2.125,0.136,6.357,1.835,8.045c8.302,8.234,11.545,17.459,8.238,28.947c-0.576,1.996,0.264,4.691,1.145,6.77
-                               c7.025,16.561,14.597,32.906,21.182,49.635c2.977,7.566,8.606,4.695,13.552,5.42c4.879,0.713,5.87-2.6,7.034-6.125
-                               c8.675-26.277,17.414-52.533,25.803-77.795c-2.52-3.998-4.955-7.096-6.572-10.57c-4.69-10.092-9.118-20.305-13.518-30.529
-                               c-2.794-6.496-1.349-9.121,5.337-9.199c14.938-0.17,29.884-0.166,44.825,0c6.387,0.07,8.062,2.666,5.745,8.648
-                               c-4.442,11.479-8.994,22.92-13.767,34.26c-1.03,2.438-3.202,4.391-5.148,6.961c8.819,26.471,17.723,53.424,26.936,80.271
-                               c0.604,1.762,3.475,3.629,5.479,3.857c4.918,0.559,9.991,0.654,14.907,0.08c6.41-0.746,9.134,2.08,9.793,8.699
-                               c-2.276,0.146-4.481,0.422-6.694,0.422c-86.81,0.02-173.62-0.047-260.427,0.139c-6.681,0.016-9.646-1.791-10.746-8.773
-                               c-4.417-27.996,1.566-54.107,13.083-79.381c1.667-3.664,3.623-7.191,5.36-10.826c10.373-21.684,24.972-37.379,49.363-45.096
-                               c29.704-9.396,58.227-22.536,87.8-34.271c-13.39-15.124-22.248-32.191-27.55-51.185c-0.519-1.853-2.624-3.237-3.921-4.896
-                               c-4.367-5.577-9.434-10.763-12.9-16.856c-8.178-14.359-7.671-28.817,1.028-43.113c1.766-2.902,2.664-6.927,2.452-10.338
-                               c-1.007-16.117-2.134-32.185,2.158-48.042c2.902-10.717,7.879-19.778,18.885-24.249c1.24-0.504,2.624-2.064,2.887-3.348
-                               c4.385-21.442,18.973-33.314,38.342-40.117c18.807-6.607,38.344-9.321,58.099-5.571c34.332,6.516,53.529,29.907,65.778,60.662
-                               c3.579,8.988,4.929,18.037,3.62,27.781c-0.736,5.464,0.068,11.319,1.146,16.807c2.543,12.906,4.089,25.885,8.676,38.547
-                               c5.716,15.77,0.759,30.674-9.505,43.901c-3.688,4.749-6.973,10.048-9.277,15.582C576.557,231.211,567.528,245.166,555.187,258.005z
-                               M505.369,18.121c-13.323,2.994-27.032,4.861-39.877,9.254c-17.122,5.858-29.354,17.113-30.935,36.798
-                               c-0.125,1.584-2.073,4.045-3.532,4.341c-13.112,2.67-17.652,12.741-18.788,23.852c-1.361,13.32-0.388,26.866-0.747,40.305
-                               c-0.116,4.474,0.133,9.805-2.103,13.23c-9.857,15.089-11,28.708,1.199,42.321c9.617,10.726,15.732,22.517,20.084,35.753
-                               c0.443,1.34,1.112,2.609,1.723,3.892c25.128,52.529,70.576,53.912,104.705,32.493c19.858-12.46,31.354-31.752,39.555-53.255
-                               c1.379-3.608,3.498-7.19,6.093-10.037c10.754-11.776,15.903-25.384,9.822-40.443c-4.176-10.335-5.623-20.814-7.043-31.494
-                               c-1.104-8.392-3.063-16.959-2.311-25.236c0.903-9.9-1.135-18.665-4.743-27.52C564.533,38.179,538.536,19.325,505.369,18.121z
-                               M426.125,276.785c-4.144,1.525-6.315,2.278-8.453,3.12c-18.923,7.482-37.389,16.591-56.876,22.054
-                               c-23.655,6.631-37.242,22.088-47.519,42.863c-11.855,23.967-19.977,48.531-17.985,75.703c0.446,6.115,2.114,8.908,9.203,8.844
-                               c41.715-0.373,83.437-0.188,125.158-0.188c2.253,0,4.505,0,7.76,0c-1.434-3.623-2.314-6.021-3.319-8.369
-                               c-6.162-14.355-12.576-28.6-18.376-43.098c-1.586-3.961-2.641-8.971-1.67-12.943c1.928-7.896,0.012-13.846-5.676-19.111
-                               c-6.889-6.377-7.349-13.268-3.223-21.756C412.368,309.051,418.643,293.74,426.125,276.785z M473.154,428.727
-                               c18.048,0,35.25,0,53.578,0c-8.865-26.602-17.478-52.449-26.09-78.299c-0.487,0.047-0.977,0.1-1.463,0.146
-                               C490.563,376.449,481.945,402.322,473.154,428.727z M481.334,304.652c4.321,9.678,8.212,18.395,11.587,25.947
-                               c5.229,0,9.262,0,13.843,0c3.192-8.092,6.586-16.729,10.217-25.947C504.715,304.652,493.635,304.652,481.334,304.652z">
-                                                   </path>
-                                                   <path data-v-2fe1039c="" fill-rule="evenodd" clip-rule="evenodd" d="M566.427,385.783c6.162,0,12.354-0.371,18.481,0.111
-                               c5.322,0.424,7.644-1.824,9.087-6.625c3.688-12.234,7.614-24.404,11.75-36.492c0.723-2.115,2.959-3.707,4.5-5.543
-                               c1.737,1.873,4.302,3.459,5.073,5.672c4.291,12.281,8.31,24.668,12.063,37.123c1.332,4.406,3.585,5.938,8.143,5.846
-                               c13.029-0.26,26.077-0.25,39.114,0.053c2.386,0.055,4.726,1.965,7.09,3.021c-1.355,2.02-2.3,4.588-4.142,5.973
-                               c-10.407,7.84-20.925,15.547-31.633,22.969c-3.805,2.639-4.593,5.336-3.139,9.58c4.229,12.313,8.281,24.682,12.099,37.123
-                               c0.683,2.227-0.094,4.904-0.197,7.371c-2.555-0.566-5.583-0.441-7.575-1.818c-10.911-7.551-21.653-15.35-32.252-23.326
-                               c-3.244-2.439-5.595-2.32-8.752,0.051c-10.418,7.822-20.952,15.5-31.637,22.957c-2.085,1.459-5.039,1.674-7.588,2.463
-                               c-0.18-2.809-1.151-5.852-0.399-8.381c3.649-12.238,7.581-24.396,11.786-36.449c1.522-4.348,0.665-6.861-3.11-9.479
-                               c-10.703-7.43-21.227-15.127-31.58-23.037c-1.871-1.434-2.584-4.389-3.835-6.637c2.247-0.844,4.46-2.293,6.742-2.406
-                               C553.136,385.574,559.784,385.783,566.427,385.783z M631.771,408.305c-6.875,0-12.887,0-19.158,0c0,2.795,0,5.162,0,7.57
-                               c2.925,0.391,5.241,0.697,7.5,1c2.063,4.639-0.58,7.23-4.159,6.75c-4.309-0.58-10.122-2.008-12.057-5.092
-                               c-2.149-3.428-1.842-9.521-0.452-13.75c1.622-4.916,6.874-6.215,11.971-5.182c2.891,0.588,5.635,1.861,8.565,2.867
-                               c2.045-2.508,3.968-4.865,5.879-7.211c-10.68-9.201-26.102-8.641-34.853,0.963c-8.079,8.867-7.627,23.338,0.989,31.48
-                               c8.693,8.217,26.543,8.705,34.083,0.826c0.887-0.92,1.575-2.424,1.616-3.686C631.875,419.473,631.771,414.094,631.771,408.305z">
-                                                   </path>
-                                                   <path data-v-2fe1039c="" fill-rule="evenodd" clip-rule="evenodd" d="M650.715,543.648c-5.461-6.201-10.923-12.398-17.623-19.998
-                               c-3.348,9.793-6.023,17.605-8.699,25.422c-0.428,0.016-0.862,0.029-1.291,0.049c-3.99-16.029-7.98-32.053-11.965-48.078
-                               c-0.389-0.047-0.776-0.088-1.164-0.133c-3.984,16.023-7.964,32.053-11.942,48.08c-0.422,0.148-0.846,0.297-1.268,0.441
-                               c-2.676-7.939-5.353-15.875-8.942-26.533c-6.521,8.148-11.826,14.771-17.126,21.391c-0.665-0.553-1.331-1.105-1.997-1.658
-                               c6.128-24.998,12.22-50.008,18.457-74.98c0.418-1.674,1.663-3.461,3.04-4.521c6.551-5.041,13.28-9.846,20.096-14.844
-                               c6.928,5.012,13.728,9.725,20.248,14.797c1.674,1.303,3.029,3.609,3.556,5.701c6.19,24.508,12.191,49.066,18.243,73.613
-                               C651.798,542.813,651.259,543.23,650.715,543.648z">
-                                                   </path>
-                                                   <path data-v-2fe1039c="" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M505.369,18.121c33.167,1.205,59.164,20.058,73.104,54.254
-                               c3.608,8.855,5.646,17.62,4.743,27.52c-0.753,8.276,1.206,16.844,2.311,25.236c1.42,10.68,2.867,21.159,7.043,31.494
-                               c6.081,15.06,0.932,28.667-9.822,40.443c-2.595,2.847-4.714,6.429-6.093,10.037c-8.2,21.503-19.696,40.794-39.555,53.255
-                               c-34.129,21.419-79.577,20.036-104.705-32.493c-0.611-1.283-1.28-2.552-1.723-3.892c-4.352-13.236-10.468-25.027-20.084-35.753
-                               c-12.2-13.613-11.056-27.231-1.199-42.321c2.236-3.426,1.987-8.757,2.103-13.23c0.359-13.439-0.614-26.985,0.747-40.305
-                               c1.135-11.11,5.676-21.182,18.788-23.852c1.459-0.295,3.408-2.757,3.532-4.341c1.582-19.685,13.813-30.94,30.935-36.798
-                               C478.337,22.982,492.046,21.115,505.369,18.121z">
-                                                   </path>
-                                                   <path data-v-2fe1039c="" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M426.125,276.785c-7.482,16.956-13.757,32.266-20.976,47.12
-                               c-4.126,8.488-3.667,15.379,3.223,21.756c5.688,5.266,7.604,11.215,5.676,19.111c-0.97,3.973,0.084,8.982,1.67,12.943
-                               c5.8,14.498,12.214,28.742,18.376,43.098c1.005,2.348,1.885,4.746,3.319,8.369c-3.255,0-5.507,0-7.76,0
-                               c-41.721,0-83.442-0.186-125.158,0.188c-7.089,0.064-8.757-2.729-9.203-8.844c-1.992-27.172,6.13-51.736,17.985-75.703
-                               c10.277-20.775,23.864-36.232,47.519-42.863c19.488-5.463,37.954-14.572,56.876-22.054
-                               C419.81,279.063,421.981,278.31,426.125,276.785z">
-                                                   </path>
-                                                   <path data-v-2fe1039c="" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M473.154,428.727c8.791-26.404,17.409-52.277,26.025-78.152
-                               c0.486-0.047,0.976-0.1,1.463-0.146c8.612,25.85,17.225,51.697,26.09,78.299C508.404,428.727,491.202,428.727,473.154,428.727z">
-                                                   </path>
-                                                   <path data-v-2fe1039c="" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M481.334,304.652c12.301,0,23.381,0,35.646,0
-                               c-3.631,9.219-7.024,17.855-10.217,25.947c-4.581,0-8.614,0-13.843,0C489.546,323.047,485.655,314.33,481.334,304.652z">
-                                                   </path>
-                                                   <path data-v-2fe1039c="" fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M631.771,408.305c0,5.789,0.104,11.168-0.075,16.537
-                               c-0.041,1.262-0.729,2.766-1.616,3.686c-7.54,7.879-25.39,7.391-34.083-0.826c-8.616-8.143-9.068-22.613-0.989-31.48
-                               c8.751-9.604,24.173-10.164,34.853-0.963c-1.911,2.346-3.834,4.703-5.879,7.211c-2.931-1.006-5.675-2.279-8.565-2.867
-                               c-5.097-1.033-10.349,0.266-11.971,5.182c-1.39,4.229-1.697,10.322,0.452,13.75c1.935,3.084,7.748,4.512,12.057,5.092
-                               c3.579,0.48,6.222-2.111,4.159-6.75c-2.259-0.303-4.575-0.609-7.5-1c0-2.408,0-4.775,0-7.57
-                               C618.885,408.305,624.896,408.305,631.771,408.305z">
-                                                   </path>
-                                               </svg> <span data-v-2fe1039c="" data-to="1426" data-speed="1500" class="count count-num timer count-title count-number">255</span>
-                                               <h6 data-v-2fe1039c=""><b>1<sup>st</sup> Year Students</b></h6>
-                                           </div>
-                                       </a></div>
-                                   
-                                   <div data-v-2fe1039c="" data-aos="fade-up" data-aos-offset="100" data-aos-duration="1500" class="col-4 col-sm-4 col-lg-2 aos-init aos-animate"><a data-v-2fe1039c="" href="/member-list?type=Affiliate" class="text-black">
-                                           <div data-v-2fe1039c="" class="box"><img data-v-2fe1039c="" height="60" src="https://basis.org.bd/public/images/icon/affiliate-members-counter.svg" alt=""> <span data-v-2fe1039c="" data-to="206" data-speed="1500" class="count count-num timer count-title count-number">425</span>
-                                               <h6 data-v-2fe1039c=""><b>Previous Students</b></h6>
-                                           </div>
-                                       </a></div>
-                                   <div data-v-2fe1039c="" data-aos="fade-up" data-aos-offset="100" data-aos-duration="1500" class="col-4 col-sm-4 col-lg-2 aos-init aos-animate"><a data-v-2fe1039c="" href="/member-list?type=International" class="text-black">
-                                           <div data-v-2fe1039c="" class="box"><img data-v-2fe1039c="" height="60" src="https://basis.org.bd/public/images/icon/international-member-counter.svg" alt=""> <span data-v-2fe1039c="" data-to="12" data-speed="1500" class="count count-num timer count-title count-number">688</span>
-                                               <h6 data-v-2fe1039c=""><b>All Students</b></h6>
-                                           </div>
-                                       </a>
-                                   </div>
-                                   
+                                <div data-v-2fe1039c="" data-aos="fade-up" data-aos-offset="100" data-aos-duration="1500" class="col-4 col-sm-4 col-lg-2 aos-init aos-animate"><a data-v-2fe1039c="" href="/member-list?type=International" class="text-black">
+                                    <div data-v-2fe1039c="" class="box"><img data-v-2fe1039c="" height="60" src="{% static 'images/client.png' %}" alt=""> <span data-v-2fe1039c="" data-to="12" data-speed="1500" class="count count-num timer count-title count-number">100</span>
+                                        <h6 data-v-2fe1039c=""><b>Our Client</b></h6>
+                                    </div>
+                                </a>
+                            </div>      
+                                <div data-v-2fe1039c="" data-aos="fade-up" data-aos-offset="100" data-aos-duration="1500" class="col-4 col-sm-4 col-lg-2 aos-init aos-animate"><a data-v-2fe1039c="" href="/member-list?type=Affiliate" class="text-black">
+                                    <div data-v-2fe1039c="" class="box"><img data-v-2fe1039c="" height="60" src="{% static 'images/project.png' %}" alt=""> <span data-v-2fe1039c="" data-to="206" data-speed="1500" class="count count-num timer count-title count-number">10</span>
+                                        <h6 data-v-2fe1039c=""><b>Our Live Project</b></h6>
+                                    </div>
+                                </a></div>
+                                <div data-v-2fe1039c="" data-aos="fade-up" data-aos-offset="100" data-aos-duration="1500" class="col-4 col-sm-4 col-lg-2 aos-init aos-animate"><a data-v-2fe1039c="" href="/member-list?type=Affiliate" class="text-black">
+                                    <div data-v-2fe1039c="" class="box"><img data-v-2fe1039c="" height="60" src="{% static 'images/team.png' %}" alt=""> <span data-v-2fe1039c="" data-to="206" data-speed="1500" class="count count-num timer count-title count-number">10</span>
+                                        <h6 data-v-2fe1039c=""><b>Our Team</b></h6>
+                                    </div>
+                                </a></div>
+                            <div data-v-2fe1039c="" data-aos="fade-up" data-aos-offset="100" data-aos-duration="1500" class="col-4 col-sm-4 col-lg-2 aos-init aos-animate"><a data-v-2fe1039c="" href="/member-list?type=International" class="text-black">
+                                    <div data-v-2fe1039c="" class="box"><img data-v-2fe1039c="" height="60" src="{% static 'images/service.jpg' %}" alt=""> <span data-v-2fe1039c="" data-to="12" data-speed="1500" class="count count-num timer count-title count-number">20</span>
+                                        <h6 data-v-2fe1039c=""><b>Our services</b></h6>
+                                    </div>
+                                </a>
+                            </div>       
+                                 
+                          
+                    </div>
+                        
+                        <div class="missionVission" id="developer">
+                            <div class="container-wrapper">
+                                <div class="content-header text-center">
+                                    <div class="col-lg-12 text-center"><a href="" class="btn btn-lg btn-primary rounded-50" style="background-color:#035a4c;text-shadow:4px 4px 4px rgb(67, 7 ,7)">
+                                        <h2>
+                                            
+                                            Cheif Trainer & Developer                                            
+                                        </h2>
+                                    </a>
+                                </div>
+                                </div>
+                                <div class="row py-4">
+                                    <div data-aos="fade-right" data-aos-offset="100" data-aos-duration="1000" class="col-lg-6 aos-init aos-animate">
+                                        <div class="box border-right-green">
+                                            <div class="box-body">
+                                               
+                                              
+                                              <p style="text-align:center"><img alt="
+                                                 প্রধান প্রশিক্ষক 	" src="{% static 'images/sumon.jpg'%}" style="height:190px; width:150px"></p>
+                                            
+                                            <p style="text-align:center"><strong><span style="font-size:14px">&nbsp;<span style="font-size:20px">Tarique Sumon</span></span> </strong></p>
+                                            <p>
+                                                    <a href="https://moedu.portal.gov.bd/site/page/5521b4ae-db5f-4410-b24e-3e34f460a926" class="btn" style="display:block;text-align:center;width:100%;" title="বিস্তারিত">Details</a>
+                                                  </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                                    
+                          
                        <div class="missionVission">
                            <div class="container-wrapper">
                                <div class="content-header text-center">
@@ -390,7 +337,7 @@
                                                        </i></a>
                                                 </div>
                                                    <br><br>
-                                                    <span>Be My Proud Student</span>
+                                                    <span>Be Our Proud Client</span>
                                                </h1>
  
                                            </div>
@@ -873,48 +820,15 @@
                                    <h1 class="title text-center">Our All Service</h1>
                                </div>
                                <ul class="nav nav-tabs visible-phone">
-                                   <li><a href="#local" data-toggle="tab" class="active">HSC ICT</a></li>
-                                   <li><a href="#inter" data-toggle="tab">IT Training </a></li>
-                                   <li><a href="#policy" data-toggle="tab">Software, App & Web </a></li>
+                                <li><a href="#policy" data-toggle="tab" class="active">Software, App & Web </a></li>
+                                <li><a href="#inter" data-toggle="tab">IT Training </a></li>
+                                   <li><a href="#local" data-toggle="tab" >HSC ICT</a></li>
+                                   
                                </ul>
                                <div class="row tab-content">
-                                   <div id="local" data-aos="fade-right" data-aos-offset="100" data-aos-duration="1000" class="col-lg-4 tab-pane active aos-init">
-                                       <div class="card border border-dark">
-                                           <div class="card-body">
-                                               <h4>ICT Private Programme</h4><img alt="ICT Private Programme" data-src="https://basis.org.bd/public/images/international-market.svg" src="{%static 'images/student.jpg' %}" lazy="loading">
-                                               <ul>
-                                                   <li><a href="/market-details/1" class="">HSC ICT 
-                                                           </a></li>
-                                                   <li><a href="http://nbr.gov.bd/nbr-enlisted/eng" target="_blank">Exam Preparation</a></li>
-                                                   <li><a href="https://basisegovhub.info" target="_blank">Helpful Notes</a></li>
-                                                   <li><span>Lab Preparation</span></li>
-                                                   <li><span>Special care in HTML & C</span></li>
-                                                   <li><a href="" target="_blank">Understanding Frontier Technology</a></li>
-                                                   
-                                               </ul> 
-                                               <a href="/market/LocalMarket" class="btn btn-outline-primary">View All</a>
-                                           </div>
-                                       </div>
-                                   </div>
-                                   <div id="inter" data-aos="fade-up" data-aos-offset="100" data-aos-duration="1500" class="col-lg-4 tab-pane aos-init aos-animate">
-                                       <div class="card border border-dark">
-                                           <div class="card-body">
-                                               <h4>IT Training</h4> <img alt="international_Marketimage" data-src="https://basis.org.bd/public/images/international-market.svg" src="{%static 'images/ittraining.jpg' %}" lazy="loading">
-                                               <ul>
-                                                   <li><a href="/market-details/5" class="">Basic Computer Training
-                                                    </a></li>
-                                                   <li><a href="/b2b" class="">Microsoft Office,Excell and Internet</a></li>
-                                                   <li><a href="/ea/international/events" class="">Graphics Design</a>
-                                                   </li>
-                                                   <li><a href="/ea/international/events" class="">C,JAVA, Python Android Learning</a>
-                                                   </li>
-                                                   <li><a href="/ea/international/awards" class="">Software, App,Web Design Learning</a>
-                                                   </li>
-                                               </ul> <a href="/market/InternationalMarket" class="btn btn-outline-primary">View All</a>
-                                           </div>
-                                       </div>
-                                   </div>
-                                   <div id="policy" data-aos="fade-left" data-aos-offset="100" data-aos-duration="2000" class="col-lg-4 tab-pane aos-init aos-animate">
+                                  
+                                   
+                                   <div id="policy" data-aos="fade-left" data-aos-offset="100" data-aos-duration="2000" class="col-lg-4 tab-pane aos-init active aos-animate">
                                        <div class="card border border-dark">
                                            <div class="card-body">
                                                <h4>Sotware ,App & Web Development</h4> <img alt="policyimage" data-src="https://basis.org.bd/public/images/policy.svg" src="{%static 'images/engineering.jpg' %}" lazy="loading">
@@ -929,6 +843,42 @@
                                            </div>
                                        </div>
                                    </div>
+                                   <div id="inter" data-aos="fade-up" data-aos-offset="100" data-aos-duration="1500" class="col-lg-4 tab-pane aos-init aos-animate">
+                                    <div class="card border border-dark">
+                                        <div class="card-body">
+                                            <h4>IT Training</h4> <img alt="international_Marketimage" data-src="https://basis.org.bd/public/images/international-market.svg" src="{%static 'images/ittraining.jpg' %}" lazy="loading">
+                                            <ul>
+                                                <li><a href="/market-details/5" class="">Basic Computer Training
+                                                 </a></li>
+                                                <li><a href="/b2b" class="">Microsoft Office,Excell and Internet</a></li>
+                                                <li><a href="/ea/international/events" class="">Graphics Design</a>
+                                                </li>
+                                                <li><a href="/ea/international/events" class="">C,JAVA, Python Android Learning</a>
+                                                </li>
+                                                <li><a href="/ea/international/awards" class="">Software, App,Web Design Learning</a>
+                                                </li>
+                                            </ul> <a href="/market/InternationalMarket" class="btn btn-outline-primary">View All</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                   <div id="local" data-aos="fade-right" data-aos-offset="100" data-aos-duration="1000" class="col-lg-4 tab-pane  aos-init">
+                                    <div class="card border border-dark">
+                                        <div class="card-body">
+                                            <h4>ICT Private Programme</h4><img alt="ICT Private Programme" data-src="https://basis.org.bd/public/images/international-market.svg" src="{%static 'images/student.jpg' %}" lazy="loading">
+                                            <ul>
+                                                <li><a href="/market-details/1" class="">HSC ICT 
+                                                        </a></li>
+                                                <li><a href="http://nbr.gov.bd/nbr-enlisted/eng" target="_blank">Exam Preparation</a></li>
+                                                <li><a href="https://basisegovhub.info" target="_blank">Helpful Notes</a></li>
+                                                <li><span>Lab Preparation</span></li>
+                                                <li><span>Special care in HTML & C</span></li>
+                                                <li><a href="" target="_blank">Understanding Frontier Technology</a></li>
+                                                
+                                            </ul> 
+                                            <a href="/market/LocalMarket" class="btn btn-outline-primary">View All</a>
+                                        </div>
+                                    </div>
+                                </div>
                                </div>
                            </div>
                        </div>

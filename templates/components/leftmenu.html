@@ -18,7 +18,7 @@
 
 
     <div style="position: relative;" class="logo1">
-<img src="{%if user.image%}{{user.image.url}}{% else %} {% static 'images/avatar.jpg' %}  {% endif %}"  class="rounded-circle img-fluid" style="width: 120px;height: 120px"> 
+<img src="{%if user.image%}{{user.image.url}}{% else %} {% static 'images/ictpark_monogram.png' %}  {% endif %}"  class="rounded-circle img-fluid" style="width: 120px;height: 120px"> 
 
             {% if user.is_authenticated %}
             
@@ -29,7 +29,7 @@
     <br>
     <br>
 
-    <h3> You are not Logged In</h3>
+    
     <a class="btn btn-success" href="{% url 'login' %}" >Login Now</a>
 
     {% endif %}
