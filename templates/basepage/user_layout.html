@@ -4,43 +4,54 @@
   <head>
     <meta charset="utf-8" />
     
-    <meta name="description" content="ICT Park">
-    <meta name="keywords" content="ICT Park Bangladesh">
+    <meta name="description" content="IT Farm, ICT Park Bangladesh, ICT Education">
+    <meta name="keywords" content="IT Farm, ICT Park Bangladesh, ICT PARK BANGLADESH, ICT Education, আইটি পার্ক, আইসিটি পার্ক বাংলাদেশ, আইসিটি পার্ক বগুড়া, আইটি ফার্ম ">
     <meta name="author" content="Tarique Sumon ">
+    <meta name="publisher" content="ICT PARK BANGLADESH">
+    <meta name="copyright" content="ICT PARK BANGLADESH">
+    <meta name="author" content="Design/Developed by: Tarique Sumon :: ICT Park Bangladesh">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="ICT Park Bangladesh, ICT PARK BANGLADESH, IT Farm">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ICT Park  Bangladesh</title>
+    <title>ICT PARK BANGLADESH</title>
     
     <link rel="shortcut icon" href="{%  static 'images/ictpark_monogram.png'%}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
-    <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
-    <link rel="stylesheet" href="{% static 'css/twitterstyle.css' %}" />
-    <link rel="shortcut icon" href="/images/ict_logo.jpg" />
-    <link rel="stylesheet" href="https://basis.org.bd/public/css/frontend/card_style.css" />
-    <link rel="stylesheet" href="https://basis.org.bd/public/css/frontend/ecommerce/style.css" />
+    <link rel="stylesheet" href="{% static 'css/ictparkbd/twitterstyle.css' %}" />
+   
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" />
-    <link rel="stylesheet" href="{% static 'css/application.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/ictparkbd/application.css' %}" />
 
-    <link rel="stylesheet" href="{% static 'css/payment.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/userstyle.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/profile.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/ictparkbd/userstyle.css' %}" />
 
-    <!-- -- -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- -- -->
-    <link rel="stylesheet" href="{% static 'css/profile.css' %}" />
-    <!-- -basis View--- --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" />
-    <script src="http://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-
-    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet" />
-    <link href="{% static 'css/frontend.css'%}" rel="stylesheet">
-
+       <!-- -- -->
+    <link rel="stylesheet" href="{% static 'css/ictparkbd/profile.css' %}" />
+    <!-- - View--- --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+    <link href="{% static 'css/ictparkbd/frontend.css'%}" rel="stylesheet">
     
-
+    
     <style>
+      @font-face {
+        font-family: "kalpurush";
+        src: url("//file-rajshahi.portal.gov.bd/media/central/themes/theme-default/fonts/Kalpurush.woff") format("woff"),
+             url("//file-rajshahi.portal.gov.bd/media/central/themes/theme-default/fonts/Kalpurush.ttf") format("truetype"),
+              url("//file-rajshahi.portal.gov.bd/media/central/themes/theme-default/fonts/Kalpurush.svg#Kalpurush") format("svg"),
+                url("//file-rajshahi.portal.gov.bd/media/central/themes/theme-default/fonts/Kalpurush.eot?#iefix") format("embedded-opentype");
+    
+      font-weight: normal;
+        font-style: normal;
+      }
+      @media only screen and (min-width:320px) and (max-width:959px) and (max-width:786){
+        @font-face {
+              font-family: "kalpurush";
+              src: url("//file-rajshahi.portal.gov.bd/media/central/themes/theme-default/fonts/Kalpurush.woff") format("woff");
+             
+              font-weight: normal;
+              font-style: normal;
+            }
+    
+    }
+      
       .pagebody{
         margin-top: 118px;
       }
@@ -50,17 +61,42 @@
         position: relative;
         background-color: transparent;
       }
+      .client{
+        width:60px;
+        height:60px;
+
+      }
+      .developer{
+        width:150px;
+        height:40px;
+      }
+      .provider{
+        width:150px;
+        height:40px;
+      }
       @media (max-width: 768px) {
+        #service_body{
+          margin-top:-30px;
+      }
         .pagebody{
           margin-top: 0%;
         }
         #rightpan {
-          width: 100%;
-          display: none;
-      
-          flex-direction: column;
-          position: absolute;
-          bottom: 0;
+          display:none;
+        }
+        
+        .client{
+          width:40px;
+          height:40px;
+  
+        }
+        .developer{
+          width:100px;
+          height:30px;
+        }
+        .provider{
+          width:100px;
+          height:30px;
         }
       }
     </style>
@@ -93,20 +129,19 @@
                                <div class="col-lg-3">
                                    <p>©Copyright 2024</p>
                                </div>
-                               <div class="col-lg-5 text-center">
-                                   <div class="d-flex align-items-center justify-content-start">
-                                       <p>We Accept</p>
-                                       <ul class="nav">
-                                           <li><img alt="img1" data-src="https://basis.org.bd/public/images/icon/bkash.svg" src="{% static 'images/bkash.png'%}" lazy="loaded"></li>
-                                           <li><img alt="img2" data-src="https://basis.org.bd/public/images/icon/amex.svg" src="{% static 'images/rocket.png'%}" lazy="loaded"></li>
-                                           <li><img alt="img3" data-src="https://basis.org.bd/public/images/icon/visa.svg" src="{% static 'images/nexuspay.png'%}" lazy="loaded"></li>
-                                       </ul>
-                                   </div>
-                               </div>
-                               <div class="col-lg-4">
-                                   <p>
+                               <div  style="margin:auto;">
+                                <p >
+                                  <strong><a class="provider" href="https://sslcommerz.com/" target="_blank"><img class="provider" loading="lazy" alt="Tarique Sumon"  src="{% static 'images/ssl_logo.png'%}" lazy="loaded"> 
+                                  </a></strong>
+                                 
+                                 </p>     
+                               
+                              </strong>
+                              </div>
+                              <div  style="margin:auto;">
+                                <p>
                                        Contributed by :
-                                       <strong><a href="http://israbentech.com/" target="_blank"><img alt="Tarique Sumon" data-src="/images/sumon.jpg" src="{% static 'images/sumon.jpg'%}" lazy="loaded"> Tarique Sumon
+                                       <strong><a href="http://israbentech.com/" target="_blank"><img alt="Tarique Sumon" data-src="/images/sumon.jpg" src="{% static 'images/sumon.jpg'%}" lazy="loaded" width="40"> Tarique Sumon
                                            </a></strong>
                                    </p>
                                </div>

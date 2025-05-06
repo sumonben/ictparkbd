@@ -1,11 +1,12 @@
 {% extends 'basepage/user_layout.html' %}
 {% block content %} 
+{% load static %}
+
 {% if 'accountabout' in request.resolver_match.url_name  %}
 {% include 'components/navbarhome.html'%}
 {%else %} 
 {% include 'components/navbarfront.html'%}
 {%endif %}
- {% load static %}
  
  <main data-v-6f04a53f="" class="main">
   <!---->
